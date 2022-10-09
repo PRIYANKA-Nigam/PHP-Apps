@@ -23,7 +23,7 @@
 </h4>
         <fieldset>
             <!-- <textarea placeholder="Type data here ......" name="pallin"> </textarea> -->
-            <input type="text" name="pallin" ">
+            <input type="text" name="pallin">
 </fieldset>
 <fieldset>
 <input type="submit" name="submit" value="Submit">
