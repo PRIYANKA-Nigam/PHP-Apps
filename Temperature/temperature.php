@@ -31,6 +31,11 @@
 <div class="right-side">
 <form method="POST">
  <input type="text" name="num" placeholder="enter Temperature value">
+ <select name="operation">
+<option value="cm">Celcius</option>
+<option value="in">Fahrenheit</option>
+<option value="mm">Kelvin</option>
+</select>
 </br>
     <div class="selection">
 </br><br><br>
@@ -38,6 +43,8 @@
         <input type="radio" name="units" value="cel">
         <label>Fahrenheit</label>
         <input type="radio" name="units" value="fah">
+        <label>Kelvin</label>
+        <input type="radio" name="units" value="kel">
 </div>
 </br>
 <input type="submit" name="submit" value="Convert Now" class="btn">
@@ -47,12 +54,36 @@
 if(isset($_POST['submit'])){
     $num=$_POST['num'];
     $temp=$_POST['units'];
-    if($temp=="cel"){
+    $value=$_POST['operation'];
+    if($temp=="fah" && $value=="cm"){
         $result= $num*9/5+32;
         echo "<center><h1><b><i><u>The conversion value in fahrenheit is " .$result."F</center></h1></b></i></u>";
+    }else if($temp=="kel" && $value=="cm"){
+        $result=$num+273.15;
+        echo "<center><h1><b><i><u>The conversion value in kelvin is " .$result."K</center></h1></b></i></u>";
+    }else if($temp=="cel" && $value=="cm"){
+        $result=$num;
+        echo "<center><h1><b><i><u>The conversion value in celcius is " .$result."C</center></h1></b></i></u>";
+    }else if($temp=="fah" && $value=="in"){
+        $result=$num;
+        echo "<center><h1><b><i><u>The conversion value in fahrenheit is " .$result."F</center></h1></b></i></u>";
+    }else if($temp=="kel" && $value=="in"){
+        $result=$num*(5/9)+459.67;
+        echo "<center><h1><b><i><u>The conversion value in kelvin is " .$result."K</center></h1></b></i></u>";
     }
-    else{
+    else if($temp=="cel" && $value=="in"){
         $result= ($num-32)*5/9;
+        echo "<center><h1><b><i><u>The conversion value in celcius is " .$result."C</center></h1></b></i></u>";
+    }
+    else if($temp=="fah" && $value=="mm"){
+        $result=($num-273.15)*(9/5)+32;
+        echo "<center><h1><b><i><u>The conversion value in fahrenheit is " .$result."F</center></h1></b></i></u>";
+    }else if($temp=="kel" && $value=="mm"){
+        $result=$num;
+        echo "<center><h1><b><i><u>The conversion value in kelvin is " .$result."K</center></h1></b></i></u>";
+    }
+    else if($temp=="cel" && $value=="mm"){
+        $result= $num-273.15;
         echo "<center><h1><b><i><u>The conversion value in celcius is " .$result."C</center></h1></b></i></u>";
     }
 }
