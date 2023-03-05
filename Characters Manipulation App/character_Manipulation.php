@@ -13,24 +13,24 @@ padding:5px;">
          if(isset($_POST['submit'])){
             $wo = $_POST['pallin'];
             $revWo = strrev($wo);
-            if($wo === $revWo){
-                echo "Yes it is";
+            if($wo === $revWo){  //<div> is taken bcoz taking background-color:red; inside <p> was not applying
+                echo "<div style='background-color:red;'><p style='color:green;'>Yes it is</p></div>";
             }else{
-                echo "No it's not";
+                echo "<div style='background-color:red;'><p style='color:green;'>No it's not</p></div>";
             }
         }
         if(isset($_POST['submit2'])){
             $leap=$_POST['leap'];
             if($leap%4==0)
             {
-                echo "Yes it is";
+                echo "<div style='background-color:red;'><p style='color:green;'>Yes it is</p></div>";
             }else{
-                echo "No it's not";
+               echo "<div style='background-color:red;'><p style='color:green;'>No it's not</p></div>";
             }
          }
          if(isset($_POST['submit3'])){
             $leap=$_POST['rev'];
-           echo strrev($leap);
+           echo "<div style='background-color:red;'><p style='color:green;'>".strrev($leap)."</p></div>";
          }
          if(isset($_POST['submit4'])){
             $leap=$_POST['sort'];
@@ -41,16 +41,18 @@ padding:5px;">
             }
         }  
         sort($p);
-        for($i=0;$i<count($p);$i++){
-           echo $p[$i];
-        }
+      //  $str=var_export($p,true);
+      //   for($i=0;$i<count($p);$i++){ //were printing as array ( 0 => 'd', 1 => 'g', 2 => 'r', 3 => 's', 4 => 't', 5 => 'w', )
+         //  echo "<div style='background-color:red;'><p style='color:green;'>".str_replace("PHP_EOL",' ',$str)."</p></div>";
+      //   }
+       echo "<div style='background-color:red;'><p style='color:green;'>".implode(" ",$p)."</p></div>";
         //   echo "<pre>";
         //    print_r($p);
         //   echo "</pre>";
          }
          if(isset($_POST['submit5'])){
             $leap=$_POST['len'];
-           echo strlen($leap);
+           echo "<div style='background-color:red;'><p style='color:green;'>".strlen($leap)."</p></div>";
          }
          if(isset($_POST['submit6'])){
             $leap=$_POST['type'];
@@ -64,9 +66,8 @@ padding:5px;">
                     $c++;
                 }
             }
-           echo "Vowels : ",$v;
-           echo "<br>";
-           echo "\nConsonants : ",$c;
+           echo "<div style='background-color:red;'><p style='color:green;'> Vowels : ",$v."</p></div>";
+           echo "\n<div style='background-color:red;'><p style='color:green;'> Consonants : ",$c."</p></div>";
          }
          if(isset($_POST['submit7'])){
             $leap=$_POST['con'];
@@ -102,24 +103,24 @@ padding:5px;">
              
                    }
          }
-           echo $z;
+           echo "<div style='background-color:red;'><p style='color:green;'>".$z."</p></div>";
          }
          if(isset($_POST['submit8'])){
             $leap=$_POST['case'];
-           echo strtoupper($leap);
+           echo "<div style='background-color:red;'><p style='color:green;'>".strtoupper($leap)."</p></div>";
          }
          if(isset($_POST['submit9'])){
             $leap=$_POST['case'];
-           echo strtolower($leap);
+           echo "<div style='background-color:red;'><p style='color:green;'>".strtolower($leap)."</p></div>";
          }if(isset($_POST['submit10'])){
             $leap=$_POST['case'];
-           echo ucwords($leap);
+           echo "<div style='background-color:red;'><p style='color:green;'>".ucwords($leap)."</p></div>";
          }if(isset($_POST['submit11'])){
             $leap=$_POST['case'];
-           echo lcfirst($leap);
+           echo "<div style='background-color:red;'><p style='color:green;'>".lcfirst($leap)."</p></div>";
          }if(isset($_POST['submit12'])){
             $leap=$_POST['case'];
-           echo ucfirst($leap);
+           echo "<div style='background-color:red;'><p style='color:green;'>".ucfirst($leap)."</p></div>";
          }
          if(isset($_POST['submit13'])){
             $leap=$_POST['fact'];
@@ -127,48 +128,48 @@ padding:5px;">
             for($i=1;$i<=$leap;$i++){
                $f=$f*$i;  
             }
-           echo $f;
+           echo "<div style='background-color:red;'><p style='color:green;'>".$f."</p></div>";
          }
          if(isset($_POST['submit14'])){
             $leap=$_POST['ch'];
             if($leap%2==0)
-            echo "Even Number";
+            echo "<div style='background-color:red;'><p style='color:green;'>Even Number</p></div>";
             else 
-            echo "Odd Number";
+            echo "<div style='background-color:red;'><p style='color:green;'>Odd Number</p></div>";
             $c=0;
             for($i=1;$i<=$leap;$i++){
                if($leap==1||$leap==2)
-             {  echo "Prime Number";
+             {  echo "<div style='background-color:red;'><p style='color:green;'>Prime Number</p></div>";
                   break; }
                if($leap%$i==0)
                 $c++;
             }
             if($c==2)
-            echo "Prime Number";
+            echo "<div style='background-color:red;'><p style='color:green;'>Prime Number</p></div>";
          }
          if(isset($_POST['submit15'])){
             $leap=$_POST['age'];
             $b=new DateTime($leap);
             $c=new DateTime(date('m.d.y'));
             $d=$c->diff($b);
-            printf('age : %d years,%d month,%d days',$d->y,$d->m,$d->d);
+            printf("<div style='background-color:red;'><p style='color:green;'>age : %d years,%d month,%d days</p></div>",$d->y,$d->m,$d->d);
          }
          if(isset($_POST['submit16'])){
             $leap=$_POST['bin'];
-           echo decbin($leap);
+           echo "<div style='background-color:red;'><p style='color:green;'>".decbin($leap)."</p></div>";
          }
          if(isset($_POST['submit17'])){
             $leap=$_POST['table'];
             for($i=1;$i<=10;$i++){
                 $p=$leap*$i;
-              echo "{$leap}*{$i}=".$p."<br>";
+              echo "<div style='background-color:red;'><p style='color:green;'>{$leap}*{$i}=".$p."</p></div>";
             }
          }
          if(isset($_POST['submit18'])){
             $leap=$_POST['cnt'];
-            echo "Total Characters: ".strlen($leap)."<br>";
-            echo "Total lines: ".count(explode("\n",$leap))."<br>";
-            echo "Total words: ".count(explode(" ",$leap))."<br>";
+            echo "<div style='background-color:red;'><p style='color:green;'>Total Characters: ".strlen($leap)."</p></div>";
+            echo "<div style='background-color:red;'><p style='color:green;'>Total lines: ".count(explode("\n",$leap))."</p></div>";
+            echo "<div style='background-color:red;'><p style='color:green;'>Total words: ".count(explode(" ",$leap))."</p></div>";
           
          }
          if(isset($_POST['submit19'])){
@@ -185,8 +186,22 @@ padding:5px;">
                   $p[]=$i;   
             }
             for($i=0;$i<count($p);$i++){
-               echo $p[$i];echo '   ';
+               echo "<div style='background-color:red;'><p style='color:green;'>".$p[$i]."</p></div>";echo '   ';
             }
+         }
+         if(isset($_POST['submit20'])){
+            $leap=$_POST['arm'];
+            $l=$leap;$sum=0;
+            while($leap!=0){
+               $d=$leap%10;
+               $sum+=pow($d,3);
+               $leap=$leap/10;
+            }
+            if($l==$sum)
+            echo "<div style='background-color:red;'><p style='color:green;'>Yes it is</p></div>";
+            else 
+            echo "<div style='background-color:red;'><p style='color:green;'>No it's not</p></div>";
+          
          }
 
 ?>
@@ -314,6 +329,14 @@ padding:5px;">
 </fieldset>
 <fieldset>
 <input type="submit" name="submit19" value="Submit">
+</fieldset>
+<br><hr>
+<h3>Check Armstrong Number</h3>
+<fieldset>
+            <input type="number" placeholder="enter Number" name="arm">
+</fieldset>
+<fieldset>
+<input type="submit" name="submit20" value="Submit">
 </fieldset>
 <br><hr>
 </form>
