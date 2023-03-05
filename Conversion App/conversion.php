@@ -18,27 +18,27 @@
 </form>
 <?php
 if(isset($_POST['tem'])){
-//header("Location:/Temperature/temperature.php",true,301);//301 moved permanently
-header("Location:/Temperature/temperature.php");
+//header("Location:/Conversion App/temperature.php",true,301);//301 moved permanently
+header("Location:/Conversion App/temperature.php");
 exit();
 //   session_start(); //to access a session this method is used
 // include("temperature.php"); //using these 2 lines will also show data of temperature.php in this file.
  
 }
 else if(isset($_POST['scale'])){
-    header("Location:/Temperature/scale.php");
+    header("Location:/Conversion App/scale.php");
     exit();  
 }
 else if(isset($_POST['weight'])){
-    header("Location:/Temperature/weight.php");
+    header("Location:/Conversion App/weight.php");
     exit();  
 }
 else if(isset($_POST['currency'])){
-    header("Location:/Temperature/currency.php");
+    header("Location:/Conversion App/currency.php");
     exit();  
 }
 else if(isset($_POST['fluid'])){
-    header("Location:/Temperature/fluid.php");
+    header("Location:/Conversion App/fluid.php");
     exit();  
 }
 ?>

@@ -95,7 +95,7 @@
             </div>  
             </form>
             <?php
-               if(isset($_POST['units1'])){
+               if(isset($_POST['c1'])){
                // $_POST['c2']="hi";
                echo "hi";
                }

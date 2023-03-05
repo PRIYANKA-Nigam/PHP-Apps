@@ -23,49 +23,50 @@ input[type=submit]{
     <body align="center" style="background-color:grey; border-style:solid;border-width:20px;border-color:white;padding:0.25em">
         <h1><b><u>Scale Conversion</u></b></h1>
         <br><br>
-        <form method="POST" >
-        <input type="text" placeholder="Enter Value" name="c1">
-        <select name="operation1">
-<option value="cm">Centimeter</option>
-<option value="in">Inches</option>
-<option value="mm">Millimeter</option>
-<option value="fo">Foot</option>
-<option value="ya">Yard</option>
-<option value="km">Kilometer</option>
-<option value="mi">Miles</option>
-<option value="m">Meter</option>
-</select> 
-<br><br>
-<h2><b>To </b></h2>
-<br><br>
-<div class="b">
-<input type="submit" value="Convert" name="c2" style="width: 180px"  >
-</div>
-<div class="a">
-        <select name="operation2">
-<option value="cm">Centimeter</option>
-<option value="in">Inches</option>
-<option value="mm">Millimeter</option>
-<option value="fo">Foot</option>
-<option value="ya">Yard</option>
-<option value="km">Kilometer</option>
-<option value="mi">Miles</option>
-<option value="m">Meter</option>
-</select> 
-</div>
+        <div>
+     
+        <form action="" method = "POST">
+        <input type="number"name = "a"  required ></br>
+            <select name="operation1"></br>
+                <option value="cm">Centimeter</option>
+                <option value="in">Inches</option>
+                <option value="mm">Millimeter</option>
+                <option value="fo">Foot</option>
+                <option value="ya">Yard</option>
+                <option value="km">Kilometer</option>
+                <option value="mi">Miles</option>
+                <option value="m">Meter</option>
+            </select> 
+            <h2>To</h2>
+           <!-- <input type="number"name = "b"required></br> -->
+          
+            <select name="operation2">
+                <option value="cm">Centimeter</option>
+                <option value="in">Inches</option>
+                <option value="mm">Millimeter</option>
+                <option value="fo">Foot</option>
+                <option value="ya">Yard</option>
+                <option value="km">Kilometer</option>
+                <option value="mi">Miles</option>
+                <option value="m">Meter</option>
+        </select> 
+        <button type="submit">submit</button> </br>
+      
+       
 </form>
+</div>
 <?php
-if(isset($_POST['c2'])){
-        $num=$_POST['c1'];
+
+if(isset($_POST['a'])){
+        $num=$_POST['a'];
         $conv=$_POST['operation2'];
-        $from=$_POST['operation1'];
-        //echo "<h1><b>The value in cm is {$num} </b></h1>";
+        $from=$_POST['operation1']; 
+        $result = 0;
+       
         if($from=="cm"&&$conv=="cm"){
           $result=$num;
-          echo "<h1><b>The value in cm is {$result} </b></h1>";
         }if($from=="cm"&&$conv=="in"){
              $result=($num*0.3937); 
-             echo "<h1><b>The value in inches is {$result} </b></h1>";  
         }if($from=="cm"&&$conv=="mm"){
              $result= ($num*10);
         }if($from=="cm"&&$conv=="fo"){
@@ -198,6 +199,7 @@ if(isset($_POST['c2'])){
         }if($from=="m"&&$conv=="m"){
                 $result=$num;
         }
+        echo '<p>'.$result.'</p>';
 }
 ?>
 </body>
