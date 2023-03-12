@@ -1,0 +1,26 @@
+.container-fluid{
+    border : 8px solid black;
+}
+.row{
+    border : 5px solid rgba(247, 89, 16, 0.493);
+    background-color: pink;
+}
+.col{
+    border : 8px solid rgb(8, 233, 83);
+}
+#head{
+    border : 3px solid rgb(233, 8, 94);
+    
+}
+#head1{
+    border : 3px solid rgb(233, 8, 94);
+    margin-left: 40px;  
+}
+#head2{
+    border : 3px solid rgb(233, 8, 94);
+    margin-left: 15px; 
+}
+#head3{
+    border : 3px solid rgb(233, 8, 94);
+    margin-left: 50px;  
+}
