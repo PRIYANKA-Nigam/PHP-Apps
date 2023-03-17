@@ -12,29 +12,58 @@ if($conn){
 }
 ?>
 <html>
-    <body>
+    <head>
+  <style>
+     h1{
+        background:olive;
+        color: black;
+        text-shadow: 4px 4px  5px yellowgreen;
+     }
+    </style>
+</head>
+    <body align=center>
+        <center>
+            <br><br><hr>
+            <h1><b><u>User Info</u></b></h1>
+          <br><br> 
         <form action="connection.php" method="post">
-            <table border="2">
+            <table border="2" style="border-width:3px;border-color:black;width:40%;height:50%">
+            <tr bgcolor="olivered"> 
+                    <td></td>
+                 </tr>
                 <tr> <td>
                         Enter Username<br>
-                        <input type="text" name="username">
+                        <input type="text" name="username" size="50">
                  </td></tr>
+                 <tr bgcolor="olivered"> 
+                    <td></td>
+                 </tr>
                  <tr> <td>
                         Enter City<br>
-                        <input type="text" name="city">
+                        <input type="text" name="city" size="50">
                  </td></tr>
+                 <tr bgcolor="olivered"> 
+                    <td></td>
+                 </tr>
                  <tr> <td>
                         Enter Email<br>
-                        <input type="text" name="email">
+                        <input type="text" name="email" size="50">
                  </td></tr>
-                 <tr> <td>
-                        <input type="submit" name="submit1" value="Insert">
-                        <input type="submit" name="submit2" value="Delete">
-                        <input type="submit" name="submit3" value="Update">
-                        <input type="submit" name="submit4" value="Display">
+                 <tr bgcolor="olivered"> 
+                    <td></td>
+                 </tr>
+              <tr bgcolor="olivered">   
+                 <td>
+                        <input type="submit" name="submit1" value="Insert" style="width:95px;height:30px;" >
+                        <input type="submit" name="submit2" value="Delete" style="width:95px;height:30px;">
+                        <input type="submit" name="submit3" value="Update" style="width:95px;height:30px;">
+                        <input type="submit" name="submit4" value="Display" style="width:95px;height:30px;">
                  </td>
                 </tr>
-</form>
+                <tr bgcolor="olivered"> 
+                    <td></td>
+                 </tr>
+</form> </center>
 </body>
 </html>
 <?php
