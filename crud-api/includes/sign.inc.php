@@ -83,6 +83,43 @@
   </div></div>
   <br><hr>
   <?php
+  if(isset($_POST['signup'])){
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $username=$_POST['uid'];
+    $password=$_POST['pwd'];
+    $password2=$_POST['pwdrepeat'];
+
+    
+require_once 'dbh.inc.php';
+require_once '../function.inc.php';
+
+if(emptyInputSignUp($name,$email,$username,$password,$password2) !== false){
+    header("location: ../signup.php?error=emptyinput");
+    exit();
+}
+if(invalidUid($username) !== false){
+    header("location: ../signup.php?error=invaliduid");
+    exit();
+}
+if(invalidEmail($email) !== false){
+    header("location: ../signup.php?error=invalidemail");
+    exit();
+}
+if(pwdMatch($password,$password2) !== false){
+    header("location: ../signup.php?error=passwordnotmatching");
+    exit();
+}
+if(uidexists($conn,$username,$email) !== false){
+    header("location: ../signup.php?error=usernametaken");
+    exit();
+}
+
+createuser($conn,$name,$email,$username,$password);
+
+}else {
+    header("location: ../signup.php");
+}
          include("../login.php");
         ?>
     </body>

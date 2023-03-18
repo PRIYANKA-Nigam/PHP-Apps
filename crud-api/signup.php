@@ -1,4 +1,6 @@
-
+<?php
+include('dbh.inc.php');
+?>
 <html>
     <head>
         <title>signup Page</title>
@@ -16,7 +18,7 @@
     <tr bgcolor="olivered" style="text-align:center"> 
         <td>
 <h2>Sign Up</h2><br>
-<form action="includes/sign.inc.php" method="post">
+<form action="login.php" method="post">
   
     <input type="text" name="name" placeholder="full name" style="width:300px;height:40px;" ><br><br>
     <input type="text" name="email" placeholder="Email" style="width:300px;height:40px;" ><br><br>
@@ -29,12 +31,16 @@
 </td> </tr>
 </table>
 <?php
-if(isset($_POST['submit'])){
+if(isset($_POST['signup'])){
     $name=$_POST['name'];
     $email=$_POST['email'];
     $username=$_POST['uid'];
     $password=$_POST['pwd'];
     $password2=$_POST['pwdrepeat'];
+
+    $query ="insert into gtl(username,email,uid,userpwd) values('$name','$email','$username','$password')";
+    mysqli_query($link,$query);
+    echo "Data inserted";
 
    
 }   

@@ -18,6 +18,8 @@ $_SESSION;   //session is a global variable that can be access by any page of a 
     <a href="logout.php">Logout</a>
     <h1>This is the index page</h1>
     <br>
-    hello , <?php echo $user_data['user_name'];  ?>
+    hello , <?php echo $user_data['user_name'];
+             echo "<br>";
+    echo  $_SESSION['user_id']?>
 </body>
 </html>

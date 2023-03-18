@@ -1,5 +1,5 @@
 <?php
-include('includes/dbh.inc.php');
+include('dbh.inc.php');
 
 
 function emptyInputSignUp($name,$email,$username,$password,$password2){ 
@@ -68,7 +68,7 @@ return $result;
 }
 
 function createuser($conn,$name,$email,$username,$password){ 
-    $sql="INSERT INTO gtl(username,email,uid,userpwd)) VALUES(?,?,?,?);";
+    $sql="INSERT INTO gtl(username,email,uid,userpwd) VALUES(?,?,?,?);";
     $stmt=mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$sql)){
 header("location: ../signup.php?error=stmtfailed");
