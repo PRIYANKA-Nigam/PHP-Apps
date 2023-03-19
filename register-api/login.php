@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     $user_name=$_POST['user_name'];
     $password=$_POST['password'];
     if(!empty($user_name) && !empty($password) && !is_numeric($user_name)){
-           $query ="select * from users where user_name='$user_name' limit 1";
+           $query ="select * from users where user_name='$user_name' and password='$password' limit 1";
           $result= mysqli_query($con,$query);
           if($result){
             if($result && mysqli_num_rows($result)>0){
@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
                 }
             }
           }  
-          echo "wrong username or password!"; 
+          echo "Wrong Username or Password !!!"; 
     }
     else{
         echo "Please enter some valid information!";

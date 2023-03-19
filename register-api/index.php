@@ -21,5 +21,6 @@ $_SESSION;   //session is a global variable that can be access by any page of a 
     hello , <?php echo $user_data['user_name'];
              echo "<br>";
     echo  $_SESSION['user_id']?>
+    <img src="<?php echo $user_data['image_name']; ?>" width="100" height="100">
 </body>
 </html>
