@@ -18,7 +18,7 @@ include('dbh.inc.php');
     background: blueviolet;  
 }
 .p-6{
-    align:right;
+   margin: auto;
    text-align:right;
 }
 
@@ -109,23 +109,22 @@ $flag=false;
    $n1=$_POST['name'];
    $p1=$_POST['pwd'];
    if(isset($_POST['Login'])){
-    // if(strcasecmp($n1,$email)==0 || strcasecmp($n1,$username)==0){
-    //     if(strcasecmp($p1,$password)==0)
-    //    {  $flag=true;
-    //     header("location:new.php");
-    //     exit();
-    //     }
-    // }
-    if(($n1==$email) || ($n1==$username)){
-        if($n2==$password){
-            //header("location:new.php");
-            echo "$email and $name";
-                exit();
+    if(!empty($user_name) && !empty($password) && !is_numeric($user_name)){
+      $query ="select * from gtl where username='$user_name' and userpwd='$password' limit 1";
+     $result= mysqli_query($con,$query);
+     if($result){
+       if($result && mysqli_num_rows($result)>0){
+           $user_data=mysqli_fetch_assoc($result);
+           if($user_data['password']===$password){
+            header("Location: new.php");
+            die;
         }
     }
-    
+  }  
+  echo "Wrong Username or Password !!!"; 
 }
-$flag=false;
+}
+
 }
 
    

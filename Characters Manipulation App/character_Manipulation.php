@@ -6,8 +6,17 @@
     <body>
 <div class="container" style="width: 1150px;height: 550px;line-height:3em;overflow:scroll;border:thin #000 solid;
 padding:5px;">
+<div style="background-color:blue">
+<marquee behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start();"><b><center>PHP Basics</center></b>
+</marquee>
+<marquee behavior="scroll" direction="down" onmouseover="this.stop();" onmouseout="this.start();"><b><center>PHP Basics</center></b>
+</marquee>
+<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"><b>PHP Basics</b>
+</marquee>
+<marquee behavior="scroll" direction="right" onmouseover="this.stop();" onmouseout="this.start();"><b>PHP Basics</b>
+</marquee> </div>
+<hr>
     <form id="contact" action=""  method="post">
-        <h3>Check Pallindrome</h3>
         <h4>
         <?php
          if(isset($_POST['submit'])){
@@ -203,9 +212,48 @@ padding:5px;">
             echo "<div style='background-color:red;'><p style='color:green;'>No it's not</p></div>";
           
          }
+         if(isset($_POST['submit21'])){
+          $s=$_POST['rem'];
+          $st_array =explode(" ",$s);
+          $final=array_unique($st_array);
+          $f=implode(" ",$final);
+          echo '<h3><b>String with Duplicate word - </b>'.$s.'</h3>';
+          echo '<h3><b>String with Unique word - </b>'.$f.'</h3>';
+
+         }
+         if(isset($_POST['submit22'])){
+         $str=" Hi , My name is Priyanka.Working as a developer in app development.My hoeby is to code";
+         $a=array("is","a","to","develop");
+         foreach($a as $w){
+            echo $w.' occurred' . substr_count(strtolower($str),$w)." times.<br/>";
+         }
+
+         }
+         if(isset($_POST['submit23'])){
+            $s=$_POST['search'];
+            $a=array('jpeg','jpg','png','gif');
+            if(in_array($s,$a)){
+               echo "Found such extension";
+            }else{
+               echo "not found";
+            }
+   
+            }
+            if(isset($_POST['submit24'])){
+               if(!empty($_POST['search'])){
+                  echo '<h3>You selected following languages</h3>';
+                  foreach($_POST['search'] as $lang){
+                     echo '<p>'.$lang.'</p>';
+                  }
+               }else{
+                  echo 'please select atleast one language';
+               }
+            }
+   
 
 ?>
 </h4>
+<h3>Check Pallindrome</h3>
         <fieldset>
             <!-- <textarea placeholder="Type data here ......" name="pallin"> </textarea> -->
             <input type="text" name="pallin">
@@ -337,6 +385,44 @@ padding:5px;">
 </fieldset>
 <fieldset>
 <input type="submit" name="submit20" value="Submit">
+</fieldset>
+<br><hr>
+<h3>Remove Duplicate Words</h3>
+<fieldset>
+<textarea rows="6" cols="60" name="rem" value="Enter Text">
+        </textarea>
+</fieldset>
+<fieldset>
+<input type="submit" name="submit21" value="Submit">
+</fieldset>
+<br><hr>
+<h3>Count Array of specific words from String</h3>
+<fieldset>
+   Hi , My name is Priyanka.Working as a developer in app development.My hoeby is to code.
+</fieldset>
+<fieldset>
+<input type="submit" name="submit22" value="Submit">
+</fieldset>
+<br><hr>
+<h3>Search Array field from Input String</h3>
+<fieldset>
+<input type="text" name="search" placeholder="jpg,png,gif,jpeg input">
+</fieldset>
+<fieldset>
+<input type="submit" name="submit23" value="Submit">
+</fieldset>
+<br><hr>
+<h3>Accept multiple checkbox Values at once</h3>
+<fieldset>
+<p><input type="checkbox" name="search[]" value="C"/>C</p>
+<p><input type="checkbox" name="search[]" value="C++"/>C++</p>
+<p><input type="checkbox" name="search[]" value="Java"/>Java</p>
+<p><input type="checkbox" name="search[]" value="Spring"/>Spring</p>
+<p><input type="checkbox" name="search[]" value="PHP"/>PHP</p>
+<p><input type="checkbox" name="search[]" value="Git"/>Git</p>
+</fieldset>
+<fieldset>
+<input type="submit" name="submit24" value="Submit">
 </fieldset>
 <br><hr>
 </form>

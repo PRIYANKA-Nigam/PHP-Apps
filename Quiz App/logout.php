@@ -6,6 +6,7 @@ if(isset($_SESSION['user_id'])){
 }  
 // or
 // session_unset();
+// session_destroy();
 header("Location: login.php");
 die;
 ?>

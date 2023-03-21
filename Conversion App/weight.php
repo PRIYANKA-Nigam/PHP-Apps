@@ -25,7 +25,7 @@
                     left: 5px;
                     height: 50px;
                     width: 100px;
-                    padding: 10px;15px;
+                    padding: 10px 15px;
                     background-color:black;
                     color:white;
                     

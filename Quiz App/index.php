@@ -5,7 +5,13 @@ include("connection.php");
 include("function.php");
 $user_data= check_login($con);
 $_SESSION;   //session is a global variable that can be access by any page of a website
-
+// if(isset($_SESSION['user_id'])){
+//     if((time()- $_SESSION['last_login_timestamp'])>60) {
+//         header("location:logout.php");
+//     }
+// }else{
+//     header("location:login.php");
+// }
 ?>
 
 
@@ -49,7 +55,10 @@ Best of Luck :)</h4>
 </div><br>
 <form action="result.php" method="post">
 <?php
-for($i=1;$i<6;$i++){
+$q="select * from questions";
+$query=mysqli_query($con,$q); 
+$num= mysqli_num_rows($query);
+for($i=1;$i<=$num;$i++){
 $q="select * from questions where qid=$i";
 $query=mysqli_query($con,$q);
 while($rows=mysqli_fetch_array($query)){
