@@ -18,6 +18,14 @@
     width: 200px;
 
 }
+.c{
+    background-color: black;
+    width: 500px;
+    margin: auto;
+    text-align: left;
+    color: white;
+    padding-top: 10px;
+}
 #but{
     margin-left: 200px;
     width: 100px;
@@ -29,13 +37,48 @@
     <body align="center">
         <div class="b">
     <h1 style="color:white;background:black"><center><b><u>Input Form</center></u></b></h1>
+        </div> 
+        <?php
+           if(isset($_POST['Upload'])){
+             $im=isset($_FILES['img'])?$_FILES['img']:null; 
+ $img =isset($_FILES['img']['name'])?$_FILES['img']['name']:null;
+ $tmp_img=isset($_FILES['img']['tmp_name'])? $_FILES['img']['tmp_name']:null;
+ $img_error=isset($_FILES['img']['error'])?$_FILES['img']['error']:null;
+ $folder='upload/';  $final=$folder.$img;
+ $ext=pathinfo($img,PATHINFO_EXTENSION);
+ if($img_error==0){
+     $final=$folder.$img;
+     $newFile=time()."_".$img;  
+   //  move_uploaded_file($file_tmp,'files/'.$newFile);
+     move_uploaded_file($tmp_img,'upload/'.$newFile);
+     echo "File Uploaded Successfully";
+     header("location:form_pdf.php?files=".$img."");
+//      if(isset($_POST['submit']))
+//    {   if(isset($_GET["files"]))
+//     $images=$_GET["files"];
+//      header("location:form_pdf2.php?files=".$img."");
+//     }
+ }else{
+    echo "Upload Error! Please try again";
+ }
+           }
+          
+        ?>
+      
+        <div class="c">
+        <label>Add Pic: </label>
+          <form action="form_pdf.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="img">
+                <input type="submit" name="Upload" value="UPLOAD" ><br>
+            </form>
         </div>
+      
         <div class="a">
-           
         <form action="form_pdf2.php" method="post" >
             Name: <input type="text" name="name" placeholder="Enter Name"><br><br>
             Email: <input type="email" name="email" placeholder="Enter Email"><br><br>
-            Mobile: <input type="number" name="num" placeholder="Enter Contact number"><br><br>
+            Mobile: <input type="tel" name="num" placeholder="Enter Contact number" 
+            required><br><br>
             DOB: <input type="date" name="dob" placeholder="Enter Contact number"><br><br>
                Address: <textarea name="address" placeholder="Enter Address" rows="3" cols="50"> </textarea><br><br>
                State:  <select name="sx">
@@ -199,15 +242,16 @@
           <input type="number" name="exp" />
           <br><br>
           <label>Project Description: </label>
-          <textarea name="pro" placeholder="Enter proj" rows="8" cols="64"> </textarea><br><br>
-          <!-- <label>Add Pic: </label>
-            <input type="file" name="img"> -->
+          <textarea name="pro" placeholder="Enter proj" rows="8" cols="64"> </textarea><br>
+          
             <br><br>
             <input type="submit" name="submit" value="SUBMIT" id="but"><br>
            
         </form>
+        
         </div>
-       
+      
+        
         <!-- <table border="2">
             <tr>
                 <th>Name</th>

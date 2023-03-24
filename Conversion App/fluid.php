@@ -39,7 +39,8 @@
 <option value="ya">Centiliter</option>
 <option value="km">Milliliter</option>
             </select>
-<button type="submit">submit</button> </br>
+<button type="submit" name="sub">submit</button> </br>
+<input type="text" value="<?php echo $result; ?>" name="out">
          <div class="a">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Water_drop_001.jpg/1200px-Water_drop_001.jpg" 
         height="600" width="600" alt="Image resize">
@@ -51,9 +52,9 @@
             <!-- </div>   -->
 </form>
 <?php
+$data=$_POST['operation'];
 $result=0;
 if(isset($_POST['c1'])){
-$data=$_POST['operation'];
 $num=$_POST['c1'];
 echo '<p>'.$result.'</p>';
 switch($data){
@@ -62,31 +63,117 @@ switch($data){
      case "in"   :
          $result=$num/264.172;break;
      case "mm":
-
+          $result=$num*4;
         case "fo":
-
+          $result=$num*40;
             case "ya":
-
+$result=$num*400;
          case "km":
+            $result=$num*4000;
 
 }
 }
 if(isset($_POST['c2'])){
+    $num=$_POST['c2'];
+    echo '<p>'.$result.'</p>';
+    switch($data){
+        case "cm":
+            $result=$num*264.172; break;
+         case "in"   :
+             $result=$num;break;
+         case "mm":
+              $result=$num*1000;
+            case "fo":
+              $result=$num*10000;
+                case "ya":
+    $result=$num*100000;
+             case "km":
+                $result=$num*1000000;
+    
+    }
 
 }
 if(isset($_POST['c3'])){
-
+    $num=$_POST['c3'];
+    echo '<p>'.$result.'</p>';
+    switch($data){
+        case "cm":
+            $result=$num/4; break;
+         case "in"   :
+             $result=$num/1000;break;
+         case "mm":
+              $result=$num;
+            case "fo":
+              $result=$num*10;
+                case "ya":
+    $result=$num*100;
+             case "km":
+                $result=$num*1000;
+    
+    }
 }
 if(isset($_POST['c4'])){
-
+    $num=$_POST['c4'];
+    echo '<p>'.$result.'</p>';
+    switch($data){
+        case "cm":
+            $result=$num/40; break;
+         case "in"   :
+             $result=$num*10000;break;
+         case "mm":
+              $result=$num/10;
+            case "fo":
+              $result=$num;
+                case "ya":
+    $result=$num*10;
+             case "km":
+                $result=$num*100;
+    
+    }
 }
 if(isset($_POST['c5'])){
-
+    $num=$_POST['c5'];
+    echo '<p>'.$result.'</p>';
+    switch($data){
+        case "cm":
+            $result=$num/400; break;
+         case "in"   :
+             $result=$num/1000000;break;
+         case "mm":
+              $result=$num/100;
+            case "fo":
+              $result=$num/10;
+                case "ya":
+    $result=$num;
+             case "km":
+                $result=$num*10;
+    
+    }
 }
 if(isset($_POST['c6'])){
-
+    $num=$_POST['c6'];
+    echo '<p>'.$result.'</p>';
+    switch($data){
+        case "cm":
+            $result=$num/4000; break;
+         case "in"   :
+             $result=$num/1000000;break;
+         case "mm":
+              $result=$num/1000;
+            case "fo":
+              $result=$num/100;
+                case "ya":
+    $result=$num/10;
+             case "km":
+                $result=$num;
+    
+    }
 }
-echo '<p>'.$result.'</p>';
+if(isset($_POST['sub'])){
+    $ans=$_POST['out'];
+    echo '<p>'.$ans.'</p>';
+}
+
 
 ?>
 </body>
