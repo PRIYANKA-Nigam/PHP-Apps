@@ -243,7 +243,8 @@
           <br><br>
           <label>Project Description: </label>
           <textarea name="pro" placeholder="Enter proj" rows="8" cols="64"> </textarea><br>
-          
+          <label>Website Link: </label>(followed by https://)
+          <textarea name="link" placeholder="Enter url"> </textarea>
             <br><br>
             <input type="submit" name="submit" value="SUBMIT" id="but"><br>
            

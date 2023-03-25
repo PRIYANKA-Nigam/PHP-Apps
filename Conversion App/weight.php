@@ -35,12 +35,10 @@
     <body style="background-color:grey; border-style:solid;border-width:20px;border-color:white;padding:0.25em">
         <h1><u>Weight Conversion</u></h1>
         <br><br>
-        <form method="POST" >
+        <form method="post" action="">
         <input type="text" class="app-form-control" placeholder="Enter Value" name="c1">
         <br><br>
-        <input type="radio" name="units" value="gm">
-        <label>Gram</label>
-        <br>
+        <input type="radio" name="units" value="gm"><label>Gram</label><br>
         
         <input type="radio" name="units" value="ton"><label>Ton</label><br>
        
@@ -88,21 +86,27 @@
       
         <input type="radio" name="units1" value="Mg">  <label>MegaGram</label>
             </div>
-            <button class="v" name="sub">CONVERT</button>
+            <input type="submit" name="sub" value="CONVERT" class="v"> 
             <div class="yellow">
             <hr>
-       <input type="text" class="app-form-control" placeholder="Converted Value" name="c2">  
-            </div>  
-            </form>
+       <input type="text" class="app-form-control" placeholder="Converted Value" name="c2" 
+       value="<?php echo $res;   ?>">  
+            </div> 
             <?php
+            $res=0;
                if(isset($_POST['sub'])){
                // $_POST['c2']="hi";
                $val=$_POST['c1'];
                $from=$_POST['units'];
                $to=$_POST['units1'];
-
-               echo "hi";
+               
+               
+               echo "hi<br>";
+               echo $from;
+               echo $to;
                }
-            ?>
+            ?> 
+            </form>
+           
 </body>
 </html>

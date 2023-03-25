@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <HTML>
     <head>
-        <title>Insert PDF</title>
+        <title>Insert Images</title>
         <style media="screen">
 div{
     border: 2px solid black;
@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
     }
 }
 if(isset($_POST['submit2'])){
-    header("location:display_pdf.php");
+    header("location:display_images.php");
 }
 ?>
         </div>

@@ -1,6 +1,6 @@
 <?php
 require("fpdf184/fpdf.php");
-$pdf=new FPDF();
+$pdf=new FPDF();//FPDF is a php class to generate pdf from php code
 //var_dump(get_class_methods($pdf));
 
 //Add a new page

@@ -58,7 +58,7 @@ if(isset($_POST['submit'])){
     }
   }
  }
-
+$url=$_POST['link'];
 
 }
 
@@ -221,6 +221,12 @@ $pdf->Cell(37,10,"Project/s Undertaken",1,0);
 $pdf->SetFont("Arial","I",10);
 $pdf->SetTextColor(0,0,255);
 $pdf->Write(10,$proj);
-
+$pdf->Ln(35);
+$pdf->SetTextColor(0,0,0);
+$pdf->SetFont("Arial","B",10);
+$pdf->Cell(37,10,"Website Link",1,0);
+$pdf->SetFont("Arial","I",10);
+$pdf->SetTextColor(0,0,255);
+$pdf->Cell(100,12,'Link','','','',false,$url);
 $pdf->Output();
 ?>
