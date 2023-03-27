@@ -103,7 +103,9 @@
       if(!empty($username) && !empty($mob))
      { $sql="insert into admin(name,Mob,Bank,Code) values('$username','$mob','$type','$code')";
       mysqli_query($con,$sql);
-      echo "You are registered with $type.A Unique Login Code will be shared to you on your mobile number $mob";}
+      echo "You are registered with $type.A Unique Login Code will be shared to you on your mobile number $mob";
+      // exit(header("location:sendSMS.php?num=$mob&bank=$type&id=$code"));
+    }
       else{
         echo "All fields are required";
       }
@@ -120,7 +122,9 @@
       {if($bal>=2000 ) 
      { $sql="insert into user(name,mob,Bank,acc_num,Balance) values('$username','$mob','$type','$accNo','$bal')";
       mysqli_query($con,$sql);
-      echo "You are registered with $type.Account Number will be shared to you on your mobile number $mob";}
+     echo "You are registered with $type.Account Number will be shared to you on your mobile number $mob";
+        // exit( header("location:sendSMS.php?num=$mob&bank=$type&id=$accNo"));
+    }
       else{
         echo "Please make a minimum deposit of 2000 to register";
       }}else{
