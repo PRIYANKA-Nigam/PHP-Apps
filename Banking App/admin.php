@@ -56,6 +56,8 @@ if(isset($_SESSION['name']) && isset($_SESSION['code'])){
                     <td><?=$row['Balance'] ?></td>
                     <td><?=$row['mode'] ?></td>
                     <td><?=$row['date'] ?></td>
+                    <td style="background-color:green;color:black;width:80px;text-align:center">
+                      <a href="view_user.php?name=<?=$row['acc_num']; ?>&num=<?=$row['name']; ?>">VIEW</a></td> 
                 </tr>
                 <?php $i++;  }?>
             </tbody>
