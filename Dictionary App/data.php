@@ -2,7 +2,6 @@
 include("connection.php");
 $url="simple_english_dictionary.json";
 //echo $url."<br>"; will print simple_english_dictionary.json
-
 $json_str=file_get_contents($url);
 //echo $json_str."<br>";
 $skey='';

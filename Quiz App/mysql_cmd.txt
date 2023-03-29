@@ -12,7 +12,7 @@ C:\xampp\htdocs>cd register-api
 C:\xampp\htdocs\register-api>cd ../../..
 
 C:\>cd xampp/mysql
-
+s;
 C:\xampp\mysql>cd bin
 
 C:\xampp\mysql\bin>mysql -u root -p -h localhost
