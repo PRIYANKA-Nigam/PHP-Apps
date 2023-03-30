@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Display Single PDF</title>
     </head>
     <body>
     
@@ -28,7 +29,11 @@ if(isset($_POST['submit'])){
     }
 
 if(isset($_POST['submit2'])){
-    header("location:pdf_upload2.php");
+   // header("location:pdf_upload2.php");
+   $info=file_get_contents('data/'.$file);
+   ?>
+    <embed type="application/pdf" src="data/<?php  echo $info; ?>"  width="1200" height="600">
+    <?php
 }
 ?>
     </body>

@@ -1,5 +1,5 @@
 <?php
-include("connection.php");
+include("../connection.php");
 $username=$_GET['name'];
 $num=$_GET['num'];
 echo "<h1 align='center'>$num</h1>";

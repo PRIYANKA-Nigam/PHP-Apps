@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("connection.php");
+include("../connection.php");
 if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'])){
 function test_input($data){
     $data=trim($data);

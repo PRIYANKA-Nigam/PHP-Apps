@@ -1,5 +1,5 @@
 <?php
-include("connection.php");
+include("../connection.php");
 $num='';$bank='';$name='';$date='';$code='';
 $sql="select * from admin";
 $res=mysqli_query($con,$sql);

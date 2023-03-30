@@ -5,7 +5,7 @@ echo md5("abcd"); //user
 ?> -->
 <?php
 session_start();
-include("connection.php");
+include("../connection.php");
 if(!isset($_SESSION['username']) && !isset($_SESSION['id'])){
 ?>
 <!Doctype Html>

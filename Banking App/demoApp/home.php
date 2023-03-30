@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("connection.php");
+include("../connection.php");
 if(isset($_SESSION['username']) && isset($_SESSION['id'])){
 ?>
 
@@ -21,7 +21,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['id'])){
     <?php 
 if($_SESSION['role']=='admin'){ ?>
 <div class="card" style="width: 18rem;">
-<img src="image/Priyanka.jpg" class="card-img-top" alt="Admin">
+<img src="../image/Priyanka.jpg" class="card-img-top" alt="Admin">
 <div class="card-body text-center">
 <h5 class="card-title"><?=$_SESSION['name'] ?></h5>
 <a href="logout.php" class="btn btn-primary">Logout</a>
@@ -59,7 +59,7 @@ if($_SESSION['role']=='admin'){ ?>
 </div>
 <?php }else{   ?>
     <div class="card" style="width: 18rem;">
-<img src="image/baby.jpg" class="card-img-top" alt="Admin">
+<img src="../image/baby.jpg" class="card-img-top" alt="Admin">
 <div class="card-body text-center">
 <h5 class="card-title"><?=$_SESSION['name'] ?></h5>
 <a href="logout.php" class="btn btn-primary">Logout</a>

@@ -25,7 +25,7 @@ include("connection.php");
 include("function.php");
 $user_data= check_login($con);
 if(isset($_POST['submit'])){
-    if(!empty($_POST['quizcheck'])){
+    if(!empty($_POST['quizcheck']) ){
         $cnt=count($_POST['quizcheck']);
         $q="select * from questions";
         $query=mysqli_query($con,$q);
