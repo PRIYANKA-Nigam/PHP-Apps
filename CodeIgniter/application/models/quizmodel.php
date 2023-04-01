@@ -11,7 +11,7 @@ class quizmodel extends CI_Model {
 		return $query->result();
 		$data_returned = $query->num_rows;
 		if($data_returned<1){
-			echo "There is no data in th edatabase";
+			echo "There is no data in the database";
 			exit();
 		}
 
