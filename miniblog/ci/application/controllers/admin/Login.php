@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
-	public function index()
+class Login extends CI_Controller { 
+	public function index()  //http://[::1]/miniblog/ci/admin/Login
 	{  //  $this->load->helper('url'); instead write array('url') inside autoload helper
 		if(isset($_SESSION['user_id'])){
 			redirect('admin/dashboard');

@@ -12,7 +12,7 @@
                     echo form_open('form/data_submitted');
                     echo form_label('Question' .'&nbsp;&nbsp;&nbsp;');
                     $data_name= array(
-                        'question'=>'ques',
+                        'name'=>'ques',
                         'id'=>'qid',
                         'class'=>'input_box',
                         'placeholder'=>'Please Enter Question',
@@ -23,15 +23,15 @@
                     echo form_label('Option' . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
                     $data_option= array(
-                        'One'=>'',
-                        'Two'=>'',
-                        'Three'=>''
+                        'One'=>'One',
+                        'Two'=>'Two',
+                        'Three'=>'Three'
                     );
                     echo form_dropdown('select',$data_option,'One',
                     'class="dropdown_box"');
                     echo "<br><br>";
-                    echo form_input($data_option);
-                    echo "<br><br>";
+                    // echo form_input($data_option);
+                    // echo "<br><br>";
                  ?>
                  <?php echo form_submit('submit','
                    Submit',"class='submit'"); ?>
