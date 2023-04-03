@@ -5,9 +5,8 @@ public function __construct(){
     parent::__construct();
     $this->load->model("json_model");
 }
-public function index()
-	{        
-		$this->load->view('view_form');
+public function index(){
+	$this->load->view("view_form");
 	}
     public function data_submitted(){
         $data=array(
@@ -15,6 +14,7 @@ public function index()
             'option'=> $this->input->POST('select'),
 
         );
+
         $json_data['data']=json_encode($data); //data->column name of our emp table of attendance db
         // print_r($json_data);
         // exit;
@@ -26,6 +26,13 @@ public function index()
         }
         $this->load->view("view_form",$data);
     }
-}
 
+    public function seeJson(){
+        $this->load->Model('json_model',"am");
+		$result=$this->am->seeJSON();
+        $data['result']=$result;
+		$this->load->view('view_form',$data);
+    }
+
+    }
 ?>
