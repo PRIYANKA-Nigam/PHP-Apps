@@ -2,25 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends my_controller {
-
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
-		$this->load->view('home');
+		$this->load->model('queries');
+		$chkAdminExists= $this->queries->chkAdminExists();
+		$this->load->view('home',['chkAdminExists' => $chkAdminExists]);
 	}
 	public function adminRegister(){
 		$this->load->model('queries');
@@ -51,4 +37,43 @@ class Welcome extends my_controller {
              $this->adminRegister();
 		}
 	}
+	public function login(){
+		if($this->session->userData("user_id"))
+        return redirect("admin/dashboard");
+		$this->load->view('login');
+	}
+	public function signin(){
+		$this->form_validation->set_rules('password','Password','Required');
+		$this->form_validation->set_rules('email','Email','Required');
+		$this->form_validation->set_error_delimiters('<div class="text-danger">','</div>');
+		if($this->form_validation->run()){
+			$email = $this->input->post('email');
+			$password= sha1( $this->input->post('password'));
+			$this->load->model('queries');
+			$userExists = $this->queries->adminExists($email,$password);
+			// echo '<pre>';
+			// print_r($userExists);
+			// echo '</pre>';
+			if($userExists){
+				$sessionData =[
+                    'user_id'=>$userExists->user_id,
+					'username'=>$userExists->username,
+					'email'=>$userExists->email,
+					'role_id'=>$userExists->role_id,
+				];
+                $this->session->set_userdata($sessionData);
+				return redirect("admin/dashboard");
+			}else{
+                 $this->session->set_flashdata('message','Email or password is incorrect');
+				 return redirect("welcome/login");
+			}
+		}else{
+			$this->login();
+		}
+	}
+	public function logout(){
+		$this->session->unset_userdata("user_id");
+		return redirect("welcome/login");
+	}
+
 }

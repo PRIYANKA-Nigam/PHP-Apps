@@ -1,12 +1,10 @@
 <?php
 include("inc/header.php"); ?>
 <div class="container">
-    <?php echo form_open("welcome/adminSignup" , ['class'=> 'form-horizontal']);   ?>
-<h3 class="display-3" style="text-align: center;">Admin Registration</h3><hr><br>
+    <?php echo form_open("admin/createCoadmin" , ['class'=> 'form-horizontal']);   ?>
+<h3 class="display-3" style="text-align: center;">Add Co-Admin</h3><hr><br>
 <?php  if($msg= $this->session->flashdata('message')):  ?>
-    <div class="row">
         <div class="alert alert-dismissible alert-success"><?php echo $msg;?></div>
-    </div>
     <?php endif;  ?>
 <!-- call to undefined function form_open() is coming to remove this add 'form' inside helper in autoload.php -->
 <div class="row">
@@ -33,6 +31,24 @@ include("inc/header.php"); ?>
 	</div>
 	<div class="col-md-6">
     <?php echo form_error('email','<div class="text-danger">','</div>');?>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+<div class="form-group">
+    <label class="col-md-3 control-label">College Name</label>
+    <select class="col-lg-9" name="college_id">
+      <option value="">Select College</option>
+      <?php if(count($colleges)):  ?>
+        <?php foreach($colleges as $college):?>
+      <option value=<?php echo $college->college_id?>><?php echo $college->collegename?></option>
+       <?php endforeach;?>
+      <?php endif;?>
+    </select>
+</div>
+	</div>
+	<div class="col-md-6">
+    <?php echo form_error('college_id','<div class="text-danger">','</div>');?>
 	</div>
 </div>
 <div class="row">
@@ -95,7 +111,10 @@ include("inc/header.php"); ?>
     <?php echo form_error('confirmPwd','<div class="text-danger">','</div>');?>
 	</div>
 </div>
-<button type="submit" class="btn btn-primary">Register</button>
+
+
+	
+<button type="submit" class="btn btn-primary">ADD</button>
 <?php echo anchor("welcome","BACK" , ['class'=> 'btn btn-primary']);   ?>
 </div>
 <?php echo form_close(); ?>
