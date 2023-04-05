@@ -55,14 +55,27 @@ class Welcome extends my_controller {
 			// print_r($userExists);
 			// echo '</pre>';
 			if($userExists){
-				$sessionData =[
-                    'user_id'=>$userExists->user_id,
-					'username'=>$userExists->username,
-					'email'=>$userExists->email,
-					'role_id'=>$userExists->role_id,
-				];
-                $this->session->set_userdata($sessionData);
-				return redirect("admin/dashboard");
+				if($userExists->role_id=='1'){
+					$sessionData =[
+						'user_id'=>$userExists->user_id,
+						'username'=>$userExists->username,
+						'email'=>$userExists->email,
+						'role_id'=>$userExists->role_id,
+					];
+					$this->session->set_userdata($sessionData);
+					return redirect("admin/dashboard");
+				}else if($userExists->role_id=='2'){
+					$sessionData =[
+						'user_id'=>$userExists->user_id,
+						'username'=>$userExists->username,
+						'email'=>$userExists->email,
+						'college_id'=>$userExists->college_id,
+						'role_id'=>$userExists->role_id,
+					];
+					$this->session->set_userdata($sessionData);
+					return redirect("users/dashboard");
+				}
+				
 			}else{
                  $this->session->set_flashdata('message','Email or password is incorrect');
 				 return redirect("welcome/login");

@@ -131,6 +131,11 @@ class admin extends my_controller {
         $colleges= $this->queries->getColleges();
 		$this->load->view('addCoadmin',['roles' => $roles,'colleges'=> $colleges]);
     }
+    public function coadmins(){
+        $this->load->model('queries');
+        $coadmins = $this->queries->viewAllColleges();
+        $this->load->view('viewCoadmins',['coadmins' => $coadmins]);
+    }
     public function __construct(){
         parent::__construct();
         if(!$this->session->userData("user_id"))
