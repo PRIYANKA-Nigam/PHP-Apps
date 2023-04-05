@@ -28,7 +28,9 @@
     <?php if($role_id=='1'): ?>
   <li><?php echo anchor("admin/dashboard",'Dashboard');?></li>
   <li><?php echo anchor("admin/coadmins",'View Co Admins');?></li>
+  <li><?php echo anchor("welcome/onLeave",'Associates on Leave');?></li>
   <li><?php echo anchor("welcome/logout",'Logout');?></li>
+
   <?php else:  ?>
 		<li><?php echo anchor("welcome/logout",'Logout');?></li>
     <?php endif;  ?>

@@ -18,6 +18,7 @@ class queries extends CI_Model{
     public function registerCoadmin($data){
         return $this->db->insert('users',$data);
     }
+   
     public function viewAllColleges(){
         $this->db->select(['users.user_id','users.email','college.college_id','users.username','users.gender',
         'college.collegename','college.branch','roles.rolename']);
@@ -71,6 +72,42 @@ class queries extends CI_Model{
     }
     public function removeStudent($id){
         return $this->db->delete('student',['id' => $id]);
+    }
+    public function addLeavesType($data){
+            return $this->db->insert('leave_type',$data);
+      }
+
+    public function viewAllLeaves(){
+        $leaves = $this->db->get('leave_type');
+        return $leaves->result(); 
+    } 
+    public function insertLeaves($data){
+        return $this->db->insert('leave',$data);
+    } 
+    public function getLeaves($username){
+        $this->db->select(['leave_type.leave_type','leave.leave_from','leave.leave_to','leave.leave_description']);
+        $this->db->from('leave');
+        $this->db->join('leave_type','leave_type.id=leave.leave_id');
+        $this->db->where(['leave.username'=> $username]);
+        $leaves=$this->db->get();
+        return $leaves->result(); 
+    }
+    public function getCollege(){
+        $this->db->select(['college.collegename','users.college_id','users.username']);
+        $this->db->from('college');
+        $this->db->join('users','users.college_id = college.college_id');
+        $college=$this->db->get();
+        return $college->result();
+    }
+    public function getTotalLeaves(){
+        $this->db->select(['leave_type.leave_type','leave.leave_from','leave.leave_to','leave.leave_description',
+    'leave.id','leave.username','leave.email','college.collegename']);
+        $this->db->from('leave');
+        $this->db->join('users','users.username=leave.username');
+        $this->db->join('college','users.college_id=college.college_id');
+        $this->db->join('leave_type','leave_type.id=leave.leave_id');
+        $leaves=$this->db->get();
+        return $leaves->result(); 
     }
 }
 

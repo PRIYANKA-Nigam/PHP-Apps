@@ -88,5 +88,14 @@ class Welcome extends my_controller {
 		$this->session->unset_userdata("user_id");
 		return redirect("welcome/login");
 	}
-
+    public function onLeave(){
+		$this->load->model('queries');
+		//$college= $this->queries->getCollege();
+		// echo '<pre>';
+		// print_r($college);
+		// echo '</pre>';
+		// exit();
+    $leaves = $this->queries->getTotalLeaves();
+		$this->load->view('onLeave',['leaves' => $leaves]);
+	}
 }

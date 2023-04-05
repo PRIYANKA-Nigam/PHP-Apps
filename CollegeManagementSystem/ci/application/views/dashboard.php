@@ -8,6 +8,7 @@ include("inc/header.php"); ?>
 <hr><br>
 <?php echo anchor("admin/addCollege","ADD COLLEGE",['class'=>'btn btn-primary']);  ?><label > </label>
 <?php echo anchor("admin/addCoadmin","ADD CO-ADMIN",['class'=>'btn btn-primary']);  ?><label > </label>
+<?php echo anchor("admin/addLeaveType","ADD LEAVE TYPE",['class'=>'btn btn-primary']);  ?><label > </label>
 <?php echo anchor("admin/addStudent","ADD STUDENT",['class'=>'btn btn-primary']);  ?>
 <hr>
 <div class="row">

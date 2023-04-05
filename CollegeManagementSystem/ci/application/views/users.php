@@ -5,9 +5,14 @@ include("inc/header.php"); ?>
 <?php  $username=$this->session->userData('username'); ?>
 <?php  $email=$this->session->userData('email'); ?>
 <h4>Welcome <?php echo $username; ?> </h4>
-<hr><br>
-
 <hr>
+<?php echo anchor("users/attendance/","Attendance" , ['class'=> 'btn btn-primary']);   ?>
+<div style="float:right">
+<?php echo anchor("users/applyLeave",'Apply for Leave');?>
+<label> </label> <label> </label> <label> </label> <label> </label>
+<?php echo anchor("users/viewLeave",'View Leaves');?>
+</div><br>
+<hr><br>
 <div class="row">
     <table class="table table-hover">
         <thead>

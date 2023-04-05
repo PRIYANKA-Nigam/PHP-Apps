@@ -136,6 +136,21 @@ class admin extends my_controller {
         $coadmins = $this->queries->viewAllColleges();
         $this->load->view('viewCoadmins',['coadmins' => $coadmins]);
     }
+    public function addLeaveType(){
+        $this->load->model('queries');
+        $leaves = $this->queries->viewAllLeaves();
+        $this->load->view('addLeaveType',['leaves'=> $leaves]);
+    }
+    public function createLeaveType(){
+        $data = $this->input->post();
+        $this->load->model('queries');
+        if($this->queries->addLeavesType($data)){
+           $this->session->set_flashdata('message','Leave created Successfully');
+        }else{
+          $this->session->set_flashdata('message','Failed to create Leave');
+        }
+        return redirect("admin/addLeaveType");
+    }
     public function __construct(){
         parent::__construct();
         if(!$this->session->userData("user_id"))

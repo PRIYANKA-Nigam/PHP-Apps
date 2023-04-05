@@ -82,6 +82,6 @@ include("inc/header.php"); ?>
 </div>
 	
 <button type="submit" class="btn btn-primary">ADD</button>
-<?php echo anchor("welcome","BACK" , ['class'=> 'btn btn-primary']);   ?>
+<?php echo anchor("admin/dashboard","BACK" , ['class'=> 'btn btn-primary']);   ?>
 </div>
 <?php echo form_close(); ?>
