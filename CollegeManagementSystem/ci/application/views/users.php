@@ -4,9 +4,11 @@ include("inc/header.php"); ?>
 <h3 class="display-3" style="text-align: center;"><b>Co-admin Dashboard</b></h3>
 <?php  $username=$this->session->userData('username'); ?>
 <?php  $email=$this->session->userData('email'); ?>
+<?php $college_id = $this->session->userData('college_id'); ?>
+
 <h4>Welcome <?php echo $username; ?> </h4>
 <hr>
-<?php echo anchor("users/attendance/","Attendance" , ['class'=> 'btn btn-primary']);   ?>
+<?php echo anchor("users/attendance/{$college_id}","Attendance" , ['class'=> 'btn btn-primary']);   ?>
 <div style="float:right">
 <?php echo anchor("users/applyLeave",'Apply for Leave');?>
 <label> </label> <label> </label> <label> </label> <label> </label>

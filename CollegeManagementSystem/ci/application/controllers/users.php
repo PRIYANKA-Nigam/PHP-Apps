@@ -30,10 +30,21 @@ public function viewLeave(){
     $leaves = $this->queries->getLeaves($username);
     $this->load->view('viewLeave',['leaves'=> $leaves]);
 }
-public function attendance(){
-    // $this->load->model('queries');
-    // $students = $this->queries->getStudents();
-    // $this->load->view('attendance',['students' => $students]);
-    $this->load->view('attendance');
+public function attendance($college_id){
+    $this->load->model('queries');
+    $students = $this->queries->getStudents($college_id);
+    $collegename = $this->queries->getCollegeName($college_id);
+    $this->load->view('attendance',['students' => $students,'collegename'=> $collegename]);
+    // $this->load->view('attendance');
 }
+public function attendanceHistory($collegename){
+    $this->load->model('queries');
+    $history = $this->queries->getAttendanceHistory($collegename);
+    $this->load->view('attendanceHistory',['history' => $history]); 
+}
+// public function editAttendance($studentname,$date){
+//     $this->load->model('queries');
+//     $history = $this->queries->updateAttendance($studentname,$date);
+//     $this->load->view('editAttendance'); 
+// }
 }

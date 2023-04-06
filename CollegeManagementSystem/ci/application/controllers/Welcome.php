@@ -70,6 +70,7 @@ class Welcome extends my_controller {
 						'username'=>$userExists->username,
 						'email'=>$userExists->email,
 						'college_id'=>$userExists->college_id,
+						// 'collegename' => $userExists->collegename,
 						'role_id'=>$userExists->role_id,
 					];
 					$this->session->set_userdata($sessionData);
@@ -98,4 +99,11 @@ class Welcome extends my_controller {
     $leaves = $this->queries->getTotalLeaves();
 		$this->load->view('onLeave',['leaves' => $leaves]);
 	}
+	public function status(){
+		$this->load->model('queries');
+		$attendance = $this->queries->viewFullStatus();
+		$this->load->view('status',['attendance'=> $attendance]);
+	}
+	
+	
 }

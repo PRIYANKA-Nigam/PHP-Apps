@@ -70,6 +70,18 @@ class queries extends CI_Model{
      return $this->db->where('id',$id)
                      ->update('student',$data);
     }
+    // public function updateAttendance($studentname,$date){
+    //     $this->db->select(['user_attendance.status']);
+    //     $this->db->from('user_attendance');
+    //     $this->db->where(['user_attendance.studentname'=>$studentname,'user_attendance.date'=>$date]);
+    //     $st=$this->db->get();
+    //     $s=$st->row();
+    //     echo '<pre>';
+    //     print_r(($s));
+    //     echo '</pre>';
+    //     exit();
+
+    // }
     public function removeStudent($id){
         return $this->db->delete('student',['id' => $id]);
     }
@@ -92,13 +104,6 @@ class queries extends CI_Model{
         $leaves=$this->db->get();
         return $leaves->result(); 
     }
-    public function getCollege(){
-        $this->db->select(['college.collegename','users.college_id','users.username']);
-        $this->db->from('college');
-        $this->db->join('users','users.college_id = college.college_id');
-        $college=$this->db->get();
-        return $college->result();
-    }
     public function getTotalLeaves(){
         $this->db->select(['leave_type.leave_type','leave.leave_from','leave.leave_to','leave.leave_description',
     'leave.id','leave.username','leave.email','college.collegename']);
@@ -109,6 +114,33 @@ class queries extends CI_Model{
         $leaves=$this->db->get();
         return $leaves->result(); 
     }
+    public function getCollegeName($college_id){
+        $this->db->select(['college.collegename']);
+        $this->db->from('college');
+        $this->db->where(['college.college_id'=>$college_id]);
+        $collegename = $this->db->get();
+        return $collegename->result();
+    }
+   public function getAttendanceHistory($collegename){
+       $this->db->select('*');
+       $this->db->from('user_attendance');
+       $this->db->where('collegename',$collegename);
+       $query =$this->db->get();
+       return $query->result();
+      
+   }
+   public function viewFullStatus(){
+    $this->db->select(['count(*) as total_student','user_attendance.collegename',
+    'user_attendance.date','user_attendance.time','college.college_id','users.username']);
+    $this->db->from('user_attendance');
+    $this->db->join('college','user_attendance.collegename=college.collegename');
+     $this->db->join('users','users.college_id=college.college_id');
+    $this->db->group_by('user_attendance.collegename','user_attendance.date','user_attendance.time');
+     $list= $this->db->get();
+    return $list->result();
+   }
+
+   
 }
 
 ?>

@@ -18,7 +18,23 @@
     <a class="navbar-brand"  href="#" style="color:#fff">College Management System</a></div>
 	<div class="col-lg-2" style="margin-top:15px;" id="bs-example-navbar-collapse-2">
 	<div class="btn-group">
+    <div >
+    <?php
+       $role_id = $this->session->userData('role_id');
+    ?>
+    <?php if($role_id=='1'): ?>
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+ View
+  </button>
+  <ul class="dropdown-menu">
+  
+  <li><?php echo anchor("admin/coadmins",'Co Admins');?></li>
+  <li><?php echo anchor("welcome/onLeave",'Associates on Leave');?></li>
+  <li><?php echo anchor("welcome/status",'Daily status');?></li>
+  <?php endif;  ?>
+  </ul> </div>
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+  style="margin-left: 10px;">
    Settings
   </button>
   <ul class="dropdown-menu">
@@ -27,8 +43,6 @@
     ?>
     <?php if($role_id=='1'): ?>
   <li><?php echo anchor("admin/dashboard",'Dashboard');?></li>
-  <li><?php echo anchor("admin/coadmins",'View Co Admins');?></li>
-  <li><?php echo anchor("welcome/onLeave",'Associates on Leave');?></li>
   <li><?php echo anchor("welcome/logout",'Logout');?></li>
 
   <?php else:  ?>
