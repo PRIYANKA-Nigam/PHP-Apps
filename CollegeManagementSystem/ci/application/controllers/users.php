@@ -42,9 +42,41 @@ public function attendanceHistory($collegename){
     $history = $this->queries->getAttendanceHistory($collegename);
     $this->load->view('attendanceHistory',['history' => $history]); 
 }
-// public function editAttendance($studentname,$date){
-//     $this->load->model('queries');
-//     $history = $this->queries->updateAttendance($studentname,$date);
-//     $this->load->view('editAttendance'); 
-// }
+public function editAttendance($studentname,$date,$collegename){
+    $this->load->model('queries');
+    $history = $this->queries->updateAttendance($studentname,$date,$collegename);
+    if($history){
+        $this->session->set_flashdata('message','Updated Student status Successfully');
+      }else{
+          $this->session->set_flashdata('message','Failed to Update status');
+      }
+      return redirect("users/attendanceHistory/{$collegename}");
+}
+public function deleteAttendance($studentname,$date,$collegename){
+    $this->load->model('queries');
+    $history = $this->queries->DeleteAttendance($studentname,$date,$collegename);
+    if($history){
+        $this->session->set_flashdata('message','Record deleted Successfully');
+      }else{
+          $this->session->set_flashdata('message','Failed to delete record');
+      }
+      return redirect("users/attendanceHistory/{$collegename}");
+}
+public function attendancebyDate($collegename){
+    $date = $this->input->post('date');
+    $this->load->model('queries');
+    $history = $this->queries->getAttendanceHistoryByDate($collegename,$date);
+    $this->load->view('attendanceHistory',['history' => $history]); 
+}
+public function DeleteattendancebyDate($collegename){
+    $date= $this->input->post('date2');
+    $this->load->model('queries');
+    $history = $this->queries->deleteAttendanceHistoryByDate($collegename,$date);
+    if($history){
+        $this->session->set_flashdata('message','Record deleted Successfully');
+      }else{
+          $this->session->set_flashdata('message','Failed to delete record');
+      }
+      return redirect("users/attendanceHistory/{$collegename}");
+}
 }

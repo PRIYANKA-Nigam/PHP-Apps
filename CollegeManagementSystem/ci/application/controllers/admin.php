@@ -151,6 +151,10 @@ class admin extends my_controller {
         }
         return redirect("admin/addLeaveType");
     }
+    public function editLeaveType($leave){
+        $id =$this->input->post('leave_type');
+        
+    }
     public function __construct(){
         parent::__construct();
         if(!$this->session->userData("user_id"))

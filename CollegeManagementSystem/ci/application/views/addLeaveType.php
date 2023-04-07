@@ -22,7 +22,7 @@ include("inc/header.php"); ?>
 <div class="form-group">
     <label class="col-md-3 control-label">Leave</label>
     <div class="col-md-9">
-        <?php echo form_input(['name'=>'leave_type','class'=>'form-control','placeholder'=>'Enter Leave Type','value'=>set_value('leave_type')]); ?>
+        <?php echo form_input(['name'=>'leave_type','id'=>'i', 'class'=>'form-control','placeholder'=>'Enter Leave Type','value'=>set_value('leave_type')]); ?>
     </div>
 </div>
 	</div>
@@ -43,19 +43,72 @@ include("inc/header.php"); ?>
             </div>
          </div>
          <div class="row">
-    <table class="table table-hover" style="margin-left: 25px;">
+    <table class="table table-hover" style="margin-left: 128px;width:80%">
         <thead>
             <tr>
-                <th scope="col">ID</th>
+                <th scope="col">S.No.</th>
                 <th scope="col">Leave Type</th>
+                <!-- <th scope="col">Action</th> -->
                 </tr>
         </thead>
         <tbody>
             <?php if(count($leaves)): ?>
-                <?php foreach($leaves as  $leave):?>
+                <?php foreach($leaves as  $leave):
+                     @$cnt++ ?>
             <tr class="table-active">
-                <td><?php echo $leave->id; ?></td>
+                <td><?php echo $cnt; ?></td>
                 <td><?php echo $leave->leave_type; ?></td>
+                <!-- <td width="35%">
+                    <button class="btn btn-default btn-rounded btn-sm leave" id="l" data-toggle="tooltip"
+                    title="Edit">Edit
+                    <div class="modal" id="header" aria-hidden="true"></div>
+                </button>
+                <script src="https://code.jquery.com/jquery-3.6.4.slim.js" 
+                integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+                    <script>
+                        $(document).ready(function(){
+                            $('.leave').click(function(e){
+                                e.preventDefault();
+                                
+                                confirm =confirm("Are you sure you want to submit it ?");
+                                if(confirm){
+                                    var id =$(this).val();
+                                    var type= $("#i").val();
+                                    var types= $("#lt").val();
+                                    
+
+                                    //alert(id);
+                                    $("#header").html(
+                                        "<div class='modal-dialog'>"+ 
+                                        "<div class='modal-content'>"+
+                                       "<div class='model-header'>"+
+                                        "<button type='' class='close' data-dismiss='modal' aria-hidden='true'>"+
+                                        "<i class='icons-office-52'>Close</i></button>"+
+                                        "<h4 class='modal-title'><strong>Leave Detail</strong></h4></div>"+
+                                        "<form method='post' id='edit'>"+
+                                       "<input type='text' name='ltype' id='lt' placeholder='enter Leave Type' required>"+
+                                       
+                                        "<button type='button' id='bt' class='btn btn-danger btn-embossed' data-dismiss='modal'>"+
+                                        "Submit</button>"+
+                                        "</form>"+
+                                        "</div>"+"</div>"
+                                     );
+                                     $('#header').modal('show');
+                                //    $.ajax({
+                                //     type: "post",
+                                //     url :"/admin/editLeaveType/{$leave->leave_type}"+id,
+                                //     success:function(response){
+                                //      alert("editted");
+                                //      window.location.reload();
+                                //     }
+
+                                //    });
+                                }
+                            });
+                        });
+                       
+                        </script> -->
+                    <?php //echo anchor("admin/editLeaveType/{$leave->leave_type}","EDIT",['class'=>'btn btn-primary']);  ?></td>
                 </tr>
             <?php endforeach;?>
             <?php else:?>

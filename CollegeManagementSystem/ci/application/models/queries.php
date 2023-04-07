@@ -70,18 +70,32 @@ class queries extends CI_Model{
      return $this->db->where('id',$id)
                      ->update('student',$data);
     }
-    // public function updateAttendance($studentname,$date){
-    //     $this->db->select(['user_attendance.status']);
-    //     $this->db->from('user_attendance');
-    //     $this->db->where(['user_attendance.studentname'=>$studentname,'user_attendance.date'=>$date]);
-    //     $st=$this->db->get();
-    //     $s=$st->row();
-    //     echo '<pre>';
-    //     print_r(($s));
-    //     echo '</pre>';
-    //     exit();
-
-    // }
+    public function updateAttendance($studentname,$date,$collegename){
+        $this->db->select(['user_attendance.status']);
+        $this->db->from('user_attendance');
+        $this->db->where(['user_attendance.studentname'=>$studentname,'user_attendance.date'=>$date,
+        'user_attendance.collegename'=>$collegename]);
+        $st=$this->db->get();
+        $s=$st->row();
+        // echo '<pre>';
+        // print_r(($s));
+        // echo '</pre>';
+        // exit();
+        if($s->status=='P'){ $s->status='A';
+            return $this->db->where(['studentname'=>$studentname,'date' => $date,'collegename'=>$collegename])
+            ->update('user_attendance',$s);
+        }else{
+            $s->status='P';
+            return $this->db->where(['studentname'=>$studentname,'date' => $date])
+            ->update('user_attendance',$s);
+        }
+    }
+    public function DeleteAttendance($studentname,$date,$collegename){
+             return $this->db->delete('user_attendance',['studentname'=>$studentname,'date' => $date,'collegename'=>$collegename]) ;
+    }
+    public function deleteAttendanceHistoryByDate($collegename,$date){
+        return $this->db->delete('user_attendance',['date' => $date,'collegename'=>$collegename]) ;
+    }
     public function removeStudent($id){
         return $this->db->delete('student',['id' => $id]);
     }
@@ -128,6 +142,13 @@ class queries extends CI_Model{
        $query =$this->db->get();
        return $query->result();
       
+   }
+   public function getAttendanceHistoryByDate($collegename,$date){
+    $this->db->select('*');
+    $this->db->from('user_attendance');
+    $this->db->where(['collegename'=>$collegename,'date'=>$date]);
+    $query =$this->db->get();
+    return $query->result();
    }
    public function viewFullStatus(){
     $this->db->select(['count(*) as total_student','user_attendance.collegename',
