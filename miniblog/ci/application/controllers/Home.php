@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Home extends CI_Controller { //http://[::1]/miniblog/ci/
 	public function index()
 	{    $this->load->Model('ArticlesModel',"am");
 		$result=$this->am->fetch_all_articles();

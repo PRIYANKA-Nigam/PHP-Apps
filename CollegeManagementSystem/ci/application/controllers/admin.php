@@ -145,19 +145,44 @@ class admin extends my_controller {
         $data = $this->input->post();
         $this->load->model('queries');
         if($this->queries->addLeavesType($data)){
-           $this->session->set_flashdata('message','Leave created Successfully');
+           $this->session->set_flashdata('success','Leave created Successfully');
         }else{
-          $this->session->set_flashdata('message','Failed to create Leave');
+          $this->session->set_flashdata('error','Failed to create Leave');
         }
         return redirect("admin/addLeaveType");
     }
-    public function editLeaveType($leave){
-        $id =$this->input->post('leave_type');
+    public function deleteLeaveType($id){
+        $this->load->model('queries');
+        $status = $this->queries->deleteLeaveType($id);
+        if($status){
+            $this->session->set_flashdata('message','Leave type deleted Successfully');
+         }else{
+           $this->session->set_flashdata('message','Failed to delete');
+         }
+         return redirect("admin/addLeaveType");
         
+    }
+    public function editLeaveType(){
+        $id =$this->input->get('id');
+        $type =$this->input->get('type');
+        $data=array('id'=>$id,'leave_type'=>$type);
+        $this->load->model('queries');
+        $status = $this->queries->updateLeaveType($data,$id);
+        if($status){
+            $this->session->set_flashdata('message','Leave type edited Successfully');
+         }else{
+           $this->session->set_flashdata('message','Failed to edit');
+         }
+         echo $status;
+         die();
+         //return redirect("admin/addLeaveType");
     }
     public function __construct(){
         parent::__construct();
         if(!$this->session->userData("user_id"))
         return redirect("welcome/login");
     }
+
+
+    
 }

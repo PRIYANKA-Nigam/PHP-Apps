@@ -160,8 +160,13 @@ class queries extends CI_Model{
      $list= $this->db->get();
     return $list->result();
    }
-
-   
+   public function updateLeaveType($data,$id){
+    return $this->db->where('id',$id)
+                    ->update('leave_type',$data);
+   }
+   public function deleteLeaveType($id){
+    return $this->db->delete('leave_type',['id' => $id]);
+   }
 }
 
 ?>

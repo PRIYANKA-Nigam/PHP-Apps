@@ -48,6 +48,7 @@
                 <h4 class="title">Enter Info</h4>
             </div>
             <div class="card-body">
+              <form class="contact-form" action="" id="contact-form">
               <div class="form-group">
               <label>Name : </label>
               <input type="text" class="form-control" name="name" id="name" placeholder="Enter name"/>
@@ -69,6 +70,7 @@
                 <input type="button" class="btn btn-primary" id="submitbtn" name="save" value="submit" 
                 onclick="clearfield();">
               </div>
+              </form>
             </div>
             <div class="card-footer">
                  <div id="response">

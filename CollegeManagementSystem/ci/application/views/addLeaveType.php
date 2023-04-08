@@ -1,5 +1,7 @@
 <?php
-include("inc/header.php"); ?>
+include("inc/header.php"); 
+$data ='';
+?>
 
 <div class="content pb-0">
             <div class="animated fadeIn">
@@ -16,6 +18,7 @@ include("inc/header.php"); ?>
         <div class="alert alert-dismissible alert-success"><?php echo $msg;?></div>
     </div>
     <?php endif;  ?>
+
 <!-- call to undefined function form_open() is coming to remove this add 'form' inside helper in autoload.php -->
 <div class="row">
 	<div class="col-md-6">
@@ -47,68 +50,73 @@ include("inc/header.php"); ?>
         <thead>
             <tr>
                 <th scope="col">S.No.</th>
+                <th scope="col">Id</th>
                 <th scope="col">Leave Type</th>
-                <!-- <th scope="col">Action</th> -->
+                <th scope="col" colspan="2">Action</th>
                 </tr>
         </thead>
         <tbody>
             <?php if(count($leaves)): ?>
                 <?php foreach($leaves as  $leave):
-                     @$cnt++ ?>
+                    @$cnt++ ?>
             <tr class="table-active">
                 <td><?php echo $cnt; ?></td>
+                <td><?php echo $leave->id ;?></td>
                 <td><?php echo $leave->leave_type; ?></td>
-                <!-- <td width="35%">
-                    <button class="btn btn-default btn-rounded btn-sm leave" id="l" data-toggle="tooltip"
-                    title="Edit">Edit
-                    <div class="modal" id="header" aria-hidden="true"></div>
-                </button>
-                <script src="https://code.jquery.com/jquery-3.6.4.slim.js" 
-                integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
-                    <script>
-                        $(document).ready(function(){
-                            $('.leave').click(function(e){
-                                e.preventDefault();
-                                
-                                confirm =confirm("Are you sure you want to submit it ?");
-                                if(confirm){
-                                    var id =$(this).val();
-                                    var type= $("#i").val();
-                                    var types= $("#lt").val();
-                                    
+                <td width="10%">
+                <button id="b1" class="btn btn-primary leave" onclick="openDialog(<?php echo $leave->id ;?>)">Edit</button>
+                <p id="msg" data-id="" ></p>
+                <div id="my_dialog" title="Leave Type"><form id=f1>
+                  <p>Leave<input type=text id=t1 name=t1><br>
+                  </form></p>
+    </div>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+    var clicked_id=0;
+   $(document).ready(function() {
+var pos = { my: "center center", at: "center top+150", of: window };
+/////////
+$(function() {
+    $( "#my_dialog" ).dialog({
+autoOpen: false,
+position:pos,
+ buttons: {
+     "Close ": function() {
+      $( this ).dialog( "close" );
+      },
+     "Submit ": function(){
+  $data = $("#t1").val();
+  callApi($data);
+     $( this ).dialog( "close" );
 
-                                    //alert(id);
-                                    $("#header").html(
-                                        "<div class='modal-dialog'>"+ 
-                                        "<div class='modal-content'>"+
-                                       "<div class='model-header'>"+
-                                        "<button type='' class='close' data-dismiss='modal' aria-hidden='true'>"+
-                                        "<i class='icons-office-52'>Close</i></button>"+
-                                        "<h4 class='modal-title'><strong>Leave Detail</strong></h4></div>"+
-                                        "<form method='post' id='edit'>"+
-                                       "<input type='text' name='ltype' id='lt' placeholder='enter Leave Type' required>"+
-                                       
-                                        "<button type='button' id='bt' class='btn btn-danger btn-embossed' data-dismiss='modal'>"+
-                                        "Submit</button>"+
-                                        "</form>"+
-                                        "</div>"+"</div>"
-                                     );
-                                     $('#header').modal('show');
-                                //    $.ajax({
-                                //     type: "post",
-                                //     url :"/admin/editLeaveType/{$leave->leave_type}"+id,
-                                //     success:function(response){
-                                //      alert("editted");
-                                //      window.location.reload();
-                                //     }
 
-                                //    });
-                                }
-                            });
-                        });
-                       
-                        </script> -->
-                    <?php //echo anchor("admin/editLeaveType/{$leave->leave_type}","EDIT",['class'=>'btn btn-primary']);  ?></td>
+     }
+   }
+		});
+});
+
+$(".leave").click(function(){
+  //  var id =$(this).val();
+$( "#my_dialog" ).dialog( "open" );
+})
+})
+function openDialog(id){
+    console.log('id..'+id);
+    clicked_id = id;
+}
+//////
+function callApi(data){
+    console.log('calling..');
+    $.get("http://[::1]/CollegeManagementSystem/ci/index.php/admin/editLeaveType?id="+clicked_id+"&type="+data,
+     function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+    window.location.reload();
+  });
+}
+</script> 
+</td>
+<td width="10%">  <?php echo anchor("admin/deleteLeaveType/{$leave->id}","Delete" , ['class'=> 'btn delete btn-danger']);   ?> </td>
                 </tr>
             <?php endforeach;?>
             <?php else:?>
