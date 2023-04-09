@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Get2Logics Home Page</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -37,50 +37,19 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
-   
+
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Home</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
+  
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
       <a class="nav-link" href="#">Sign out</a>
     </div>
   </div>
 </header>
-<div class="container-fluid">
-  <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
-      <div class="position-sticky pt-3 sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-              <span data-feather="home" class="align-text-bottom"></span>
-            Dashboard
-            </a>
-          </li>
-          <hr class="sidebar-divider">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file" class="align-text-bottom"></span>
-             Add Blog
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart" class="align-text-bottom"></span>
-             View Blog
-            </a>
-          </li>
-        </ul>
+<?php  include('sidebar.php'); ?>
+<div style="margin-left: 100px;">
 
-       
-    
-      </div>
-    </nav>
-                    <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
@@ -92,7 +61,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                     <div class="row">
 
                      
-                          <div class="col-lg-12 mb-4">
+                          <div class="col-lg-6 mb-4">
                              <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Blogs</h6>
@@ -231,11 +200,24 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                                 </div>
                             </div>
                              
-                        </div>
+                      
 
                                 </div>
                             </div>
                         </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="card shadow mb-12">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">In-use Languages(2023)</h6>
+                                </div>
+                                <!-- Card Body -->
+    <div class="card-body">
+          <?php  include('charts.php'); ?>
+    </div>
+</div>
+</div>   </div>
                          <!-- Content Column -->
                          <div class="col-lg-12 mb-4">
 
@@ -484,17 +466,11 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
     <a href="#" class="btn btn-primary">Go Top</a>
   </div>
 </div>
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
+           
+      </div>
         <!-- End of Content Wrapper -->
+        <?php 
+        include('footer.php');
+        ?>
 </body>
 </html>
