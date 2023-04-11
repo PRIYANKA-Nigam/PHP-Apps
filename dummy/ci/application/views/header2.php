@@ -86,21 +86,72 @@
 <div class="container-fluid">
   <div class="row gx-5" >
     <div class="col">
-     <div class="p-3" onclick="location.href='new.php';" style="cursor:pointer;">Blogs</div>
+     <div class="p-3" onclick="location.href='<?= base_url().'Welcome/Blog'?>'" style="cursor:pointer;">Blogs</div>
     </div>   <div class="col-1"></div>
     <div class="col">
-      <div class="p-3" onclick="location.href='new.php';" style="cursor:pointer;">Tutorials</div>
+      <div class="p-3" onclick="location.href='<?= base_url().'Welcome/Tutorials'?>';" style="cursor:pointer;">Tutorials</div>
     </div> <div class="col-1"></div>
     <div class="col">
-      <div class="p-3" onclick="location.href='new.php';" style="cursor:pointer;">Tech links</div>
+      <div class="p-3" onclick="location.href='<?= base_url().'Welcome/Technology'?>';" style="cursor:pointer;">Tech links</div>
     </div>  <div class="col-1"></div>
     <div class="col">
-      <div class="p-3" onclick="location.href='new.php';" style="cursor:pointer;">Quiz</div>
+      <div class="p-3" onclick="location.href='<?= base_url().'Welcome/Quiz'?>';" style="cursor:pointer;">Quiz</div>
     </div> <div class="col-1"></div>
   </div>
 </div>
+
+<div style="background:black;height:500px;width:100%">
+       <div style="position:absolute;bottom:200px;width:100%">
+  <label style="color:white;font-size:80px"><b><i>Get2Logics</i></b></label>
+
+  <div id="carouselExampleIndicators" class="carousel slide">
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <h4 style="color:white;font-size:15px"><i>Enhance your learning and build a strong base.Maintain 
+      a go-getter attitude in your work field and work with a sharp intellect to excel in your career 
+    field.</i></h4>
+    </div>
+    <div class="carousel-item">
+    <h4 style="color:white;font-size:15px"><i>Our website provides contents specific to web-app area and mobile app content too.</i></h4>
+    </div>
+    <div class="carousel-item">
+    <h4 style="color:white;font-size:15px"><i>I have cover various articles related to programming languages which are in high demand now a days.</i></h4>
+    </div>
+    <div class="carousel-item">
+    <h4 style="color:white;font-size:15px"><i>Develop a progressive nature in your daily work life and excel in the field you are making effort.</i></h4>
+    </div>
+  </div>
+ 
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" 
+    aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+</div>
+</div>
+<div style="position:absolute;bottom:0px;width:100%">
+<label style="color:white;padding-right:50px;">Follow us on :</label>
+<a href="https://github.com/PRIYANKA-Nigam" ><img src="github.png" alt="Github" width="65px" height="65px"></a>
+<a href="https://hackerrank.com/ec_1634831038"> <img src="hack.jpg" alt="Hackerrank" width="65px" height="65px"></a>
+<a href="https://twitter.com/PriyankaN2504"><img src="twitter.jpg" alt="twitter" width="65px" height="65px"></a>
+<a href="https://instagram.com/nigampriyanka042"><img src="insta.jpg" alt="Instagram" width="65px" height="65px"></a>
+<a href="https://linkedin.com/in/priyanka-nigam-083247172"><img src="linked.png" alt="Linkedin" width="65px" height="65px"></a>
+<a href="https://facebook.com/priyanka.nigam.9256"><img src="fb.jpg" alt="Facebook" width="65px" height="65px"></a>
+</div>
+</div>
 <hr>
-<h1><center>Page Content</center></h1>
+<h1><center>High Demand Tech domain</center></h1>
 <br>
 <div class="container text-center">
   <div class="row g-2">
@@ -120,7 +171,7 @@
 </div>
     </div>
 
-    <div class="col-5 offset-1">
+    <div class="col-5 offset-2">
       <div class="p-3" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" 
      aria-expanded="false" aria-controls="collapseWidthExample">
       <h1 style="color:white;"><center>Microservices</center></h1>
@@ -137,13 +188,13 @@
 </div>
     </div> 
     </div>
-    <div class="col-5">
-      <div class="p-3" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" 
+    <div class="col-5" style="margin-top:100px">
+      <div class="p-5" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" 
      aria-expanded="false" aria-controls="collapseWidthExample">
       <h1 style="color:white;"><center>Android/IOS Development</center></h1>
       <div style="min-height: 120px;">
   <div class="collapse collapse-horizontal" id="collapseWidthExample">
-    <div class="card card-body" style="width: 300px;">
+    <div class="card card-body" style="width: 400px;">
      There is always a craze in mobile app development. Their are various softwares in market to construct your app in 
      no time and put them in production.Java is widely used well known programming language for android and IOS App development.
      If you are looking for IOS app than Objective-C , Swift could be your best bet.For android Development, Java can be use.However 
@@ -154,13 +205,13 @@
 </div>
     </div> 
     </div>
-    <div class="col-5 offset-1">
+    <div class="col-5 offset-2" style="margin-top:100px">
       <div class="p-3" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" 
      aria-expanded="false" aria-controls="collapseWidthExample">
       <h1 style="color:white;"><center>DevOps Engineering</center></h1>
       <div style="min-height: 120px;">
   <div class="collapse collapse-horizontal" id="collapseWidthExample">
-    <div class="card card-body" style="width: 300px;">
+    <div class="card card-body" style="width: 500px;">
    This is also a high paying job field and is good for the users who have less coding background.Here the DevOps 
    engineer works with the development team to tackle the necessary coding and scripting to connect various 
    applications elements, such as APIs,libraries and softaware development Kits(SDKs) and integrate other components 
@@ -179,7 +230,7 @@
 <!-- <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" 
     data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button> -->
 
-    <br>
+    <br><br><br>
     <hr>
 
     </body>
