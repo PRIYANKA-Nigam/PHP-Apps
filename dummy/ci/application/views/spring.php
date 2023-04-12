@@ -2,7 +2,7 @@
 
 <html>
     <head><title> Blogs</title></head>
-    <body style="margin-left: 350px;">
+    <body style="margin-left: 370px;">
         <h1>Spring content body</h1>
         <br>
     </body>

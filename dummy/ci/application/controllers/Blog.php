@@ -13,12 +13,13 @@ class Blog extends CI_Controller {
         $this->load->view('spring');
     }
     public function Git()
-	{
-        $this->load->view('git');
+	{   $query= $this->db->query("select * from blog order by blogid desc");
+        $data['result'] = $query->result_array();
+        $this->load->view('git',$data);
     }
     public function DevOps()
 	{
-        $this->load->view('devOps');
+        $this->load->view('sidebar5');
     }
     public function Microservice()
 	{
@@ -26,6 +27,34 @@ class Blog extends CI_Controller {
     }
     public function Kafka()
 	{
-        $this->load->view('kafka');
+        $this->load->view('sidebar6');
+    }
+    public function Azure()
+	{
+        $this->load->view('azure');
+    }
+    public function Maven()
+	{
+        $this->load->view('maven');
+    }
+    public function JDBC()
+	{
+        $this->load->view('jdbc');
+    }
+    public function Jar()
+	{
+        $this->load->view('jar');
+    }
+    public function Jira()
+	{
+        $this->load->view('jira');
+    }
+    public function Api()
+	{
+        $this->load->view('api');
+    }
+    public function PHP()
+	{
+        $this->load->view('PHP');
     }
 }

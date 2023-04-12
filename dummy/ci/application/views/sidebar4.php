@@ -28,6 +28,9 @@ integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQS
   <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>     -->
 <div class="container-fluid">
     <div class="row">
+        
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
+<div class="side-bar" >
         <div class="d-flex flex-column justify-content-between col-auto bg-dark min-vh-100">
             <div class="mt-4">
                 <a class="text-white d-none d-sm-inline text-decoration-none d-flex align-items-center ms-4" role="button">
@@ -161,6 +164,8 @@ integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQS
             </div> 
         </div></div>
         </div>
+</div>
+    </nav>
     </div>
 </div>
 </body>

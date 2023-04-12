@@ -19,8 +19,8 @@ class Welcome extends CI_Controller {
 		// $this->load->view('sidebar2');
 		// $this->load->view('sidebar3');
 		// $this->load->view('sidebar4');
-		// $this->load->view('sidebar5');
-		$this->load->view('sidebar6');
+		$this->load->view('sidebar5');
+		// $this->load->view('sidebar6');
 		// $this->load->view('sidebar7');
 	}
 	public function Blog()

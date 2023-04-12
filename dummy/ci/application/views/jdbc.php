@@ -3,110 +3,137 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>JDBC Blogs</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel = "stylesheet" href  = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+ 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
+integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/style.css');    ?>">
     <script src='main.js'></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
-    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" 
-integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" 
-crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/style.css');    ?>">
-<style>
+    <style>
 label{
     text-align: center;
     position: fixed;
     top: 0;
     left: 35%;
+    font-size: 50px;
     /* top:10%; */
-    color: purple;
+    color: white;
 }
 section{
     height: 100vh;
     width: 200vh;
-    display: flex;
+    display: inline-flexbox;
     align-items: left;
-    margin-top: 25px;
-    margin-left: 320px;
-    padding-left: 200px;
-    padding-top: 20px;
+    margin-top: 35px;
+    margin-left: 350px;
+    padding-left: 350px;
+    padding-top: 130px;
     justify-content: center;
     text-transform: uppercase;
 }
-#s1{
-    background: linear-gradient(-45deg,white 30%,yellow 40%);
+#j1{
+    background: linear-gradient(-5deg,white 60%,yellow 0%);
 }
-#s2{
-    background: linear-gradient(-45deg,lightblue 30%,yellow 0%);
+#j2{
+    background: linear-gradient(-5deg,lightblue 60%,yellow 0%);
 }
-#s3{
-    background: linear-gradient(-45deg,lightgreen 30%,yellow 0%);
+#j3{
+    background: linear-gradient(-5deg,lightgreen 60%,yellow 0%);
 }
-#s4{
-    background: linear-gradient(-45deg,purple 30%,yellow 0%);
+#j4{
+    background: linear-gradient(-5deg,purple 60%,yellow 0%);
 }
-#s5{
-    background: linear-gradient(-45deg,crimson 30%,yellow 0%);
+#j5{
+    background: linear-gradient(-5deg,crimson 60%,yellow 0%);
 }
 
 </style>
+
 </head>
-<body >
-   <div class="side-bar" >
-    <div class="menu">
-    <div> <span data-feather="home" class="align-text-bottom" style="margin-left:50px;font-size:30px">
-     Kafka</span><hr></div>
-        <div class="item"> <a href="#s1"><i class="fas fa-desktop"></i>What is Kafka?</a> </div>
-        <div class="item">
-             <a class="sub-btn" href="#s2"><i class="fas fa-table"></i>Kafka<i class="fas fa-angle-right dropdown"></i></a>
-            <div class="sub-menu">
-                <a href="#s2" class="sub-item"><i class="far fa-star"></i>Producer</a>
-                <a href="#s3" class="sub-item"><i class="far fa-star"></i>Consumer</a>
-                <a href="#s4" class="sub-item"><i class="far fa-star"></i>Kafka Topics</a>
-                <a href="#s4" class="sub-item"><i class="far fa-star"></i>Broker</a>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>  
+
+<div class="container-fluid">
+    <div class="row">
+        
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
+<div class="side-bar" >
+        <div class="d-flex flex-column justify-content-between col-auto bg-dark min-vh-100">
+            <div class="mt-4">
+                <a class="text-white d-none d-sm-inline text-decoration-none d-flex align-items-center ms-4" role="button">
+                    <span class="fs-5">JDBC</span>
+                </a>
+                <hr class="text-white">
+                <ul class="nav nav-pills flex-column mt-2 mt-sm-0" id="menu">
+                    
+                    <li class="nav-item">
+                        <a href="#j1" class="nav-link text-white" aria-current="page">
+                            <i class="fa fa-house"></i>
+                            <span class="ms-2 d-none d-sm-inline">What is jdbc.</span>
+                        </a>
+                    </li>
+                    <li class="nav-item disabled">
+                        <a href="#sidemenu" data-bs-toggle="collapse" class="nav-link text-white" aria-current="page">
+                            <i class="fa fa-table"></i>
+                            <span class="ms-2 d-none d-sm-inline">JDBC Statements</span>
+                        </a>
+                      <ul class="nav collapse ms-1 flex-column" id="sidemenu" data-bs-parent="#menu">
+                        <li class="nav-item">
+                        <a href="#j2" class="nav-link active text-white" aria-current="page">Prepared Statement</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#j3" class="nav-link text-white">Statement</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#j4" class="nav-link text-white">Callable Statement</a>
+                        </li>
+                      </ul>
+                    </li>
+                   
+                    <li class="nav-item">
+                    <a href="#j5" class="nav-link text-white" aria-current="page" >
+                        <i class="fa fa-users"></i>
+                        <span class="ms-2 d-none d-sm-inline">JDBC Drivers</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#j6" class="nav-link text-white" aria-current="page" >
+                        <i class="fa fa-users"></i>
+                        <span class="ms-2 d-none d-sm-inline">ResultSet</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#j7" class="nav-link" >Class.forName() Vs RegisterDriver class</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#j8" class="nav-link" >JDBC Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#j9" class="nav-link" >Types of files we can acsess using JDBC. </a>
+                    </li>
+                    <li class="nav-item diabled">
+                    <a href="#" class="nav-link" aria-current="page">Disabled</a>
+                    </li>
+                </ul>
             </div>
-            </div>
-            <div class="item">
-             <a class="sub-btn" href="#s2"><i class="fas fa-table"></i>Kafka APIs<i class="fas fa-angle-right dropdown"></i></a>
-            <div class="sub-menu">
-                <a href="#s2" class="sub-item"><i class="far fa-star"></i>Producer APIs</a>
-                <a href="#s3" class="sub-item"><i class="far fa-star"></i>Consumer APIs</a>
-                <a href="#s4" class="sub-item"><i class="far fa-star"></i>Stream APIs</a>
-                <a href="#s4" class="sub-item"><i class="far fa-star"></i>Connector APIs</a>
-            </div>
-            </div>
-        <div class="item"> <a href="#"><i class="fas fa-desktop"></i>Kafka Connect</a> </div>
-        <div class="item"> <a href="#"><i class="fas fa-info-circle"></i>Kafka Vs Rabbit MQ</a> </div>
-        <div class="item"> <a href="#"><i class="fas fa-info-circle"></i>Kafka Vs Kafka Streams</a> </div>
-        <div class="item"> <a href="#"><i class="fas fa-info-circle"></i>Kafka Vs Rest APIs</a> </div>
-        <div class="item"> <a href="#"><i class="fas fa-th"></i>Requirement of message broker in microservices</a> </div>
-        <!-- <div class="item" > <a class="sub-btn" href="#"><i class="fas fa-cogs"></i>Settings<i class="fas fa-angle-right dropdown"></i></a>
-        <div class="sub-menu">
-                <a href="#" class="sub-item">Sub 1</a>
-                <a href="#" class="sub-item">Sub 2</a>
-                <a href="#" class="sub-item">Sub 3</a>
-    </div>  </div>
-        <div class="item"> <a href="#"><i class="fas fa-info-circle"></i>About</a> </div> -->
+            
+        </div>
+</div>
+    </nav>
     </div>
-   </div>
-   <script type="text/javascript">
-$(document).ready(function(){
-$('.sub-btn').click(function(){
-    $(this).next('.sub-menu').slideToggle();
-    $(this).find('.dropdown').toggleClass('rotate');
-});
-
-});
-
-</script>
-<div >
-<label><b>In-page navigation for sidebar elements</b></label><br><hr>
+</div>
+<label><b>JDBC KT</b></label><br><hr>
 <div class="content" >
-    <section id="s1" >
+    <section id="j1" >
 <h1>i clicked for s1.u also tap for it.</h1>
 What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -134,7 +161,7 @@ except to obtain some advantage from it? But who has any right to find
 fault with a man who chooses to enjoy a pleasure that has no annoying 
 consequences, or one who avoids a pain that produces no resultant pleasure?"
     </section>
-    <section id="s2">
+    <section id="j2">
 <h1>i clicked for s2</h1>
 It is a long established fact that a reader will be distracted by the 
 readable content of a page when looking at its layout. The point of 
@@ -146,7 +173,7 @@ search for 'lorem ipsum' will uncover many web sites still in their
 infancy. Various versions have evolved over the years, sometimes by 
 accident, sometimes on purpose (injected humour and the like).
     </section>
-    <section id="s3">
+    <section id="j3">
 <h1>i clicked for s3</h1>
 Where can I get some?
 There are many variations of passages of Lorem Ipsum available, 
@@ -161,7 +188,7 @@ model sentence structures, to generate Lorem Ipsum which looks reasonable.
 The generated Lorem Ipsum is therefore always free from repetition, 
 injected humour, or non-characteristic words etc.
     </section>
-    <section id="s4">
+    <section id="j4">
 <h1>i clicked for s4</h1>
 The standard Lorem Ipsum passage, used since the 1500s
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
@@ -172,7 +199,7 @@ reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
 culpa qui officia deserunt mollit anim id est laborum."
     </section>
-    <section id="s5">
+    <section id="j5">
 <h1>i clicked for s5</h1>
 "At vero eos et accusamus et iusto odio dignissimos ducimus qui 
 blanditiis praesentium voluptatum deleniti atque corrupti quos 
@@ -189,7 +216,6 @@ earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
 voluptatibus maiores alias consequatur aut perferendis doloribus 
 asperiores repellat."
     </section>
-</div>
 </div>
 </body>
 </html>

@@ -57,7 +57,7 @@
       </div>
       <div class="col-lg-6 mb-4">
           <div class="card bg-danger text-white shadow">
-              <div class="card-body">
+              <div class="card-body" onclick="location.href='<?= base_url().'Blog/JDBC'?>'" style="cursor:pointer;">
               JDBC
                 
               </div>
@@ -65,7 +65,7 @@
       </div>
       <div class="col-lg-6 mb-4">
           <div class="card bg-secondary text-white shadow">
-              <div class="card-body">
+              <div class="card-body" onclick="location.href='<?= base_url().'Blog/Azure'?>'" style="cursor:pointer;">
                  Azure
                  
               </div>
@@ -73,7 +73,7 @@
       </div>
       <div class="col-lg-6 mb-4">
           <div class="card bg-light text-black shadow">
-              <div class="card-body">
+              <div class="card-body" onclick="location.href='<?= base_url().'Blog/PHP'?>'" style="cursor:pointer;">
                  PHP
                 
               </div>
@@ -121,7 +121,7 @@
       </div>
       <div class="col-lg-6 mb-4">
           <div class="card bg-danger text-white shadow">
-              <div class="card-body">
+              <div class="card-body" onclick="location.href='<?= base_url().'Blog/Maven'?>'" style="cursor:pointer;">
                   Maven/Gradle
                  
               </div>
@@ -129,7 +129,7 @@
       </div>
       <div class="col-lg-6 mb-4">
           <div class="card bg-secondary text-white shadow">
-              <div class="card-body">
+              <div class="card-body" onclick="location.href='<?= base_url().'Blog/Api'?>'" style="cursor:pointer;">
                  APIs & Libraries
                  
               </div>
@@ -137,7 +137,7 @@
       </div>
       <div class="col-lg-6 mb-4">
           <div class="card bg-light text-black shadow">
-              <div class="card-body">
+              <div class="card-body" onclick="location.href='<?= base_url().'Blog/Jira'?>'" style="cursor:pointer;">
                  JIRA
                   
               </div>
@@ -145,7 +145,7 @@
       </div>
       <div class="col-lg-6 mb-4">
           <div class="card bg-dark text-white shadow">
-              <div class="card-body">
+              <div class="card-body" onclick="location.href='<?= base_url().'Blog/Jar'?>'" style="cursor:pointer;">
                   JAR/WAR/EAR files
                  
               </div>
