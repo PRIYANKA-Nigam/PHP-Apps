@@ -19,7 +19,7 @@
     width:0.1px;
 }
 .col-5{
-  background: black;
+  background: blueviolet;
   width: 400px;
   height: 160px;
 }

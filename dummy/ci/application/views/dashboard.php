@@ -10,7 +10,50 @@
     <meta name="author" content="">
 
     <title>Get2Logics Home Page</title>
-
+    <style>
+.dot{
+    /* margin-left: 2dp; */
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+   /* margin-top: 50px; */
+   
+}
+.a{
+height: 35px;
+width: 15px;
+}
+  
+  img {
+    max-width: 65%;
+    max-height:10%;
+    float: left;
+  }
+  .image2{
+    max-width: 100%;
+    max-height:10%;
+    float: right;
+    width: 60rem;
+    /* margin-top: 40px; */
+    /* margin-left: 60px; */
+    /* padding-right: 5px; */
+  
+  
+  }
+  
+  .text {
+    font-size: 20px;
+    padding-left: 40px;
+    /* padding-top: 10%; */
+    /* margin-top: 80px; */
+    /* float: left; */
+    display: inline-block;
+    background-color: blueviolet;
+    border-radius: 50%;
+  }
+    </style>
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -29,7 +72,14 @@
 integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+<style>
+/* .mt-30{margin-top: 30px;
+      margin-bottom: 30px;}
+ .mt-100{
+  margin-top: 50px;
+ }      */
 
+</style>
 </head>
 <body id="page-top">
         <!-- Content Wrapper -->
@@ -40,175 +90,105 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
 <div style="margin-left: 100px;">
 <?php include('header2.php'); ?>
 <br><br>
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-top:70px">
+                    <!-- <div class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-top:70px">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div> -->
+                    <div style="background-color:black;width:100%;height:200px">
                     </div>
-              
                     <!-- Content Row -->
-
-                    <div class="row">
-
-                     
-                          <div class="col-lg-6 mb-4">
-                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Blogs</h6>
-                                    
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                           Java
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                           C
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
-                                        <div class="card-body">
-                                           Spring
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
-                                        <div class="card-body">
-                                          Git
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                        JDBC
-                                          
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-secondary text-white shadow">
-                                        <div class="card-body">
-                                           Azure
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-light text-black shadow">
-                                        <div class="card-body">
-                                           PHP
-                                          
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-dark text-white shadow">
-                                        <div class="card-body">
-                                           Android Studio
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                           SQL(Oracle/MySQL)
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                           Microservices
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
-                                        <div class="card-body">
-                                           DevOps
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
-                                        <div class="card-body">
-                                           Kafka
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            Maven/Gradle
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-secondary text-white shadow">
-                                        <div class="card-body">
-                                           APIs & Libraries
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-light text-black shadow">
-                                        <div class="card-body">
-                                           JIRA
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-dark text-white shadow">
-                                        <div class="card-body">
-                                            JAR/WAR/EAR files
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                             
-                      
-
-                                </div>
-                            </div>
+                 
+                    <div class="row" >
+                      <div class="row">
+                      <div class="col-md-8">
+                        <div class="col-md-4">
+                        <div class="text">
+                <label>Confuse to choose right career path for yourself</label>
+            </div>
+                       
                         </div>
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="card shadow mb-12">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">In-use Languages(2023)</h6>
-                                </div>
-                                <!-- Card Body -->
-    <div class="card-body">
-          <?php  include('charts.php'); ?>
+                        <div class="col-md-8">
+         <div class="image">
+                <img src="<?=base_url().'assets/images/carttonRight.jpg'?>" width="200px" height="200px">
+                         </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="col-md-4">
+                        <div class="text">
+                <label>Here is your key.</label>
+            </div>
+                        </div>
+                        <div class="col-md-8">
+                         
+            <div class="image2">
+                <img src="<?=base_url().'assets/images/cartoonLeft.jpg'?>" width="350px" height="250px">
+        </div></div>
+                        </div>
+                        </div>
+                        <div class="row">
+
+<!-- Content Column -->
+<span class="dot"></span><span class="dot"></span>
+<span class="dot a"><h4><center><b style="color:white">Average Salary Path of Tech Roles</b></center></h4></span>
+<span class="dot"></span><span class="dot"></span><br>
+
+<div class="col-lg-8 mb-4">
+
+    <!-- Project Card Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Average Salary per domain</h6>
+        </div>
+        <div class="card-body">
+            <h4 class="small font-weight-bold">DevOps Engineer <span
+                    class="float-right">3-18.8 lakh</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 60%"
+                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">AI Engineer <span
+                    class="float-right">9-21 lakh</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 100%"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">ML Engineer <span
+                    class="float-right">6.5-20 lakh</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 80%"
+                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">Data Science Engineer<span
+                    class="float-right">7-13 lakh</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 60%"
+                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">Big Data Engineer <span
+                    class="float-right">13-20 lakh</span></h4>
+            <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%"
+                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">Mobile App Developer<span
+                    class="float-right">3-12 lakh</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-alert" role="progressbar" style="width: 60%"
+                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">Web Developer <span
+                    class="float-right">3-18 lakh</span></h4>
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 70%"
+                    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+             </div>
+        </div>
+
     </div>
-</div>
-</div>   </div>
-                         <!-- Content Column -->
+               
                          <div class="col-lg-12 mb-4">
 
 <!-- Project Card Example -->
@@ -244,6 +224,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
               </div>
               <h2>xyz</h2>
             </div>
+           
           </div>
         </div>
             <?php
@@ -252,6 +233,19 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
        
         
   </div>
+  <!-- <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav> -->
   </div>
         </div>
         </div>
@@ -415,7 +409,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                             </div>
                         </div>
                     </div>
-</div></div>
+</div></div></div></div>
                     <!-- Content Row -->
                     
             <!-- End of Main Content -->
@@ -458,8 +452,14 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
 </div>
            
       </div>
-      <?php 
-        include('footer.php');
-        ?>
+   
+      <footer class="sticky-footer bg-white">
+      <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2023</span>
+          </div>
+      </div>
+  </footer> 
+        
 </body>
 </html>        

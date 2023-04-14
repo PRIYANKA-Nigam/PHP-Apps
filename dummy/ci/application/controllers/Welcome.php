@@ -19,7 +19,7 @@ class Welcome extends CI_Controller {
 		// $this->load->view('sidebar2');
 		// $this->load->view('sidebar3');
 		// $this->load->view('sidebar4');
-		$this->load->view('sidebar5');
+		$this->load->view('test');
 		// $this->load->view('sidebar6');
 		// $this->load->view('sidebar7');
 	}
@@ -39,6 +39,10 @@ class Welcome extends CI_Controller {
 	public function Technology()
 	{
 		$this->load->view('techLinks');	
+	}
+	public function AppPreview()
+	{
+		$this->load->view('appPreview');	
 	}
 	public function Quiz()
 	{

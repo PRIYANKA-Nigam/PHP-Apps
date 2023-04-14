@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Blog extends CI_Controller {
 
-	public function index()
+	public function Java()
 	{
         $this->load->view('java');
     }
@@ -17,9 +17,13 @@ class Blog extends CI_Controller {
         $data['result'] = $query->result_array();
         $this->load->view('git',$data);
     }
+    public function Git2()
+	{  
+        $this->load->view('git2');
+    }
     public function DevOps()
 	{
-        $this->load->view('sidebar5');
+        $this->load->view('devOps');
     }
     public function Microservice()
 	{
@@ -27,7 +31,7 @@ class Blog extends CI_Controller {
     }
     public function Kafka()
 	{
-        $this->load->view('sidebar6');
+        $this->load->view('kafka');
     }
     public function Azure()
 	{
@@ -56,5 +60,21 @@ class Blog extends CI_Controller {
     public function PHP()
 	{
         $this->load->view('PHP');
+    }
+    public function Jenkins()
+	{
+        $this->load->view('jenkins');
+    }
+    public function SonarQube()
+	{
+        $this->load->view('sonarqube');
+    }
+    public function Spinnaker()
+	{
+        $this->load->view('spinnaker');
+    }
+    public function blogsAjax()
+	{
+        $this->load->view('blogsAjax');
     }
 }

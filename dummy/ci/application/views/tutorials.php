@@ -12,8 +12,9 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
     <div class="row">
+    <a href="<?=base_url().'Welcome/'?>" ><button class="btn btn-success" >Back</button></a> 
     <div class="col-lg-12 mb-4">
-
+          
 <!-- Project Card Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">

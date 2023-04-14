@@ -151,7 +151,10 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                             </div>
                         </div>
                     </div>
-
+                    <a href='<?= base_url().'Blog/Git2'?>' >
+                    <button name="git" class="btn bg-gradient-primary btn-success" style="margin-left:650px;margin-bottom:100px;margin-top:50px">More
+                  </button></a>
+                    
 </body>
 </html>
       

@@ -14,10 +14,20 @@ body{
     background-position: center;
 }
 
+#sidebarMenu{
+  background: rgba(255, 255  , 255, 0.1);
+  backdrop-filter: blur(55px);
+  width: 400px;
+  height: 100vh;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto; */
+}
 .side-bar{
     background: rgba(255, 255  , 255, 0.1);
     backdrop-filter: blur(55px);
-    width: 290px;
+    width: 400px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -29,7 +39,7 @@ left: 0;
 }
 .side-bar .menu{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 5px;
 }
 .side-bar .menu .item a{
 color: #000;
@@ -37,7 +47,7 @@ font-size: 16px;
 text-decoration: none;
 display: block;
 padding: 5px 20px;
-line-height: 20px;
+line-height: 10px;
 }
 
 .side-bar .menu .item a:hover{
@@ -49,9 +59,9 @@ line-height: 20px;
     margin-right: 5px;
 }
 .side-bar .menu .item a .dropdown{
-    position: absolute;
+    position: relative;
     right: 0;
-    margin: 10px;
+    margin: 5px;
     transition: 0.3s ease;
 }
 
@@ -60,7 +70,7 @@ line-height: 20px;
     display: none;
 }
 .side-bar .menu .item .sub-menu .a{
-    padding-left: 20px;
+    padding-left: 10px;
 }
 .rotate{
     transform: rotate(90deg);
@@ -90,7 +100,7 @@ line-height: 20px;
 
   .b-example-vr {
     flex-shrink: 0;
-    width: 1.5rem;
+    width: 2.5rem;
     height: 100vh;
   }
 
@@ -139,7 +149,7 @@ line-height: 20px;
   /* Fixed sidenav, full height */
 .sidenav {
 height: 10%;
-width: 200px;
+width: 270px;
 position: fixed;
 z-index: 1;
 top: 0;
@@ -171,7 +181,7 @@ color: greenyellow;
 
 /* Main content */
 .main {
-margin-left: 200px; /* Same as the width of the sidenav */
+margin-left: 100px; /* Same as the width of the sidenav */
 font-size: 20px; /* Increased text to enable scrolling */
 padding: 0px 10px;
 }
