@@ -21,6 +21,13 @@
    /* margin-top: 50px; */
    
 }
+.dot1{
+  height: 15px;
+    width: 15px;
+    background-color:white;
+    border-radius: 50%;
+    display: inline-block;
+}
 .a{
 height: 35px;
 width: 15px;
@@ -73,12 +80,9 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 <style>
-/* .mt-30{margin-top: 30px;
-      margin-bottom: 30px;}
- .mt-100{
-  margin-top: 50px;
- }      */
-
+.mt-100{margin-top: 50px;}
+.mt-30{margin-top: 30px;}
+.mb-30{margin-bottom: 30px;}
 </style>
 </head>
 <body id="page-top">
@@ -89,13 +93,18 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
     crossorigin="anonymous"></script>
 <div style="margin-left: 100px;">
 <?php include('header2.php'); ?>
-<br><br>
+
                     <!-- <div class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-top:70px">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div> -->
                     <div style="background-color:black;width:100%;height:200px">
+                   <label style="color:white"> /////////////////////////////////////////////////////////////
+                   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</label>
+                   <label style="color:white;margin-top:70px">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</label>
+                   <label style="color:white;margin-top:50px"> /////////////////////////////////////////////////////////////
+                   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</label>
                     </div>
                     <!-- Content Row -->
                  
@@ -133,7 +142,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
 <span class="dot"></span><span class="dot"></span>
 <span class="dot a"><h4><center><b style="color:white">Average Salary Path of Tech Roles</b></center></h4></span>
 <span class="dot"></span><span class="dot"></span><br>
-
+<div class="row">
 <div class="col-lg-8 mb-4">
 
     <!-- Project Card Example -->
@@ -148,20 +157,38 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                 <div class="progress-bar bg-danger" role="progressbar" style="width: 60%"
                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <h4 class="small font-weight-bold">AI Engineer <span
-                    class="float-right">9-21 lakh</span></h4>
+            <h4 class="small font-weight-bold">DevOps Engineer (Entry level)<span
+                    class="float-right">3-7 lakh</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 60%"
+                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">AI Engineer(Experienced) <span
+                    class="float-right">10-21 lakh</span></h4>
             <div class="progress mb-4">
                 <div class="progress-bar bg-warning" role="progressbar" style="width: 100%"
                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <h4 class="small font-weight-bold">ML Engineer <span
+            <h4 class="small font-weight-bold">AI Engineer <span
+                    class="float-right">5-12 lakh</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 100%"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">ML Engineer(Senior) <span
                     class="float-right">6.5-20 lakh</span></h4>
             <div class="progress mb-4">
                 <div class="progress-bar bg-success" role="progressbar" style="width: 80%"
                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
+            <h4 class="small font-weight-bold">ML Engineer(Junior) <span
+                    class="float-right">3-10 lakh</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 80%"
+                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
             <h4 class="small font-weight-bold">Data Science Engineer<span
-                    class="float-right">7-13 lakh</span></h4>
+                    class="float-right">3-10 lakh</span></h4>
             <div class="progress mb-4">
                 <div class="progress-bar bg-info" role="progressbar" style="width: 60%"
                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
@@ -171,21 +198,99 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
             <div class="progress">
                 <div class="progress-bar bg-danger" role="progressbar" style="width: 80%"
                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4 class="small font-weight-bold">Mobile App Developer<span
-                    class="float-right">3-12 lakh</span></h4>
+            </div><br>
+            <h4 class="small font-weight-bold">Mobile App Developer(Fresher)<span
+                    class="float-right">3-6 lakh</span></h4>
             <div class="progress mb-4">
                 <div class="progress-bar bg-alert" role="progressbar" style="width: 60%"
                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <h4 class="small font-weight-bold">Web Developer <span
-                    class="float-right">3-18 lakh</span></h4>
+            <h4 class="small font-weight-bold">Mobile App Developer(Experienced)<span
+                    class="float-right">5-12 lakh</span></h4>
+            <div class="progress mb-4">
+                <div class="progress-bar bg-alert" role="progressbar" style="width: 60%"
+                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">Web Developer(Entry level) <span
+                    class="float-right">3-7 lakh</span></h4>
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 70%"
+                    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="small font-weight-bold">Web Developer(Senior) <span
+                    class="float-right">7-13 lakh</span></h4>
             <div class="progress">
                 <div class="progress-bar bg-warning" role="progressbar" style="width: 70%"
                     aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
              </div>
+            
         </div>
+        
+</div>
+<div class="col-lg-4" style="background:black;height:820px;width:400px;border-radius:20%">
+ <label style="color:white;margin-top:5px;font-size:20px;margin-left:40px"><b>Experience</b></label><br><br><br>
+ <div>
+ <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">4+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-3 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">5+ years ~~~~~~~~~~~~~~~</lebel></div><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-5 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">5+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-4 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-3 years ~~~~~~~~~~~~~~~</lebel></div><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">5+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-4 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">4+ years ~~~~~~~~~~~~~~~</lebel></div><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-4 years ~~~~~~~~~~~~~~~</lebel></div><br>
+       <div>
+       <span class="dot1"></span> 
+   <span class="dot1"></span>
+      <span class="dot1"></span>  
+       <span class="dot1"></span> <label style="color:white;margin-left:12px">5+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+</div>
 
     </div>
                
@@ -198,20 +303,38 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
     </div>
     <div class="card-body">
     <div class="album py-5 bg-light">
-    <div class="container">
+    <div class="container mt-100">
+<h2 class="mb-30">Videos Details</h2>
+        <ul class="list-group sidebar-nav">
+<div class="row">
 
-      <div class="row">
+
+          
         <?php
-          foreach($result as $key=>$value){
-            // print_r($value);
-            ?>
- <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text"><?= $value['vid']?></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <?php
-              $data=$value['url'];
+        $start=0; $current_page=1;
+        $per_page=2; 
+        $record=count($result);  
+        $page=ceil($record/$per_page);
+        if(isset($_GET['start'])){
+          $start = $_GET['start'];
+          if($start<=0){
+            $start=0;
+            $current_page=1;
+          }else{
+            $current_page=$start;
+            $start--;
+            $start = $start*$per_page;
+          }
+         
+        }
+       $sql ="select * from  tutorials limit $start,$per_page";
+       $query = $this->db->query($sql);
+       if($query->num_rows()>0){
+        foreach($query->result() as $value){?>
+          
+          <div class="col-md-6">       
+<li class="list-group-item"> <?php
+              $data=$value->url;
     $final=str_replace('watch?v=','embed/',$data);
     echo "
     <iframe src='$final' 
@@ -220,33 +343,36 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
     allowfullscreen>
     </iframe>
     ";
-    ?>
-              </div>
-              <h2>xyz</h2>
+    ?></li> </div>
+     <div class="col-md-6">    
+    <li>This is my video title.irfh cdnj jdj cdj djc jndj djs ndj hdj bdjhb hdfb dcj 
+      dcnj dnj dnjb cdjh jsdnk cnsdjk sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC
+      nsdsjndc nsdk sdjn
+    </li>  
+     </div>  
+    
+            <?php  } }else { ?>
+             No records Found !!
+              <?php }?>
+         
+          
             </div>
-           
-          </div>
-        </div>
-            <?php
+      </ul> 
+       <ul class="pagination mt-30" >
+        <?php 
+        for($i=1;$i<=$page;$i++){ 
+          $class='';
+          if($current_page==$i){
+            $class='active';
           }
-        ?>
-       
-        
+          ?>
+        <li class="page-item <?php echo $class?>"><a class="page-link" href="?start=<?php echo $i?>"><?=$i?></a></li>
+      <?php } ?>
+    
+       </ul>
+  
   </div>
-  <!-- <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav> -->
-  </div>
+        </div>
         </div>
         </div>
     </div>
@@ -261,148 +387,72 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                                 <!-- Card Body -->
                                 <div class="card-body">
                            <div class="album py-5 bg-light">
-                              <div class="container">
-                                 <div class="row">
-                                    <h1>Android</h1>
-                                 <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
+                           <div class="container mt-100">
+<h2 class="mb-30">Source Code</h2>
+        <ul class="list-group sidebar-nav">
+<div class="row">  
+        <?php
+        $starts=0; $current_page=1;
+        $per_page=4; 
+        $record=count($res);  
+        $page=ceil($record/$per_page);
+      
+        if(isset($_GET['starts'])){
+          $start = $_GET['starts'];
+          if($start<=0){
+            $start=0;
+            $current_page=1;
+          }else{
+            $current_page=$start;
+            $start--;
+            $start = $start*$per_page;
+          }
+         
+        }
+       $sql ="select * from  techlinks limit $start,$per_page";
+       $query = $this->db->query($sql);
+       if($query->num_rows()>0){
+        foreach($query->result() as $value){?>
+           <div class="col-md-4">    
+    <li class="list-group-item active"><?php  echo $value->title ?>
+    </li> <br> 
+     </div>  
+          <div class="col-md-8">       
+<li class="list-group-item"> <?php
+$p=$value->url;
+printf('<a href="%1$s">%1$s</a>',htmlspecialchars($p,ENT_QUOTES));
+    //   echo "<a href='//$p'>click here";
+    //   echo '</a>';
+   
+    ?></li><br> </div>
+    
+    
+            <?php  } }else { ?>
+             No records Found !!
+              <?php }?>
+         
+          
+            </div>
+      </ul> 
+       <ul class="pagination mt-30" >
+        <?php 
+        for($i=1;$i<=$page;$i++){ 
+          $class='';
+          if($current_page==$i){
+            $class='active';
+          }
+          ?>
+        <li class="page-item <?php echo $class?>"><a class="page-link" href="?starts=<?php echo $i?>"><?=$i?></a></li>
+      <?php } ?>
+    
+       </ul>
+  
+  </div>
+        </div>
                                     
-                         </div></div></div></div>
-            <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    </div> </div></div></div>
-                                    <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    
-                         </div></div></div></div>
-            <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    </div> </div></div></div>
-                                    <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    
-                         </div></div></div></div>
-            <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    </div> </div></div></div>
-                                    <h1>PHP</h1>
-                                    <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    
-                         </div></div></div></div>
-            <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    </div> </div></div></div>
-                                    <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    
-                         </div></div></div></div>
-            <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    </div> </div></div></div>
-                                    <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    
-                         </div></div></div></div>
-            <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    </div> </div></div></div>
-                                    <h1>Spring</h1>
-                                    <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    
-                         </div></div></div></div>
-            <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    </div> </div></div></div>
-                                    <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    
-                         </div></div></div></div>
-            <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    </div> </div></div></div>
-                                    <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    
-                         </div></div></div></div>
-            <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">Title</p>
-              <div class="d-flex justify-content-between align-items-center">
-                                        <h1>a</h1>
-                                    </div> </div></div></div>
         </div>
         </div>
+                          </div>
             
                                 </div>
                                 

@@ -98,7 +98,7 @@ section{
    </div>
    <!-- <section class="main">
     <h1>Sidebar Menu with <br>Sub-Menus</h1> -->
-    <label><b>DevOps KT</b></label><br><hr>
+    <label><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br>
 <div class="content" >
     <section id="d1" >
 <h1>i clicked for s1.u also tap for it.</h1>

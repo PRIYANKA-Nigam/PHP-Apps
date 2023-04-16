@@ -316,7 +316,7 @@ integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQS
       </div>
     </nav>
     </div></div>
-    <label><b>Azure</b></label><br><hr>
+    <label style="margin-top:35px"><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br>
 <div class="content" >
     <section id="p1" >
 <h1>i clicked for s1.u also tap for it.</h1>

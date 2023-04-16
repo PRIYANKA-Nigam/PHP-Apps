@@ -22,7 +22,7 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
     <div class="container">
-        <h1>SonarQube</h1><hr><br>
+        <h1><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a> SonarQube</h1><hr><br>
     <div class="row">
 
 

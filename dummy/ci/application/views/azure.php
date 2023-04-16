@@ -264,7 +264,7 @@ section{
     </nav>
   </div>
   </div></div>
-<label><b>Azure</b></label><br><hr>
+<label><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br>
 <div class="content" >
     <section id="a1" >
 <h1>i clicked for s1.u also tap for it.</h1>

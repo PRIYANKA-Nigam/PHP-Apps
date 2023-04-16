@@ -7,7 +7,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -75,6 +77,9 @@ section{
   </style>
 </head>
 <body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+    crossorigin="anonymous"></script>
 <div class="container">
   <div class="row">
 
@@ -99,14 +104,14 @@ section{
               <span style="color:white;margin-left:28px">
 			  Basic properties</span></a>
                   </div></li>
-				  <hr class="sidebar-divider">
+				  <!-- <hr class="sidebar-divider"> -->
 		  <li>
             <div id="popular" class="mainmenu" >
 			<a href="#s2" class="nav-link text-white" aria-current="page">
               <span style="color:white;margin-left:28px">
 			  pom.xml</span></a>
                   </div></li>
-				  <hr class="sidebar-divider">
+				  <!-- <hr class="sidebar-divider"> -->
 		  <li>
             <div id="popular" class="mainmenu" >
 			<a href="#s3" class="nav-link text-white" aria-current="page">
@@ -127,7 +132,7 @@ section{
 	</div>
 </div>
 		  </li>
-		  <hr class="sidebar-divider">
+		  <!-- <hr class="sidebar-divider"> -->
 		  <li>
             <div id="popular" class="mainmenu" >
 			<a href="#s8" class="nav-link text-white" aria-current="page">
@@ -149,35 +154,35 @@ section{
 		</li></ul>
 	</div>
 </div> </li>
-<hr class="sidebar-divider">
+<!-- <hr class="sidebar-divider"> -->
 <li>
 <div id="popular" class="mainmenu" >
 <a href="#s14" class="nav-link text-white" aria-current="page">
               <span style="color:white;margin-left:28px">
         @value annotation</span></a>
 </div></li>
-<hr class="sidebar-divider">
+<!-- <hr class="sidebar-divider"> -->
 <li>
 <div id="popular" class="mainmenu" >
 <a href="#s15" class="nav-link text-white" aria-current="page">
               <span style="color:white;margin-left:28px">
          Actuator</span></a>
 </div></li>
-<hr class="sidebar-divider">
+<!-- <hr class="sidebar-divider"> -->
 <li>
 <div id="popular" class="mainmenu" >
 <a href="#s16" class="nav-link text-white" aria-current="page">
               <span style="color:white;margin-left:28px">
         Spring MVC</span></a>
 </div></li>
-<hr class="sidebar-divider">
+<!-- <hr class="sidebar-divider"> -->
 <li>
 <div id="popular" class="mainmenu" >
 <a href="#s17" class="nav-link text-white" aria-current="page">
               <span style="color:white;margin-left:28px">
          Rest Template</span></a>
 </div></li>
-<hr class="sidebar-divider">
+<!-- <hr class="sidebar-divider"> -->
 <li>
 <div id="popular" class="mainmenu" >
 <a href="#s18" class="nav-link text-white" aria-current="page">
@@ -250,7 +255,7 @@ section{
 		</li></ul>
 	</div>
 </div></li>
-<hr class="sidebar-divider">
+<!-- <hr class="sidebar-divider"> -->
 		  <div id="popular" class="mainmenu" >
 		  <a href="#s50" class="nav-link text-white" aria-current="page">
               <span style="color:white;margin-left:28px">
@@ -263,7 +268,7 @@ section{
 
 </div>
 	</nav></div></div>
-	<label><b>Spring Boot</b></label><br><hr>
+	<label><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br>
 <div class="content" >
     <section id="s1" >
 <h1>i clicked for s1.u also tap for it.</h1>

@@ -22,7 +22,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
 
-
+    <a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a>
 <div class="col-lg-12 mb-4">
                            <div class="card shadow mb-4">
                           <div class="card-header py-3">

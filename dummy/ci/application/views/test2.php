@@ -23,17 +23,17 @@
 <!-- Project Card Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Videos</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Apps</h6>
     </div>
     <div class="card-body">
     <div class="album py-5 bg-light">
     <div class="container mt-100">
-<h2 class="mb-30">Videos Details</h2>
+<h2 class="mb-30">Source Code</h2>
         <ul class="list-group sidebar-nav">
 <div class="row">  
         <?php
         $start=0; $current_page=1;
-        $per_page=2; 
+        $per_page=4; 
         $record=count($result);  
         $page=ceil($record/$per_page);
         if(isset($_GET['start'])){
@@ -48,29 +48,23 @@
           }
          
         }
-       $sql ="select * from  tutorials limit $start,$per_page";
+       $sql ="select * from  techlinks limit $start,$per_page";
        $query = $this->db->query($sql);
        if($query->num_rows()>0){
         foreach($query->result() as $value){?>
-          
-          <div class="col-md-6">       
-<li class="list-group-item"> <?php
-              $data=$value->url;
-    $final=str_replace('watch?v=','embed/',$data);
-    echo "
-    <iframe src='$final' 
-    frameborder='0'
-    allow='autoplay:encrypted-media'
-    allowfullscreen>
-    </iframe>
-    ";
-    ?></li> </div>
-     <div class="col-md-6">    
-    <li>This is my video title.irfh cdnj jdj cdj djc jndj djs ndj hdj bdjhb hdfb dcj 
-      dcnj dnj dnjb cdjh jsdnk cnsdjk sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC
-      nsdsjndc nsdk sdjn
-    </li>  
+           <div class="col-md-4">    
+    <li class="list-group-item active"><?php  echo $value->title ?>
+    </li> <br> 
      </div>  
+          <div class="col-md-8">       
+<li class="list-group-item"> <?php
+$p=$value->url;
+printf('<a href="%1$s">%1$s</a>',htmlspecialchars($p,ENT_QUOTES));
+    //   echo "<a href='//$p'>click here";
+    //   echo '</a>';
+   
+    ?></li><br> </div>
+    
     
             <?php  } }else { ?>
              No records Found !!

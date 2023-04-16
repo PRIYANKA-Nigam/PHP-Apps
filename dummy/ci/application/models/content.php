@@ -6,10 +6,11 @@ class content extends CI_Model{
         return $result->result_array();
     }
 
-    // function fetch_blog_detail($blog_id){
-    //     $result=$this->db->query("select * from articles where blogid='$blog_id'"); 
-    //     return $result->result_array();
-    // }
+    function fetch_all_links(){
+        $res=$this->db->query("select * from  techlinks");
+
+        return $res->result_array();
+    }
 }
 
 ?>

@@ -102,11 +102,11 @@
 
 <div style="background:black;height:500px;width:100%">
        <div style="position:absolute;bottom:200px;width:100%">
-  <label style="color:white;font-size:80px"><b><i>Get2Logics</i></b></label>
+  <label style="color:white;font-size:80px;margin-left:350px"><b><i>Get2Logics</i></b></label>
 
   <div id="carouselExampleIndicators" class="carousel slide">
   
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="margin-left: 100px;">
     <div class="carousel-item active">
     <h4 style="color:white;font-size:15px"><i>Enhance your learning and build a strong base.Maintain 
       a go-getter attitude in your work field and work with a sharp intellect to excel in your career 
@@ -141,17 +141,20 @@
 </div>
 </div>
 <div style="position:absolute;bottom:0px;width:100%">
-<label style="color:white;padding-right:50px;">Follow us on :</label>
-<a href="https://github.com/PRIYANKA-Nigam" ><img src="github.png" alt="Github" width="65px" height="65px"></a>
-<a href="https://hackerrank.com/ec_1634831038"> <img src="hack.jpg" alt="Hackerrank" width="65px" height="65px"></a>
-<a href="https://twitter.com/PriyankaN2504"><img src="twitter.jpg" alt="twitter" width="65px" height="65px"></a>
-<a href="https://instagram.com/nigampriyanka042"><img src="insta.jpg" alt="Instagram" width="65px" height="65px"></a>
-<a href="https://linkedin.com/in/priyanka-nigam-083247172"><img src="linked.png" alt="Linkedin" width="65px" height="65px"></a>
-<a href="https://facebook.com/priyanka.nigam.9256"><img src="fb.jpg" alt="Facebook" width="65px" height="65px"></a>
+<label style="color:white;padding-right:50px;margin-left:450px">Follow us on :</label>
+<div style="margin-left: 350px;">
+<a href="https://github.com/PRIYANKA-Nigam" ><img src="<?=base_url().'github.png'?>" alt="Github" width="65px" height="65px"></a>
+<a href="https://hackerrank.com/ec_1634831038"> <img src="<?=base_url().'hack.jpg'?>" alt="Hackerrank" width="65px" height="65px"></a>
+<a href="https://twitter.com/PriyankaN2504"><img src="<?=base_url().'twitter.jpg'?>" alt="twitter" width="65px" height="65px"></a>
+<a href="https://instagram.com/nigampriyanka042"><img src="<?=base_url().'insta.jpg'?>" alt="Instagram" width="65px" height="65px"></a>
+<a href="https://linkedin.com/in/priyanka-nigam-083247172"><img src="<?=base_url().'linked.png'?>" alt="Linkedin" width="65px" height="65px"></a>
+<a href="https://facebook.com/priyanka.nigam.9256"><img src="<?=base_url().'fb.jpg'?>" alt="Facebook" width="65px" height="65px"></a>
+</div>
 </div>
 </div>
 <hr>
 <h1><center>High Demand Tech domain</center></h1>
+<div style="margin-left:380px">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
 <br>
 <div class="container text-center">
   <div class="row g-2">

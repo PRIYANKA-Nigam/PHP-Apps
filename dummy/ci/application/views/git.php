@@ -22,6 +22,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a>
       <h2>Git Commands</h2>
    
       <div class="table-responsive" style="margin-left:80px">

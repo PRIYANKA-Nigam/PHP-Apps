@@ -131,7 +131,7 @@ integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQS
     </nav>
     </div>
 </div>
-<label><b>JDBC KT</b></label><br><hr>
+<label><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br><hr>
 <div class="content" >
     <section id="j1" >
 <h1>i clicked for s1.u also tap for it.</h1>

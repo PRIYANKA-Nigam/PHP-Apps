@@ -347,8 +347,8 @@ integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQS
       </div>
     </nav>
     </div></div>
-    <div style="margin-top:5px;padding-top:10px;">
-    <label style="background:black"><b>Java Content</b></label><br><hr>
+    <div style="margin-top:15px;padding-top:10px;">
+    <label style="margin-top:35px;" ><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br><hr>
 <div class="content" >
     <section id="j1" >
 <h1>i clicked for s1.u also tap for it.</h1>

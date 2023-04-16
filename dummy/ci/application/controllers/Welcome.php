@@ -9,19 +9,26 @@ class Welcome extends CI_Controller {
 		// print_r($result);
 		// die();
 		$data['result']=$result;
-		//$this->load->view('header',$data);
-		$this->load->view('dashboard',$data);
+		$res=$this->am->fetch_all_links();
+		$data1['result']=$res;
+	
+		
+		$this->load->view('dashboard',['result'=>$result,'res'=>$res]);
 	//	$this->load->view('welcome_message');
 	}
 	public function test()
 	{
-		// $this->load->view('header2');
-		// $this->load->view('sidebar2');
-		// $this->load->view('sidebar3');
-		// $this->load->view('sidebar4');
-		$this->load->view('test');
-		// $this->load->view('sidebar6');
-		// $this->load->view('sidebar7');
+		$this->load->Model('content',"am");
+		$result=$this->am->fetch_all_articles();
+		$data['result']=$result;
+		$this->load->view('test',$data);
+	}
+	public function test2()
+	{
+		$this->load->Model('content',"am");
+		$result=$this->am->fetch_all_links();
+		$data['result']=$result;
+		$this->load->view('test2',$data);
 	}
 	public function Blog()
 	{
