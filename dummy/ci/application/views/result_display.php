@@ -1,10 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+// session_unset();
+//         unset($_SESSION['quiz']);
+//         session_destroy();
+    
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Play Quiz</title>
+	<title>Quiz Result</title>
 </head>
 <body>
 
@@ -29,18 +34,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php array_push($array2,$res->answer); 
               array_push($array3,$res->qid); 
               array_push($array4,$res->question); 
-              array_push($array5,$res->choice1); 
-              array_push($array6,$res->choice2); 
-              array_push($array7,$res->choice3); 
-              array_push($array8,$res->answer); 
+              array_push($array5,$res->option1); 
+              array_push($array6,$res->option2); 
+              array_push($array7,$res->option3); 
+              array_push($array8,$res->option4); 
         
     
     }  ?>
 
     <?php
-    for($i=0;$i<=4;$i++){ ?>
+//echo count($results);
+    for($i=0;$i<count($results);$i++){ ?>
 
-    <form method="post" action="<?php echo base_url();?>index.php/welcome/index">
+    <form method="post" action="<?php echo base_url();?>Welcome/Quiz">
 
 <p><?=$array3[$i]?>.<?=$array4[$i]?></p>
 
@@ -57,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <br><br>
 
 <h2>Your Score: </h2>
-<h1><?=$score?>/5</h1>
+<h1><?=$score?>/<?=count($results)?></h1>
 <input type="submit" value="Play Again">
     </form>
 </div>
