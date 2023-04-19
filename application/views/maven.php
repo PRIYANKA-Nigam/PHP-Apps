@@ -84,48 +84,6 @@ section{
 #m6{
     background: linear-gradient(-50deg,crimson 40%,yellow 40%);
 }
-#m7{
-    background: linear-gradient(-50deg,white 40%,yellow 40%);
-}
-#m8{
-    background: linear-gradient(-50deg,lightblue 40%,yellow 40%);
-}
-#m9{
-    background: linear-gradient(-45deg,lightgreen 40%,yellow 0%);
-}
-#m10{
-    background: linear-gradient(-45deg,purple 40%,yellow 0%);
-}
-#m11{
-    background: linear-gradient(-50deg,crimson 40%,yellow 40%);
-}
-#m12{
-    background: linear-gradient(-50deg,white 40%,yellow 40%);
-}
-#m13{
-    background: linear-gradient(-50deg,lightblue 40%,yellow 40%);
-}
-#m14{
-    background: linear-gradient(-45deg,lightgreen 40%,yellow 0%);
-}
-#m15{
-    background: linear-gradient(-45deg,purple 40%,yellow 0%);
-}
-#m16{
-    background: linear-gradient(-50deg,crimson 40%,yellow 40%);
-}
-#m17{
-    background: linear-gradient(-50deg,white 40%,yellow 40%);
-}
-#m18{
-    background: linear-gradient(-50deg,lightblue 40%,yellow 40%);
-}
-#m19{
-    background: linear-gradient(-45deg,lightgreen 40%,yellow 0%);
-}
-#m20{
-    background: linear-gradient(-45deg,purple 40%,yellow 0%);
-}
 
     </style>
 
@@ -160,7 +118,7 @@ section{
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#m2">
+            <a class="nav-link" href="#m1">
               <span data-feather="file" class="align-text-bottom"></span>
          Maven Vs Gradle
             </a>
@@ -264,18 +222,6 @@ section{
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#m18">
-              <span data-feather="shopping-cart" class="align-text-bottom"></span>
-          Settings.xml
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#m19">
-              <span data-feather="shopping-cart" class="align-text-bottom"></span>
-         Archetype
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#m20">
               <span data-feather="file" class="align-text-bottom"></span>
           Ways to run a spring boot application.
             </a>
@@ -288,334 +234,87 @@ section{
 <label><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br>
 <div class="content" >
     <section id="m1" >
-<h1>What is Maven.</h1>
-Maven is a popular open-source build tool developed by the Apache 
-Group to build, publish, and deploy several projects at once for 
-better project management. <br>
-Maven comes with pre-defined targets for performing certain 
-well-defined tasks such as compilation of code and its packaging. 
-Maven dynamically downloads Java libraries and Maven plug-ins 
-from one or more repositories such as the Maven 2 Central 
-Repository, and stores them in a local cache.
-With Maven, all dependencies of your project are maintained in 
-a single pom.xml file. Maven takes care of downloading these 
-dependencies into the local repositories and makes them available 
-for the project.
-    </section>
-    <section id="m2">
-<h1>Maven Vs Gradle</h1>
-<b>Gradle -</b> It's a build automation tool that is open-source 
-and builds on concepts of Apache Maven and Apache Ant.It is capable
-of building any type of software.It provides support for building,
-testing and deploying softwares on different platform.It allows to 
-write buildscripts with java.It is easy to migrate to gradle from
-maven or other build tools.<br>
-Gradle provides integration with several development tools and servers
-including - eclipse,Intellij,jenkins and android studio.<br><br>
-<b>Maven -</b>Maven is older open-source project management tool
-primarily used for java projects.<br>
-<b>Working difference -</b><br>
-<ul>
-  <li>
-    Gradle is used for large projects while maven is specifically
-    designed for smaller projects.
-  </li>
-  <li>
-    Gradle avoids the work by tracking input and output tasks ans only 
-    runs the task that have been changed.Hence gives a faster
-    performance.Maven doesn't use build cache. thus, its' build time is 
-    slower than gradle.
+<h1>i clicked for s1.u also tap for it.</h1>
+What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 
+1500s, when an unknown printer took a galley of type and scrambled it to 
+make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic 
+typesetting, remaining essentially unchanged. It was popularised in the 
+1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+and more recently with desktop publishing software like Aldus PageMaker 
+including versions of Lorem Ipsum.
 
-  </li>
-</ul>
+"But I must explain to you how all this mistaken idea of denouncing 
+pleasure and praising pain was born and I will give you a complete 
+account of the system, and expound the actual teachings of the great 
+explorer of the truth, the master-builder of human happiness. No one 
+rejects, dislikes, or avoids pleasure itself, because it is pleasure, 
+but because those who do not know how to pursue pleasure rationally 
+encounter consequences that are extremely painful. Nor again is there 
+anyone who loves or pursues or desires to obtain pain of itself, 
+because it is pain, but because occasionally circumstances occur in 
+which toil and pain can procure him some great pleasure. To take a 
+trivial example, which of us ever undertakes laborious physical exercise, 
+except to obtain some advantage from it? But who has any right to find 
+fault with a man who chooses to enjoy a pleasure that has no annoying 
+consequences, or one who avoids a pain that produces no resultant pleasure?"
     </section>
     <section id="m3">
-<h1> Maven Lifecycle Methods</h1>
-A Build Lifecycle is a well-defined sequence of phases, which define 
-the order in which the goals are to be executed.<br>
-When Maven starts building a project, it steps through a defined 
-sequence of phases and executes goals.A goal represents a specific 
-task which contributes to the building and managing of a project. <br><br>
-The Maven build lifecycle has 8-stages by default. These are in a 
-particular Maven lifecycle order, as mentioned below.<br>
-<ul>
-<li>Validation</li>
-<li>Compilation</li>
-<li>Testing</li>
-<li>Packaging</li>
-<li>Integration testing</li>
-<li>Verification</li>
-<li>Installation</li>
-<li>Deployment.</li>
-<ul>   
-<h1>mvn build</h1>
-Maven Build -> It does the dependency management for Eclipse build 
-path based on Maven's pom.xml. The result will probably be a .war 
-file in the target subfolder of your project.( A goal in maven build
- is necessary to specify otherwise errors will come.This goal is 1 of 
- the lifecycle phase.This goal launches the maven web application on 
- tomcat on port 8080 ). Whenever a goal (a specific build task) is to 
- be executed, Maven looks for the configuration details in POM.It 
- resolves Maven dependencies from the Eclipse workspace without 
- installing to local Maven repository (requires dependency project 
- be in same workspace).
+<h1>i clicked for s2</h1>
+It is a long established fact that a reader will be distracted by the 
+readable content of a page when looking at its layout. The point of 
+using Lorem Ipsum is that it has a more-or-less normal distribution of 
+letters, as opposed to using 'Content here, content here', making it 
+look like readable English. Many desktop publishing packages and web 
+page editors now use Lorem Ipsum as their default model text, and a 
+search for 'lorem ipsum' will uncover many web sites still in their 
+infancy. Various versions have evolved over the years, sometimes by 
+accident, sometimes on purpose (injected humour and the like).
     </section>
     <section id="m4">
-<h1>mvn clean</h1>
-Maven clean plugins ->  The Maven Clean Plugin, as the name implies, 
-attempts to clean the files and directories generated by Maven during 
-its build. While there are plugins that generate additional files, 
-the Clean Plugin assumes that these files are generated inside the 
-target directory.<br>
-Maven clean - The first command deletes target directory and then 
-builds all you code and installs artifacts into local repository. 
-It cleans the target folder,clean every file and previous results of 
-the previous builds.
+<h1>i clicked for s3</h1>
+Where can I get some?
+There are many variations of passages of Lorem Ipsum available, 
+but the majority have suffered alteration in some form, by injected 
+humour, or randomised words which don't look even slightly believable. 
+If you are going to use a passage of Lorem Ipsum, you need to be sure 
+there isn't anything embarrassing hidden in the middle of text. All 
+the Lorem Ipsum generators on the Internet tend to repeat predefined 
+chunks as necessary, making this the first true generator on the Internet. 
+It uses a dictionary of over 200 Latin words, combined with a handful of 
+model sentence structures, to generate Lorem Ipsum which looks reasonable. 
+The generated Lorem Ipsum is therefore always free from repetition, 
+injected humour, or non-characteristic words etc.
     </section>
     <section id="m5">
-<h1>mvn install</h1>
-<b>Maven install -</b> Maven install is Maven build with added additional 
-step. That additional step is uploading the result from the Maven 
-build script to your local Maven repository.<br>
-Maven some build lifecycle phases - compile,test,package,install.<br>
-<b>Maven install</b> is one step among the maven lifecycle which copies 
-the packaged binary in your local maven repository<br>
-When you do a Mvn install, it will roughly:<br>
-Generate whatever it needs,<br>
-Compile the sources,<br>
-Copy other resources,<br>
-Create the artifact for your project,<br>
-Run unit tests,<br>
-Copy the artifact to the local Mvn repository (this is usually $HOME/.m2/repository).<br>
-So a Mvn clean install will first clean the target and then run the steps above.
-mvn install is to do the whole build cycle again with validate, compile, 
-test, package, verify and install the created artifacts (e.g. a JAR or WAR file … ) 
-into the local repository (defaults to ${user.home}/.m2/repository)
+<h1>i clicked for s4</h1>
+The standard Lorem Ipsum passage, used since the 1500s
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+culpa qui officia deserunt mollit anim id est laborum."
     </section>
     <section id="m6">
-<h1>mvn deploy</h1>
-install phase installs the package in local/remote maven repository.Deploy
-phase Copies the final package to the remote repository.It will deploy our build , 
-copy the final package to the remote repository or sharing the build package 
-to other developers.
-    </section>
-    <section id="m7">
-<h1>mvn test</h1>
-To run the unit test.This phase tests the compiled source code suitable for 
-testing framework.
-    </section>
-    <section id="m8">
-<h1>mvn package</h1>
-It will compile the code &  packaged it in jar format.This phase creates 
-the JAR/WAR package as mentioned in the packaging in POM.xml.
-    </section>
-    <section id="m9">
-<h1>mvn verify</h1>
-It is for integration test.
-The main difference between mvn verify and mvn test is -<br>
-when you run a Maven goal, it will run any previous goal. The order of basic phases is:
-<ul>
-<li>Validate</li>
-<li>Compile</li>
-<li>Test</li>
-<li>Package</li>
-<li>Verify</li>
-<li>Install</li>
-<li>Deploy</li>
-<ul>
-If you run Test, Maven will execute validate, compile and test.
-Based on this, the first point is that verify includes test.
-TEST - test the compiled source code using a suitable unit testing 
-framework. These tests should not require the code be packaged or deployed
-VERIFY - run any checks on results of integration tests to ensure quality 
-criteria are met.
-    </section>
-    <section id="m11">
-<h1>Maven Commands</h1><br>
-<b>clean install -x -></b> check if there is any error in debug mode for 
-successfully building the maven.<br>
-<b>mvn clean -x -></b> get more information about why our build is failing 
-on using mvn clean.<br>
-<b>mvn compile:</b><br>
-This command is used to compile the project’s source code.<br>
-<b>mvn clean:</b><br>
-Here, the project is cleaned to remove all previous-build files generated.<br>
-<b>mvn test:</b><br>
-With this command, one can run project testing steps.<br>
-<b>mvn test-compile:</b><br>
-This command is used to compile the code from the test source.<br>
-<b>mvn install:</b><br>
-This command helps deploys the packaged WAR/JAR files storing them
-as classes in the local repository.<br>
-<b>mvn package:</b><br>
-With this Maven lifecycle command, one packages or creates a 
-project WAR or JAR file to be able to use a distributable format.<br>
-<b>mvn deploy:</b><br>
-The deploy command occurs after compilation, running project tests, 
-and project building. Here the packaged WAR/JAR files are copied 
-to the remote repository for use by other developers.<br>
-    </section>
-    <section id="m12">
-<h1>Maven Commands</h1><br>
-<b>clean install -x -></b> check if there is any error in debug mode for 
-successfully building the maven.<br>
-<b>mvn clean -x -></b> get more information about why our build is failing 
-on using mvn clean.<br>
-<b>mvn compile:</b><br>
-This command is used to compile the project’s source code.<br>
-<b>mvn clean:</b><br>
-Here, the project is cleaned to remove all previous-build files generated.<br>
-<b>mvn test:</b><br>
-With this command, one can run project testing steps.<br>
-<b>mvn test-compile:</b><br>
-This command is used to compile the code from the test source.<br>
-<b>mvn install:</b><br>
-This command helps deploys the packaged WAR/JAR files storing them
-as classes in the local repository.<br>
-<b>mvn package:</b><br>
-With this Maven lifecycle command, one packages or creates a 
-project WAR or JAR file to be able to use a distributable format.<br>
-<b>mvn deploy:</b><br>
-The deploy command occurs after compilation, running project tests, 
-and project building. Here the packaged WAR/JAR files are copied 
-to the remote repository for use by other developers.<br>
-    </section>
-    <section id="m13">
-<h1>Maven Commands</h1><br>
-<b>clean install -x -></b> check if there is any error in debug mode for 
-successfully building the maven.<br>
-<b>mvn clean -x -></b> get more information about why our build is failing 
-on using mvn clean.<br>
-<b>mvn compile:</b><br>
-This command is used to compile the project’s source code.<br>
-<b>mvn clean:</b><br>
-Here, the project is cleaned to remove all previous-build files generated.<br>
-<b>mvn test:</b><br>
-With this command, one can run project testing steps.<br>
-<b>mvn test-compile:</b><br>
-This command is used to compile the code from the test source.<br>
-<b>mvn install:</b><br>
-This command helps deploys the packaged WAR/JAR files storing them
-as classes in the local repository.<br>
-<b>mvn package:</b><br>
-With this Maven lifecycle command, one packages or creates a 
-project WAR or JAR file to be able to use a distributable format.<br>
-<b>mvn deploy:</b><br>
-The deploy command occurs after compilation, running project tests, 
-and project building. Here the packaged WAR/JAR files are copied 
-to the remote repository for use by other developers.<br>
-    </section>
-    <section id="m14">
-<h1>Maven Build Profiles</h1><br>
-<b>Profile - </b<br>A profile in Maven is an alternative set of configuration 
-values which set or override default values. Using a profile, you 
-can customize a build for different environments. Profiles are 
-configured in the pom. xml and are given an identifier.<br>
-<ul>
-<li>Global Profile - in effective pom.xml</li>
-<li>Local profile(per project) - In settings. xml</li>
-<li>User defined profile(per user) - Modified settings.xml</li>
-</ul><br>
-Profile Activation via Maven Settings
-Open Maven settings.xml file available in %USER_HOME%/.m2 directory 
-where %USER_HOME% represents the user home directory. If settings.xml 
-file is not there, then create a new one.
-    </section>
-    <section id="m15">
-<h1>Maven Build Profiles</h1><br>
-<b>Profile - </b<br>A profile in Maven is an alternative set of configuration 
-values which set or override default values. Using a profile, you 
-can customize a build for different environments. Profiles are 
-configured in the pom. xml and are given an identifier.<br>
-<ul>
-<li>Global Profile - in effective pom.xml</li>
-<li>Local profile(per project) - In settings. xml</li>
-<li>User defined profile(per user) - Modified settings.xml</li>
-</ul><br>
-Profile Activation via Maven Settings
-Open Maven settings.xml file available in %USER_HOME%/.m2 directory 
-where %USER_HOME% represents the user home directory. If settings.xml 
-file is not there, then create a new one.
-    </section>
-    <section id="m16">
-<h1>Maven Build Profiles</h1><br>
-<b>Profile - </b<br>A profile in Maven is an alternative set of configuration 
-values which set or override default values. Using a profile, you 
-can customize a build for different environments. Profiles are 
-configured in the pom. xml and are given an identifier.<br>
-<ul>
-<li>Global Profile - in effective pom.xml</li>
-<li>Local profile(per project) - In settings. xml</li>
-<li>User defined profile(per user) - Modified settings.xml</li>
-</ul><br>
-Profile Activation via Maven Settings
-Open Maven settings.xml file available in %USER_HOME%/.m2 directory 
-where %USER_HOME% represents the user home directory. If settings.xml 
-file is not there, then create a new one.
-    </section>
-    <section id="m17">
-<h1>Maven Build Profiles</h1><br>
-<b>Profile - </b<br>A profile in Maven is an alternative set of configuration 
-values which set or override default values. Using a profile, you 
-can customize a build for different environments. Profiles are 
-configured in the pom. xml and are given an identifier.<br>
-<ul>
-<li>Global Profile - in effective pom.xml</li>
-<li>Local profile(per project) - In settings. xml</li>
-<li>User defined profile(per user) - Modified settings.xml</li>
-</ul><br>
-Profile Activation via Maven Settings
-Open Maven settings.xml file available in %USER_HOME%/.m2 directory 
-where %USER_HOME% represents the user home directory. If settings.xml 
-file is not there, then create a new one.
-    </section>
-    <section id="m18">
-<h1>Settings.xml</h1><br>
-The Settings. xml file contains adjustable parameters about server 
-administration within an Installation. Such parameters include the 
-ability to adjust the size of the System Logs, Email Server settings, 
-and settings specific to the database the platform is hosted on.<br>
-It allows us to specify which local and remote repository location 
-it will use. It can also be used to store data which we don't want
-to show in our source code such as credentials.It allows values Such
-as local repository location or path, alternate remote repository 
-server authenication information and other information.<br><br>
-Whaen we do maven configuration for the first time and run some maven 
-goals than in the user home directory a .m2 folder gets created.Inside
-this .m2 folder, we can copy settings.xml file from the maven installtion 
-directory.Copying the settings.xml file inside .m2 folder gives user 
-specific configuaration and incase of eclipse IDE, we have to specify
-the location of this file for <b>user specific configuration</b><br>
-<br>
-By-default , the path for local repository is given inside .m2 folder
-but if we want to give any custom path for the local repository than
-we can give it under settings.xml in <localRepository> tag.
-    </section>
-    <section id="m19">
-<h1>Archetype</h1><br>
-Archetype tells maven the type of project we r building.<br> 
-That can be a java project archetype,spring applications 
-archetype.,hibernate application archetype.<br> Different types 
-of archetype r available inside maven repository. <br>
-If we want to build a java application we will include web archetype.<br>
-The combination of group Id ,artifactId ,version decides the 
-type of artifact we r using.scope tag defines the scope for our artifact.<br>
-mvn archetype : generate -> it'll fetch all the archetype from 
-central repository and will ask for the user input for the artifact Id,groupId version.
-    </section>  
-    <section id="m20">
-<h1>Ways to run a spring boot application</h1><br>
-Ways to run a spring boot app
-1.using maven artifact or maven descriptor which lets to execute 
-maven command inorder to built a jar file.<br>
-Eg.. Running a jar file -> java -jar (jar file)<br>
-2.Plugins in pom.xml (running directly without creating any jar file)
-Eg..  ./mvnw spring-boot:run<br>
-(Maven install takes our spring project & generate the maven artifact .
-The generated maven artifact is gonna be a jar file.On running mvn 
-install , the target folder is generated.  )<br>
-(The jar file generated not only contains the compiled sources from 
-our spring project it also contain things needed to run the application )
+<h1>i clicked for s5</h1>
+"At vero eos et accusamus et iusto odio dignissimos ducimus qui 
+blanditiis praesentium voluptatum deleniti atque corrupti quos 
+dolores et quas molestias excepturi sint occaecati cupiditate 
+non provident, similique sunt in culpa qui officia deserunt 
+mollitia animi, id est laborum et dolorum fuga. Et harum quidem 
+rerum facilis est et expedita distinctio. Nam libero tempore, 
+cum soluta nobis est eligendi optio cumque nihil impedit quo 
+minus id quod maxime placeat facere possimus, omnis voluptas 
+assumenda est, omnis dolor repellendus. Temporibus autem quibusdam 
+et aut officiis debitis aut rerum necessitatibus saepe eveniet ut 
+et voluptates repudiandae sint et molestiae non recusandae. Itaque 
+earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
+voluptatibus maiores alias consequatur aut perferendis doloribus 
+asperiores repellat."
     </section>
    </div>
 </body></html>
