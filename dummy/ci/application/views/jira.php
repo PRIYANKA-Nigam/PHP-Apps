@@ -32,33 +32,29 @@
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                <div class="h5 mb-0 font-weight-bold text-gray-800">Title</div><br>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">JIRA Overview</div><br>
                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                    What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 
-1500s, when an unknown printer took a galley of type and scrambled it to 
-make a type specimen book. 
-It has survived not only five centuries, but also the leap into electronic 
-typesetting, remaining essentially unchanged. It was popularised in the 
-1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-and more recently with desktop publishing software like Aldus PageMaker 
-including versions of Lorem Ipsum.
+                    Jira is a project management software use for software  development  
+                    across industries it allows to view ,track & report task/issued over the project  we r working on.<br>
 
-"But I must explain to you how all this mistaken idea of denouncing 
-pleasure and praising pain was born and I will give you a complete 
-account of the system, and expound the actual teachings of the great 
-explorer of the truth, the master-builder of human happiness. No one 
-rejects, dislikes, or avoids pleasure itself, because it is pleasure, 
-but because those who do not know how to pursue pleasure rationally 
-encounter consequences that are extremely painful. Nor again is there 
-anyone who loves or pursues or desires to obtain pain of itself, 
-because it is pain, but because occasionally circumstances occur in 
-which toil and pain can procure him some great pleasure. To take a 
-trivial example, which of us ever undertakes laborious physical exercise, 
-except to obtain some advantage from it? But who has any right to find 
-fault with a man who chooses to enjoy a pleasure that has no annoying 
-consequences, or one who avoids a pain that produces no resultant pleasure?"</div>
+Epic gives an abstract view of our project workflow. It remains in the planning backlog.<br>
+Story is in the delivery backlog.<br>
+Story point - It estimates measurement of complexity of the story.<br>
+Issue -> it can be any task, defect/bug etc which is in the to do list.<br><br>
+<b>Create an issue(to make an element for our project workflow)</b><br>
+Backlog ->epic->story<br>
+<b>Creating sub-task under the issue/story->click->select task</b><br>
+<b>DoD (Definition of Done ) -></b> ensures that the working s/w produced at the end of 
+the sprint is of high quality & potentially shippable.<br>
+<b>Sprint Burn Down -></b> To check how much work remain in a sprint backlog , 
+understand how quickly team has completed task , predict when team will 
+achieve goal of sprint.<br>
+________________________________________<br>
+
+Atlassian created Jira in the year 2002 and it was initially 
+built to be an issue and bug tracking application.Now, Jira 
+software has grown into an agile project management tool 
+    catering to software development teams - small and big</div>
                   
                 </div>
                 <div class="col-auto">
@@ -75,18 +71,27 @@ consequences, or one who avoids a pain that produces no resultant pleasure?"</di
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                <div class="h5 mb-0 font-weight-bold text-gray-800">Title</div><br>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">JIRA's pros and cons</div><br>
                 </div>
                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                    It is a long established fact that a reader will be distracted by the 
-readable content of a page when looking at its layout. The point of 
-using Lorem Ipsum is that it has a more-or-less normal distribution of 
-letters, as opposed to using 'Content here, content here', making it 
-look like readable English. Many desktop publishing packages and web 
-page editors now use Lorem Ipsum as their default model text, and a 
-search for 'lorem ipsum' will uncover many web sites still in their 
-infancy. Various versions have evolved over the years, sometimes by 
-accident, sometimes on purpose (injected humour and the like).</div>
+                    <b>PROS :</b>
+Jira software lets you add story points to each issue to quantify the work 
+required to be done and also group related issues using its Epic issue type
+Jira software has agile capabilities that supports frameworks such as scrum 
+and kanban with features like scrum and kanban boards.<br>
+
+<b>CONS :</b>
+Most developers also hate this app for its slow speed.
+Jira’s agile capabilities lack finesse when it comes to implementing 
+frameworks like scrum, unlike Zepel. You don’t get the elegant Sprints view 
+that has built-in agile reports such as burnup and burndown charts. 
+(Burn down and burn up charts are two types of charts that project managers 
+use to track and communicate the progress of their projects.<br> A burn down 
+chart shows how much work is remaining to be done in the project, whereas 
+a burn up shows how much work has been completed, and the total amount of work. 
+Burn down or burn-up charts are used to showcase progress of a project) .<br>
+
+Hence, JIRA is functional but not developers' friendly</div>
                    
                 <div class="col-auto">
                     <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -105,33 +110,32 @@ accident, sometimes on purpose (injected humour and the like).</div>
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                <div class="h5 mb-0 font-weight-bold text-gray-800">Title</div><br>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">Azure DevOps Vs Jira </div><br>
                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                    What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 
-1500s, when an unknown printer took a galley of type and scrambled it to 
-make a type specimen book. 
-It has survived not only five centuries, but also the leap into electronic 
-typesetting, remaining essentially unchanged. It was popularised in the 
-1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-and more recently with desktop publishing software like Aldus PageMaker 
-including versions of Lorem Ipsum.
+                    Azure DevOps and Jira are both helpful tools for software 
+                    development teams. Jira uses Agile methodologies, offers additional 
+                    search functionality and can be used beyond software development 
+                    projects. Azure DevOps can be used by cross-functional teams 
+                    throughout the entire lifecycle of a software application.<br>
+                <b>Azure DevOps Key functionality : </b><br>
+                To collaborate and track software development projects from beginning to end.<br>
+                 <b>JIRA key functionality : </b><br>
+                 Manage projects for teams using Agile methodologies, such as Scrum.<br>
+                 Jira supports Agile methodology, such as Scrum and Kanban, and allows teams 
+                 to adjust workflow iterations and add more features while in progress, 
+                 which isn’t available with Azure DevOps.<br>
 
-"But I must explain to you how all this mistaken idea of denouncing 
-pleasure and praising pain was born and I will give you a complete 
-account of the system, and expound the actual teachings of the great 
-explorer of the truth, the master-builder of human happiness. No one 
-rejects, dislikes, or avoids pleasure itself, because it is pleasure, 
-but because those who do not know how to pursue pleasure rationally 
-encounter consequences that are extremely painful. Nor again is there 
-anyone who loves or pursues or desires to obtain pain of itself, 
-because it is pain, but because occasionally circumstances occur in 
-which toil and pain can procure him some great pleasure. To take a 
-trivial example, which of us ever undertakes laborious physical exercise, 
-except to obtain some advantage from it? But who has any right to find 
-fault with a man who chooses to enjoy a pleasure that has no annoying 
-consequences, or one who avoids a pain that produces no resultant pleasure?"</div>
+Conversely, Azure DevOps allows teams to view a project from start to finish, 
+along with the connections between various stages and work items, but 
+Jira doesn’t allow teams to view previous tasks or iterations. For instance, 
+users of Jira can’t see whether a completed Story is associated with a 
+software release.<br><br>
+<b>If you are looking for something to help you manage the entire life 
+    cycle of a software application development, from ideation to 
+    deployment, Azure DevOps will probably be your best option. If, 
+    on the other hand, you want a project development tool to be used 
+    for software development, as well as other projects, Jira can better 
+    meet your needs.</b></div>
                   
                 </div>
                 <div class="col-auto">
@@ -148,18 +152,19 @@ consequences, or one who avoids a pain that produces no resultant pleasure?"</di
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                <div class="h5 mb-0 font-weight-bold text-gray-800">Title</div><br>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">JIRA Vs Github</div><br>
                 </div>
                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                    It is a long established fact that a reader will be distracted by the 
-readable content of a page when looking at its layout. The point of 
-using Lorem Ipsum is that it has a more-or-less normal distribution of 
-letters, as opposed to using 'Content here, content here', making it 
-look like readable English. Many desktop publishing packages and web 
-page editors now use Lorem Ipsum as their default model text, and a 
-search for 'lorem ipsum' will uncover many web sites still in their 
-infancy. Various versions have evolved over the years, sometimes by 
-accident, sometimes on purpose (injected humour and the like).</div>
+                    GitHub is an Internet hosting service for software development 
+                    and version control using Git. It provides the distributed version 
+                    control of Git plus access control, bug tracking, software feature 
+                    requests, task management, continuous integration, and wikis for every project. <br><br>
+                    It is a code hosting platform for version control and collaboration. 
+                    It lets you and others work together on projects from anywhere.<br>
+                    Joining as a recent addition to the list of Jira alternatives is GitHub.
+Popularly known for source code management, now, GitHub has expanded its horizons 
+from version control systems to project management. And it is rising to fame as a
+ popular replacement to Jira as it can do most of what Jira can do.</div>
                    
                 <div class="col-auto">
                     <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -168,6 +173,59 @@ accident, sometimes on purpose (injected humour and the like).</div>
         </div>
     </div>
 </div>
+
+    </div><br>
+    <div class="row">
+
+<!-- Earnings (Monthly) Card Example -->
+<div class="col-md-6">
+    <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                <div class="h5 mb-0 font-weight-bold text-gray-800">Github</div><br>
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Joining as a recent addition to the list of Jira alternatives is GitHub.
+Popularly known for source code management, now, GitHub has expanded its horizons from 
+version control systems to project management. And it is rising to fame as a popular 
+replacement to Jira as it can do most of what Jira can do.<br>
+
+<b>PROS</b><br>
+GitHub’s project boards have useful templates such as basic kanban, automated 
+kanban, automated kanban with triggers for PR review status to help prioritize work and customize workflows.
+GitHub’s pricing plan is quite affordable.<br>
+
+<b>CONS</b><br>
+Unlike Jira software and Zepel, GitHub lacks powerful agile capabilities other than simple kanban software and Milestones for scrum.
+Unlike Atlassian’s Jira, GitHub doesn’t have story points to capture and quantify the work required to be completed.<br><br>
+
+<b>Forking a repository in github -></b><br>
+A fork is a copy of a repository that you manage. Forks let you make changes to a project
+without affecting the original repository. You can fetch updates from or submit changes 
+to the original repository with pull requests.<br>
+<b>------–-----------  Forking Vs Branching</b<br><br>
+When you fork a repository, you’re creating your own copy of the entire project 
+including the repo. Forking in GitHub is duplicating an entire git repository into a 
+different account. So if you have the account marvin, and you fork rails/rails, you will have marvin/rails.
+A branch is simply a separate set of commits within a repo that already exists.<br>
+<b>–-----------------------Github Issues -></b><br>
+Issues is a place in github to leave comment about the project.Any developer 
+who is visiting my repository can add issue in that.In issue he/she can specify 
+anything which he wants us to perform or add in our code.This issue will have a 
+unique id or number which the owner can reference in commit message when he is 
+resolving that particular issue .So, that the assigner should know that its' 
+issue has been fixed.Once the owner resolves the issue ,he can close that issue.</div>
+                  
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
     </div>
 </div>

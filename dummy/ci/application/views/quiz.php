@@ -22,7 +22,7 @@
 <a href="<?php echo base_url(); ?>Welcome/Quizdisplay/container" class="btn btn-warning" style="margin-top:50px;width:120px;height:60px">Container/VM</a>
 <a href="<?php echo base_url(); ?>Welcome/Quizdisplay/cplusplus" class="btn btn-info" style="margin-top:50px;width:120px;height:60px">C++</a>
 
-<a href="<?php echo base_url(); ?>Welcome/Quizdisplay/docker" class="btn btn-danger" style="margin-top:50px;width:120px;height:60px">Docker</a><br>
+<a href="<?php echo base_url(); ?>Welcome/Quizdisplay/docker" class="btn btn-dark" style="margin-top:50px;width:120px;height:60px">Docker</a><br>
 <a href="<?php echo base_url(); ?>Welcome/Quizdisplay/git" class="btn btn-success" style="margin-left:100px;margin-top:5px;width:120px;height:60px">Git</a>
 
 <a href="<?php echo base_url(); ?>Welcome/Quizdisplay/java" class="btn btn-danger" style="margin-top:5px;width:120px;height:60px" >Java</a>
@@ -31,7 +31,7 @@
 <a href="<?php echo base_url(); ?>Welcome/Quizdisplay/jenkins" class="btn btn-warning" style="margin-top:5px;width:120px;height:60px">Jenkins</a>
 <a href="<?php echo base_url(); ?>Welcome/Quizdisplay/kubernetes" class="btn btn-info" style="margin-top:5px;width:120px;height:60px">Kubernetes</a><br>
 
-<a href="<?php echo base_url(); ?>Welcome/Quizdisplay/microservice" class="btn btn-info" style="margin-left:100px;margin-top:5px;width:120px;height:60px">Microservice</a>
+<a href="<?php echo base_url(); ?>Welcome/Quizdisplay/microservice" class="btn btn-dark" style="margin-left:100px;margin-top:5px;width:120px;height:60px">Microservice</a>
 <a href="<?php echo base_url(); ?>Welcome/Quizdisplay/php" class="btn btn-success" style="margin-top:5px;width:120px;height:60px">PHP</a>
 
 <a href="<?php echo base_url(); ?>Welcome/Quizdisplay/rest" class="btn btn-danger" style="margin-top:5px;width:120px;height:60px">Rest API</a>
