@@ -31,33 +31,21 @@
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                <div class="h5 mb-0 font-weight-bold text-gray-800">Title</div><br>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">Spinnaker</div><br>
                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                    What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 
-1500s, when an unknown printer took a galley of type and scrambled it to 
-make a type specimen book. 
-It has survived not only five centuries, but also the leap into electronic 
-typesetting, remaining essentially unchanged. It was popularised in the 
-1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-and more recently with desktop publishing software like Aldus PageMaker 
-including versions of Lorem Ipsum.
-
-"But I must explain to you how all this mistaken idea of denouncing 
-pleasure and praising pain was born and I will give you a complete 
-account of the system, and expound the actual teachings of the great 
-explorer of the truth, the master-builder of human happiness. No one 
-rejects, dislikes, or avoids pleasure itself, because it is pleasure, 
-but because those who do not know how to pursue pleasure rationally 
-encounter consequences that are extremely painful. Nor again is there 
-anyone who loves or pursues or desires to obtain pain of itself, 
-because it is pain, but because occasionally circumstances occur in 
-which toil and pain can procure him some great pleasure. To take a 
-trivial example, which of us ever undertakes laborious physical exercise, 
-except to obtain some advantage from it? But who has any right to find 
-fault with a man who chooses to enjoy a pleasure that has no annoying 
-consequences, or one who avoids a pain that produces no resultant pleasure?"</div>
+                    It's a piece of deployment software. Spinnaker is a free and open-source 
+                    continuous delivery software platform originally developed by Netflix and 
+                    extended by Google.[2] It is designed to work with Kubernetes, Google Cloud 
+                    Platform, AWS, Microsoft Azure and Oracle Cloud.<br>
+                    Spinnaker is not a build tool.<br>
+Build tools are commonly known as programs that automate the process of building an executable 
+application from source code. This building process includes activities like compiling, linking 
+and packaging the code into an executable form.eg.. Ant,Maven,Docker etc.
+Build tools automates the process of building an executable. This gives each developer the 
+ability to build and run software on their machine. A build tool can automate the process of 
+downloading and managing dependencies for you. ... Build tool will ensure correct versions are used.<br>
+Git and Gradle are both open source tools.
+                </div>
                   
                 </div>
                 <div class="col-auto">
@@ -73,18 +61,34 @@ consequences, or one who avoids a pain that produces no resultant pleasure?"</di
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                <div class="h5 mb-0 font-weight-bold text-gray-800">Title</div><br>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">Spinnaker Vs Jenkins</div><br>
                 </div>
                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                    It is a long established fact that a reader will be distracted by the 
-readable content of a page when looking at its layout. The point of 
-using Lorem Ipsum is that it has a more-or-less normal distribution of 
-letters, as opposed to using 'Content here, content here', making it 
-look like readable English. Many desktop publishing packages and web 
-page editors now use Lorem Ipsum as their default model text, and a 
-search for 'lorem ipsum' will uncover many web sites still in their 
-infancy. Various versions have evolved over the years, sometimes by 
-accident, sometimes on purpose (injected humour and the like).</div>
+                    Many organizations are using a combination of Jenkins and a tool like Ansible, Puppet, Chef, or Salt 
+                    to automate their CI/CD pipelines but find themselves having to do many steps manually or using a 
+                    series of scripts that can be hard to maintain. Many organizations manually move software from 
+                    Development to Staging to Production with time-consuming manual processes.<br>
+Spinnaker can fully automate these processes. Spinnaker can fully integrate with standard CI/CD tools such as Jenkins, 
+SonarQube, and Artifactory but add a layer of automation to automate software deployments to Development, Staging, 
+and Production, eliminating many manual steps.<br>
+Jenkins X provides developers a better way to automate their CI/CD process for Kubernetes than Jenkins alone but 
+still lacks the Spinnaker deployment model’s capabilities.<br>
+Jenkins is for Continuous Integration.Jenkins was never designed for cloud deployment Spinnaker is for Continuous 
+Deployment<br>
+
+Jenkins is currently the most popular Continuous Integration Tool. It has an extensive community with a large catalog 
+of plugins available. However, it is not ideal for continuous delivery because -<br>
+To create deployment workflow, stages, and deployment strategies developer needs to write scripts and also maintain 
+those scripts. <br>
+Spinnaker was never intended to be a build tool.So, Spinnaker still relies on a build server and must integrate 
+with tools like Jenkins.Spinnaker takes advantage of existing build tools like Jenkins to start jobs and monitor 
+their progress and results. Spinnaker can make the deployment phase much more flexible. <br>Spinnaker cannot replace 
+Jenkins as a CI tool, but Spinnaker can make the deployment to the cloud process much more straightforward.
+<b>Even Jenkins being originally a Continuous Integration solution, and as a Continuous Deployment 
+    solution as well, but Spinnaker brought to us a more focused approach allowing us to spend less time by 
+    creating and managing pipelines. While on Jenkins we need to install dozens of plugin to achieve our goals, 
+    Spinnaker has all what we need out of the box. </b>
+<br></div>
                    
                 <div class="col-auto">
                     <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -103,33 +107,19 @@ accident, sometimes on purpose (injected humour and the like).</div>
         <div class="card-body">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                <div class="h5 mb-0 font-weight-bold text-gray-800">Title</div><br>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">Spinnaker Vs Kubernetes</div><br>
                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                    What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 
-1500s, when an unknown printer took a galley of type and scrambled it to 
-make a type specimen book. 
-It has survived not only five centuries, but also the leap into electronic 
-typesetting, remaining essentially unchanged. It was popularised in the 
-1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-and more recently with desktop publishing software like Aldus PageMaker 
-including versions of Lorem Ipsum.
-
-"But I must explain to you how all this mistaken idea of denouncing 
-pleasure and praising pain was born and I will give you a complete 
-account of the system, and expound the actual teachings of the great 
-explorer of the truth, the master-builder of human happiness. No one 
-rejects, dislikes, or avoids pleasure itself, because it is pleasure, 
-but because those who do not know how to pursue pleasure rationally 
-encounter consequences that are extremely painful. Nor again is there 
-anyone who loves or pursues or desires to obtain pain of itself, 
-because it is pain, but because occasionally circumstances occur in 
-which toil and pain can procure him some great pleasure. To take a 
-trivial example, which of us ever undertakes laborious physical exercise, 
-except to obtain some advantage from it? But who has any right to find 
-fault with a man who chooses to enjoy a pleasure that has no annoying 
-consequences, or one who avoids a pain that produces no resultant pleasure?"</div>
+                    Kubernetes is an open-source container cluster manager. Spinnaker is an 
+                    open source continuous delivery platform with a range of cluster management 
+                    and deployment management features, originally developed at Netflix.<br>
+                <b>Spinnaker listens for a new image in the container registry and triggers the 
+                    delivery pipeline for deployment. The Spinnaker pipeline creates the necessary 
+                    configurations (application configs, instances, scaling, etc.) and deploys the 
+                    container in a target Kubernetes cluster after manual review.</b>
+                    A Spinnaker Instance maps to a Kubernetes Pod . What differentiates this from 
+                    other Cloud Providers is the ability for Pods to run multiple containers at once,
+                     whereas typical IAAS providers in Spinnaker run exactly one image per Instance.<br>
+                </div>
                   
                 </div>
                 <div class="col-auto">
@@ -141,7 +131,7 @@ consequences, or one who avoids a pain that produces no resultant pleasure?"</di
 </div>
 
 
-<div class="col-md-6 ">
+<!-- <div class="col-md-6 ">
     <div class="card border-left-success shadow h-100 py-2">
         <div class="card-body">
             <div class="row no-gutters align-items-center">
@@ -165,7 +155,7 @@ accident, sometimes on purpose (injected humour and the like).</div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
     </div>
 </div>
