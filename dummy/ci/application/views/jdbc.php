@@ -28,7 +28,7 @@ label{
     color: white;
 }
 section{
-    height: 100vh;
+    height: auto;
     width: 200vh;
     display: inline-flexbox;
     align-items: left;

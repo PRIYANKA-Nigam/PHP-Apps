@@ -51,7 +51,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     color: white;
 }
 section{
-    height: 100vh;
+    height: auto;
     width: 170vh;
     display: inline-flexbox;
     align-items: left;

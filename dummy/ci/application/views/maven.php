@@ -58,7 +58,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
     color: white;
 }
 section{
-    height: 100vh;
+    height: auto;
     width: 170vh;
     display: inline-flexbox;
     align-items: left;

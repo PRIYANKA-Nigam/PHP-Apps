@@ -28,7 +28,7 @@ label{
     color: purple;
 }
 section{
-    height: 100vh;
+    height: auto;
     width: 200vh;
     display: inline-block;
     align-items: left;

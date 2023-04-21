@@ -106,7 +106,7 @@
 
   <div id="carouselExampleIndicators" class="carousel slide">
   
-  <div class="carousel-inner" style="margin-left: 100px;">
+  <div class="carousel-inner" style="margin-left: 50px;">
     <div class="carousel-item active">
     <h4 style="color:white;font-size:15px"><i>Enhance your learning and build a strong base.Maintain 
       a go-getter attitude in your work field and work with a sharp intellect to excel in your career 
@@ -152,9 +152,16 @@
 </div>
 </div>
 </div>
+<div style="background-color: black;width:100%;height:auto;margin-top:5px">
+<a href="https://www.topcoder.com/" ><img src="<?=base_url().'top.png'?>" alt="Top coder" width="220px" height="200px"></a>
+<a href="https://leetcode.com/" ><img src="<?=base_url().'leet.png'?>" alt="Leetcode" width="220px" height="200px"></a>
+<a href="https://www.codechef.com/" ><img src="<?=base_url().'code.png'?>" alt="Codechef" width="220px" height="200px"></a>
+<a href="https://hackerrank.com/" ><img src="<?=base_url().'hackerrank.png'?>" alt="Hackerrank" width="220px" height="200px"></a>
+<a href="https://www.hackerearth.com/" ><img src="<?=base_url().'hackerearth.png'?>" alt="Hackerearth" width="220px" height="200px"></a>
+</div>
 <hr>
 <h1><center>High Demand Tech domain</center></h1>
-<div style="margin-left:380px">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+<div style="margin-left:320px">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
 <br>
 <div class="container text-center">
   <div class="row g-2">

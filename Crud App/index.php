@@ -225,7 +225,8 @@
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
         Accordion Item #2
       </button>
     </h2>
@@ -237,7 +238,8 @@
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+      <button class="accordion-button collapsed" type="button" 
+      data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
         Accordion Item #3
       </button>
     </h2>

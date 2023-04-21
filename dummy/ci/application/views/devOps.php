@@ -26,7 +26,7 @@ label{
     color: white;
 }
 section{
-    height: 100vh;
+    height: auto;
     width: 200vh;
     display: inline-flexbox;
     align-items: left;
@@ -94,6 +94,8 @@ section{
                 <a href="#d27" class="sub-item"><i class="far fa-star"></i>Kubernetes without Docker using other container runtimes</a>
         </div></div>
     <div class="item"> <a href="#d28"><i class="fas fa-info-circle"></i>Container without Docker</a> </div>
+    <div class="item"> <a href="#d29"><i class="fas fa-info-circle"></i>Docker/Kubernetes/Nagios</a> </div>
+    <div class="item"> <a href="#d30"><i class="fas fa-info-circle"></i>Why deploying microservice on container is better</a> </div>
     </div>
    </div>
    <!-- <section class="main">
@@ -289,6 +291,8 @@ Docker is another popular container runtime that uses containerd as an internal
 runtime. But, the Docker container is easier to manage and run the same tasks as 
 the containerd to get better and more efficient results. Docker has made it 
 easier for developers to create, run, test, and deploy applications.<br>
+<b><i>Container runtime are tools or software that are used to create and run containers. Eg: dockers and rkt.
+Dockers must be installed to create containers</i></b>
     </section>
     <section id="d12">
 <h1>Virtual Machine Vs Container</h1><br>
@@ -297,7 +301,15 @@ must include its own guest operating system inside it, along with its related
 binaries, libraries, and application files. This consumes a large amount of 
 system resources and overhead, especially when multiple VMs are running on 
 the same physical server, each with its own guest OS.<br>
+Containers host the individual microservices that form a microservices application.
+ However , microservices can be host & deploy in a variety of other ways:
+VMs. It's uncommon to host microservices inside VMs. Nevertheless, it's technically 
+feasible for developers to deploy a set of microservices inside individual VMs and 
+then connect them together to form a microservices app.
+Directly on the OS. There is also no technical reason why you can't deploy a set of 
+microservices directly on the same OS and not isolate them inside of a container or VM.
 
+<br>
 In contrast, each container shares the same host OS or system kernel and is 
 much lighter in size, often only megabytes. This often means a container might 
 take just seconds to start (versus the gigabytes and minutes required for a typical VM).<br>
@@ -339,7 +351,11 @@ It receives commands from the API server and instructs the container runtime to
 start or stop containers as needed.<br>
 Every Kubernetes Node runs at least: Kubelet, a process responsible for communication 
 between the Kubernetes control plane and the Node; it manages the Pods and the 
-containers running on a machine.
+containers running on a machine.<br>
+<b><i>Kubelet - it runs containers inside pod.If a pod goes down ,it is the kubelet 
+    job to communicate to the master.It is the technology that applies, creates,updates, 
+    & destroy containers on a kubernetes node.It is the primary node agent that runs 
+    on each node.</i></b>
     </section>
     <section id="d14">
 <h1>Kube proxy</h1><br>
@@ -347,6 +363,11 @@ kube-proxy is a network proxy that runs on each node in your cluster,
 implementing part of the Kubernetes Service concept. kube-proxy maintains 
 network rules on nodes. These network rules allow network communication 
 to your Pods from network sessions inside or outside of your cluster.<br>
+<b><i>Kube proxy - it redirects the incoming traffic to the desired pod.if 
+    there is a pod that is running a web page than kube proxy allows in & 
+    out flow. of traffic b/w pod & that web page.
+The number of containers that r inside a pod will have the same ip address,
+memory & volume.1 container communication with other is done through localhost.</i></b>
 <b>Kubelet Vs kube-proxy</b><br>
 <b>kubelet –</b> watches the API server for pods on that node and makes sure they are running.<br>
 <b>kube-proxy –</b> watches the API server for pods/services changes in order to maintain the network up to date.<br>
@@ -362,7 +383,7 @@ inspect and manage cluster resources, and view logs.<br>
 kubelet is Kubernetes's mechanism for creating containers in a worker 
 node, while kubectl is the CLI tool that developers use for interacting 
 with a Kubernetes cluster.<br>
-
+<b><i>Kubectl - command line tool to manage kubernetes cluster</i></b>
     </section>
     <section id="d16" >
 <h1>Minikube</h1><br>
@@ -371,6 +392,7 @@ Minikube is a lightweight Kubernetes implementation that creates a VM on
 your local machine and deploys a simple cluster containing only one node. 
 Minikube is available for Linux, macOS, and Windows systems.<br>
 <b>Kubectl Vs Minikube</b><br>
+<b><i>Minikube - contains actual kubernetes code .</i></b><br>
 Kubernetes is a more comprehensive orchestration tool that is good for 
 large scale projects and to manage the developed applications with a whole 
 range of libraries. Whereas, Minikube, as a local Kubernetes engine, is 
@@ -381,7 +403,9 @@ Minikube is a utility you can use to run Kubernetes (k8s) on your local
 machine. It creates a single node cluster contained in a virtual machine 
 (VM). This cluster lets you demo Kubernetes operations without requiring 
 the time and resource-consuming installation of full-blown K8s.<br>
-
+<b>
+Master and Node can't run on the same machine in the kubernetes cluster
+</b>
     </section>
     <section id="d17">
 <h1>Docker</h1><br>
@@ -398,6 +422,28 @@ deploy containerized applications or software in multiple environments,
 from development to test and production. Docker was built on open standards 
 and functions inside most common operating environments, including Linux, 
 Microsoft Windows, and other on-premises or cloud-based infrastructures.<br>
+<b>=====================================</b><br>
+<b>Have you ever observed that an application runs successfully in development environment, 
+but the same application with the same code creates multiple issues while running in 
+the production environment? </b><br>
+to avoid issues generated during production deployment, we should once think of 
+Docker concept . docker & containers r a new way of running s/w in production 
+environment without any issues . Docker is a new technology that facilitates development 
+teams to build, manage, and secure applications anywhere.<br> <b>Docker</b> works on a concept of 
+Container. <b>container</b> is a kind of software that packs up code and all its dependencies 
+in a standard unit so the application runs from one environment to another quickly and 
+reliably. Likewise Docker provides the ability to wrap up and run an application without 
+affecting the reliability in an isolated environment is known as a docker container . <br>
+With Docker, you can run multiple containers simultaneously on a given host
+Instances of containerized apps use far less memory than virtual machines, they start and stop more quickly.
+<b>Docker Image -></b><br>
+Docker image is a lightweight, standalone, executable bundle of software that contains 
+everything (code, runtime, system tools, system libraries and settings) which is required 
+to run an application
+<b>Docker Hub -></b><br>
+Docker Hub is a kind of repository service provided by Docker for storing, finding and 
+sharing container images with your team. It is the world’s largest repository of containerplatform
+______________________________________________
 <b>Docker Usecase :</b><br>
 Docker's container-based platform allows for highly portable workloads. 
 Docker containers can run on a developer's local laptop, on physical or virtual 
@@ -412,7 +458,11 @@ which you can use for your own private use or share publicly with other Docker u
 The key difference between a Docker image Vs a container is that a Docker image is a 
 read-only immutable template that defines how a container will be realized. A Docker 
 container is a runtime instance of a Docker image that gets created when the $ docker 
-run command is implemented.
+run command is implemented.<br>
+<b><i>A docker image can have another docker image as it's parent image.
+Each time Docker launches a container from an image, it adds a thin writable 
+layer, known as the container layer, which stores all changes to the container
+throughout its runtime</i></b>
     </section>
     <section id="d18">
 <h1>Dangling images</h1><br>
@@ -493,26 +543,148 @@ holds all the versions of a specific image.<br>
 
     </section>
     <section id="d24">
-<h1>Kubernetes Vs Docker compose</h1>
+<h1>Kubernetes Vs Docker compose</h1><br>
+<b>Docker Compose -></b> Compose is a tool for defining and running multi-container Docker applications.
+One of the additional features of Docker Compose is that it can create containers using 
+container images that are hosted on a container repository such as DockerHub.<br> Also, 
+Docker Compose can build containers based on a Dockerfile stored on the hosting machine.<br>
+<b>______________ </b><br>
+<b>Kubernetes Vs docker compose</b><br>
+Kubernetes and Docker Compose are both container orchestration frameworks. Kubernetes 
+runs containers over a number of computers, virtual or real. Docker Compose runs 
+containers on a single host machine.<br>
+<b>________________</b><br>
 
     </section>
     <section id="d25">
-<h1>Kubernetes Vs Docker swarm</h1>
+<h1>Kubernetes Vs Docker swarm</h1><br>
+Docker Swarm is a lightweight, easy-to-use orchestration tool 
+with limited offerings compared to Kubernetes. In contrast, 
+Kubernetes is complex but powerful and provides self-healing, 
+auto-scaling capabilities out of the box.<br>
+<b>Which is better to use and when .</b><br>
+If you or your company does not need to manage complex workloads, 
+then Docker Swarm is the right choice. If your applications are 
+critical and you are looking to include monitoring, security 
+features, high availability, and flexibility, then Kubernetes 
+is the right choice.<br>
+<i>The main difference is that Kubernetes is a container orchestration 
+system that manages multiple containers. Docker Swarm does not manage 
+any containers but instead is a cluster manager for Docker containers. 
+Kubernetes also has built-in support for stateful applications, 
+whereas Docker Swarm does not.</i>
+<b><i>K8s architecture is more complicated than Swarm as the platform 
+    has master/worker nodes and pods that can contain one or more containers. 
+    Kubernetes is ideal for complex apps that can benefit from automatic scaling.</i></b>
+<h3>Kubernetes , Docker swarm comparison</h3><br>
+<table border="2">
+    <tr>
+        <th>Point</th><th>Kubernetes</th><th>Docker Swarm</th>
+    </tr>
+    <tr>
+        <td>Main selling point</td><td>A complete container orchestration solution with advanced automation features and high customization</td>
+        <td>An emphasis on ease of use and a seamless fit with other Docker products</td>
+    </tr>
+    <tr>
+        <td>Installation</td><td>Somewhat complex as you need to install (and learn to use) kubectl</td>
+        <td>Quick and easy setup (if you already run Docker)  </td>
+    </tr>
+    <tr>
+        <td>Monitoring capabilities </td><td>Has built-in monitoring and logging</td>
+        <td>Basic server log and event tools, but needs a third-party tool for advanced monitoring</td>
+    </tr>
+    <tr>
+        <td>Load balancing</td><td>No built-in mechanism for auto load-balancing</td>
+        <td>Internal load balancing</td>
+    </tr>
+    <tr>
+        <td>Optimal use case</td><td>High-demand apps with a complex configuration</td>
+        <td>Simple apps that are quick to deploy and easy to manage</td>
+    </tr>
 
+</table>
     </section>
     <section id="d26" >
-<h1>Docker-Kubernetes twinning</h1>
-Docker without Kubernetes using Docker compose
+<h1>Docker-Kubernetes twinning</h1><br>
+Docker is a container runtime, Kubernetes is a platform for running 
+and managing containers from many container runtimes. Kubernetes supports 
+numerous container runtimes including Docker, containerd, CRI-O, and any 
+implementation of the Kubernetes CRI (Container Runtime Interface).
+Docker without Kubernetes using Docker compose.<br>
+<b>Docker without Kubernetes</b><br>
+<b><i>Can You Use Docker Without Kubernetes?</i></b><br>
+The short and simple answer is yes, Docker can function without Kubernetes. 
+You see, Docker is a standalone software designed to run containerized applications. 
+Since container creation is part of Docker, you don’t need any separate software 
+for Docker to execute.<br>
+
     </section>
     <section id="d27">
-<h1>Kubernetes without Docker using other container runtimes</h1>
+<h1>Kubernetes without Docker using other container runtimes</h1><br>
+Kubernetes takes care of the containers created by a platform like Docker. 
+It ensures the health and failure management of a system, thus automating 
+the whole process.Kubernetes is meant to run across a cluster, whereas Docker runs on a single node.
+<br><br>
+<b>The answer is both yes and no. Kubernetes, in itself, is not a complete 
+    solution. It depends on a container runtime to orchestrate; you can’t 
+    manage containers without having containers in the first place.
+Docker is one of the platforms used for containerization but it is not the 
+only platform out there. This means, as long as you have a container runtime, 
+Kubernetes will do its job. You can choose that container runtime to be Docker, 
+but it’s not a requirement.</b><br>
+And also - <br>
+Docker is heavy. We get better performance with a lightweight container runtime like containerd or CRI-O. 
+containerd consumes less memory and CPU, and that pods start in less time than on Docker.
+<b><i>Docker, however, was never designed to run inside Kubernetes. Realizing 
+    this problem, the Kubernetes developers eventually implemented an API 
+    called Container Runtime Interface (CRI). This interface allows us to 
+    choose among different container runtimes, making the platform more 
+    flexible and less dependent on Docker</i></b>
 
     </section>
     <section id="d28">
-<h1>Container without Docker</h1>
+<h1>Container without Docker</h1><br>
+yes it is possible to create and run containers without using 
+docker by using other containerization platform.
+Several tools can be used to create containers without Docker.
+ Some examples include: LXC (Linux Containers): 
+This is an open-source containerization system that allows you to run 
+multiple isolated Linux systems on a single host.
 
     </section>
- 
+    <section id="d29">
+<h1>Docker/Kubernetes/Nagios</h1><br>
+<b>Docker</b> is a software platform that enables packaging an application 
+into containers. These containers represent isolated environments that 
+provide everything necessary to run the application. Dockerizing an 
+application refers to packaging it in a Docker image to run in one or 
+more containers.Docker image is a reproducible environment for the 
+application that guarantees portability across machines.Docker Hub is 
+largest repository of container images .<br>
+You can also share applications and collaborate with other developers 
+using Docker Hub.<br>
+User only have it's code into his machine.<br>
+Docker wraps code to<br>
+<b>(Code+services+libraries+db )</b> into 1 single package called docker.<br>
+<b>Docker -</b> container platform<br>
+<b>Kubernetes -</b> container Management platform<br>
+<b>Nagios -</b> Nagios is an open source monitoring system for computer systems.
+Nagios can monitor memory usage, disk usage, microprocessor load, the number 
+of currently running processes and log files. Nagios also can monitor services, 
+such as Simple Mail Transfer Protocol (SMTP), Post Office Protocol 3 (POP3),
+ Hypertext Transfer Protocol (HTTP) and other common network protocols.
+____________________
+    </section>
+    <section id="d30">
+<h1>Why deploying microservice on container is better</h1><br>
+( VMs take up to a few minutes to start, but containers can typically start 
+in just a few seconds. It's easier to maximize the agility of microservices 
+when they are hosted inside containers.)<br>
+( Containers provide isolation for each containerized application or microservice, 
+which reduces the risk that a security vulnerability can spread. Microservices 
+deployed directly on a host OS are less secure in this respect.)<br>
+Containerizing a service can help to make it highly maintainable and testable.<br>
+    </section>
 </div>
    <!-- </section> -->
    <script type="text/javascript">

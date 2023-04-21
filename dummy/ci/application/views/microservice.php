@@ -44,7 +44,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     color: white;
 }
 section{
-    height: 100vh;
+    height: auto;
     width: 170vh;
     display: inline-flexbox;
     align-items: left;
@@ -213,6 +213,9 @@ integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQS
                         <a href="#m13" class="nav-link text-white">Webservice Vs APIs</a>
                         </li>
                         <li class="nav-item">
+                        <a href="#micro" class="nav-link text-white">Webservice Vs Microservice</a>
+                        </li>
+                        <li class="nav-item">
                         <a href="#m14" class="nav-link text-white">API Vs WebHooks Vs Websockets</a>
                         </li>
                       </ul>
@@ -254,6 +257,12 @@ integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQS
                     </li>
                     <li class="nav-item">
                     <a href="#m22" class="nav-link" >Firebase Vs Rest APIs</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#m23" class="nav-link" >CQRS</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#m24" class="nav-link" >Microservice Design pattern</a>
                     </li>
                 </ul>
             </div>
@@ -415,6 +424,55 @@ better choice.<br>
 Switching from monolithic to microservice is advisable as you can detect bugs or 
 performance issues in a gradual fashion with microservices but is hard to come body
 incase of monolithic.<br>
+Monolithic architecture<br>
+
+pros -<br>
+
+Easy to deploy. We just need to copy the packaged application(jar, war, etc.) to a server.<br>
+
+Easy to test (Testing a single application is always easy).<br>
+
+Cons -<br>
+
+Even for a small change in the code, entire application needs to be re-built and re-deploy.<br>
+
+As the number of modules increase, then application size increases, downtime for 
+re-deployment may also increase accordingly. As a result, the code becomes complex 
+which is then hard to maintain.<br>
+
+
+Microservice(single-function service) architecture<br>
+
+instead of sharing a single database schema with other services, each service 
+has its own database schema.<br>
+
+Cons -<br>
+
+Microservices Architecture includes a complexity,<br>
+
+Complexity arises when we need to implement the inter-process communication mechanism,
+ including the additional implementation to handle partial failures.<br>
+
+
+Testing a microservices also becomes much more complex as compared to monolithic. 
+For a similar test for a service you would need to launch that service and other 
+services that it depends upon or at least configure stubs for those services.<br>
+
+
+Deployment of a Microservices Architecture based application is also much more 
+complex.we need to configure, deploy, scale, and monitor each instance of microservices separately.<br>
+
+______<br>
+
+Once we complete writing Microservices Application, it must be published by the 
+Register and Discovery Server (R&D Server) i.e. Netflix Eureka. In short,  Eureka Server.<br>
+
+
+If any Microservice is throwing Exceptions repeatedly, then Stop Executing such 
+Microservice for some duration and inform it to Admin Dashboard. In order to 
+handle this, we use Circuit Breaker concept(via Netflix Hystrix). However, the 
+new concept for Fault tolerance is Resilience4j as Hystrix is deprecated now.<br>
+______<br>
     </section>
     <section id="m10">
 <h1>Microservice Vs APIs</h1>
@@ -485,7 +543,19 @@ RESTful API can be used with a variety of data formats, including XML and JSON.
 <h1>Webservice Vs APIs</h1>
 Jar files which we use in our project are also APIs but not web APIs.
 The key difference is web service supports only HTTP while API supports 
-HTTP/HTTPS protocol. A type of API is a web service.
+HTTP/HTTPS protocol. A type of API is a web service.<br>
+
+An API is a set of definition & protocols to allow communication between 2 
+applications.apis can be available in online or offline mode but web services 
+need internet connection to make communication possible. Web service only 
+support http protocol . API allows both http/https protocol and supports xml 
+& Json both while web service supports only xml .Many APIs r open source and 
+publicly available by documentation. Web services r not open source.
+A web service is an API wrapped in http .<br>
+
+All web service r API but not all API r web service.<br>
+_______<br>
+Container & microservice r like milk & cookies.You can operate microservices without containers<br>
     </section>
     <section id="m14">
 <h1>API Vs WebHooks Vs Websockets</h1>
@@ -502,7 +572,20 @@ needed functionality is sent to the respective microservice by the API gateway a
 the fetched response is received to us as the output.<br>
 <b>API Gateway Vs Service Registry</b>The API gateway operates at the application level 
 and stands between the user and internal applications logic, while the 
-service registry mesh stands between the internal microservices.
+service registry mesh stands between the internal microservices.<br>
+Instead of calling services directly, clients call the API gateway(Edge Microservice ), <br>
+which forwards the call to the appropriate services on the back end. It works as a middleware between eureka server & microservice.<br>
+
+Pros - <br>
+External clients don’t need to pass through the authentication of each & every microservice. External client 
+only needs to pass authentication of only one microservice at the beginning which is the API Gateway.
+We don’t need to expose the endpoints of microservices to the external application/client.<br>
+
+Cons -<br>
+Since every request goes through API Gateway after a security check, it may slow down the performance.<br>
+2. Suppose we implement only one API gateway for the multiple microservices & if API Gateway 
+fails, the request will not be processed further. Hence, we should implement multiple Gateways
+ and manage the traffic via load balancer.<br>
     </section>
     <section id="m16">
 <h1>Eureka Server</h1>
@@ -602,7 +685,81 @@ We  need to host our server somewhere (heroku/AWS/Azure/etc.) and it will
 cost money also . but no such adjustment needed ro make incase of Firebase 
 as it has it's own server .
     </section>
- 
+    <section id="m23">
+<h1>CQRS</h1>
+<b>cqrs design pattern in microservice architecture -></b> cqrs design pattern is 
+used when quering in microservices.<br>
+
+We can use CQRS design pattern in order to avoid complex queries to get 
+rid of inefficient joins. CQRS stands for Command and Query Responsibility 
+Segregation. Basically this pattern separates read and update operations for a database.<br>
+
+
+<b>Need for CQRS -></b><br>
+
+Normally, in monolithic applications, most of time we have 1 database and 
+this database should respond both query and update operations. That means 
+a database is both working for complex join queries, and also perform 
+CRUD operations. But if the application goes more complex this query and 
+crud operations will be also is going to be un-manageable.<br>
+
+
+cqrs allows separate reading database and the writing database with 2 database. 
+By this way we can even use different database for reading and writing database 
+types like using no-sql for reading and using relational database for crud operations.<br>
+
+So we can say that CQRS separates reads and writes into different databases, 
+Commands performs update data, Queries performs read data. Now since cqrs uses 
+2 d/f db than to maintain syncing b/w these 2 db we can use Kafka for syncing 
+these 2 database with pub/sub Kafka topic exchanges.<br>
+
+
+<b>Real life usecase -></b> Instagram Database Architecture<br>
+
+
+Instagram basically uses two database systems, one is relational database 
+PostgreSQL and the other is no-sql database — Cassandra.Cassandra database 
+for user stories that is read-incentive data. And using relational PostgreSQL 
+database for User Information bio update.<br>
+
+    </section>
+    <section id="micro">
+<h1>Webservice Vs microservices</h1>
+Both r based on http protocol.
+Microservices and web services are two different approaches to building web applications.
+Microservices are a modular, component-based approach to building applications, 
+while web services are typically built as monolithic applications.<br>
+Microservices are typically deployed as independent, self-contained services, 
+while web services are deployed as a single unit. Microservices are typically 
+deployed in a cloud-based environment, while web services are usually deployed in a traditional on-premises environment.
+Microservices are highly scalable, while web services are designed for a more limited scale.<br>
+Microservices are designed to be stateless, while web services are typically designed to be stateful.
+
+Few central types of web services: XML-RPC, UDDI, SOAP, and REST:
+SOAP & REST r software architecture to create API .
+    </section>
+    <section id="m24">
+<h1>microservice Design pattern</h1>
+Top 6 microservice patterns -<br>
+
+Database Per Service Pattern - as its name implies, each microservice has its own dedicated 
+database. Not an easy pattern to implement as there’s lots of potential drawbacks and 
+overhead in architecture development. Loose coupling and scaling are pluses.<br>
+
+Single Database Pattern - microservices share one DB - a bit more forgiving approach than 
+1. The downside is coordination of efforts and cross-dependencies, which goes against the 
+very philosophy of microservices.<br>
+
+Saga Pipeline Pattern - a sequential pipeline of transactions that takes place with microservice “commit” events.<br>
+
+API Composition Pattern - used for implementing complex queries in a microservices architecture.<br>
+
+Command Query Responsibility Segregation Pattern - addresses the challenge of querying multiple 
+microservices by defining a special database view designed to support such query.<br>
+
+Event sourcing Pattern addresses the problem of maintaining data consistency across 
+microservices (an alternative to this would be another pattern called “Transaction Log Trail”)<br>
+    </section>
    </div>
 </body>
 </html>

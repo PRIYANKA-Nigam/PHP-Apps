@@ -100,11 +100,9 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div> -->
                     <div style="background-color:black;width:100%;height:200px">
-                   <label style="color:white"> /////////////////////////////////////////////////////////////
-                   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</label>
-                   <label style="color:white;margin-top:70px">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</label>
-                   <label style="color:white;margin-top:50px"> /////////////////////////////////////////////////////////////
-                   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</label>
+                   <label style="color:white"> /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</label>
+                   <label style="color:white;margin-top:60px">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</label>
+                   <label style="color:white;margin-top:70px"> ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</label>
                     </div>
                     <!-- Content Row -->
                  
@@ -143,7 +141,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
 <span class="dot a"><h4><center><b style="color:white">Average Salary Path of Tech Roles</b></center></h4></span>
 <span class="dot"></span><span class="dot"></span><br>
 <div class="row">
-<div class="col-lg-8 mb-4">
+<div class="col-lg-6 mb-4">
 
     <!-- Project Card Example -->
     <div class="card shadow mb-4">
@@ -228,7 +226,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
         </div>
         
 </div>
-<div class="col-lg-4" style="background:black;height:820px;width:400px;border-radius:20%">
+<div class="col-lg-6" style="background:black;height:820px;width:400px;border-radius:20%">
  <label style="color:white;margin-top:5px;font-size:20px;margin-left:40px"><b>Experience</b></label><br><br><br>
  <div>
  <span class="dot1"></span> 

@@ -49,7 +49,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     color: white;
 }
 section{
-    height: 100vh;
+    height: auto;
     width: 170vh;
     display:inline-block;
     align-items: left;
@@ -261,7 +261,7 @@ integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQS
         <ul class="nav flex-column navbar-nav bg-gradient-primary  sidebar-dark accordion" 
         id="accordionSidebar" style="background:brown">
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="index.html">
+            <a class="nav-link" aria-current="page" href="#">
             <div class="sidebar-brand-icon rotate-n-15">
                 </div>
               <span data-feather="home" class="align-text-bottom">
@@ -521,6 +521,13 @@ integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQS
               Annotation in Java
             </a>
           </li>
+          <hr class="sidebar-divider">
+          <li class="nav-item">
+            <a class="nav-link" href="#j53">
+              <span data-feather="shopping-cart" class="align-text-bottom"></span>
+           Marker Interface
+            </a>
+          </li>
         </ul>
 
        
@@ -531,7 +538,7 @@ integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQS
     <div style="margin-top:15px;padding-top:10px;">
     <label style="margin-top:35px;" ><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br><hr>
 <div class="content" >
-    <section id="j1" style="font-size:10px">
+    <section id="j1" >
 <h1>What is Java.</h1>
 Java is a high-level, class-based, object-oriented programming language 
 that is designed to have as few implementation dependencies.Java is a 
@@ -728,6 +735,7 @@ To fix this error, access outerField through an object reference:<br>
 
 System.out.println(outer.outerField);</li>
 </ul>
+<b>In versions prior to java8 , we were able to execute our program without main() using static block but not from java 8.</b>
     </section>
     <section id="j9">
 <h1>Superclass members</h1><br>
@@ -748,6 +756,20 @@ is the class from which a child class (or a subclass) inherits its constructors<
 like Java libraries, Java source compilers, Java debuggers, bundling and deployment tools.<br>
 <b>Just In Time compiler (JIT)</b> is runs after the program has started executing, on the fly. 
 It has access to runtime information and makes optimizations of the code for better performance.<br>
+jdk is a software development environment that is used to develop,compile & execute java 
+applications & applets.jre is implementation of jvm.jdk is a superset that includes jre , 
+compiler & other system files & library.<br>
+
+Main difference between JRE and JDK is that, you can not compile Java program using JRE. <br>
+Tools required for compiling Java source file to create class files, i.e. javac, comes 
+with JDK installation.JDK is something you will need to compile your code to make them 
+executable by your JRE.You will need javac for compiling your code which is present in JDK.
+Jre can only be use to run a java program and is developed as browser plugin. In order 
+to run any Java program from browser.<br>
+JRE was required to run applets like java app on users machines<br>
+
+Firstly java is compiled to bytecode, which then either compiled, or interpreted depending on mood of JIT.<br>
+
 <b>Similarity &  distinction  in JDK & jre -></b><br>
 you downloaded just a JRE if you were only interested in 
 running Java program's. If a programmer would like to 
@@ -874,6 +896,11 @@ a Thread can only be started once.If a Thread needs to be
 run more than once, then one should make an new instance 
 of the Thread and call start on it. <b>(When a thread is started it called start() which internally called run() ).</b>
 So , After starting a thread, it can never be started again. Hence, we can't  call a same thread multiple times.<br>
+<b>Problem with multithreading</b><br>
+
+Increased difficulty level of code.<br>
+Deadlock occurrence if not using synchronize<br>
+Overhead due to thread switching <br>
     </section>
     <section id="j18">
 <h1>Executor Framework</h1>
@@ -965,6 +992,9 @@ within the class, outside the class, within the package and outside the package.
 Modifiers public, static, strictFp etc 
 they all can be placed in any order before giving the 
 return type.<br><b>eg... public static int sum() same as static public  int sum().</b>
+<br>
+<b>Access modifiers visibility sequence is : private < default < protected < public 
+which means private is the most restrictive & public is the least restrictive modifier.</b>
     </section>
     <section id="j23">
 <h1>visibilty scope</h1><br>
@@ -985,9 +1015,17 @@ The following rules for inherited methods are enforced for overridding class-<br
 Methods declared <b>public</b> in a superclass also must be public in all subclasses.<br>
 Methods declared <b>protected</b> in a superclass must either be protected or public in subclasses; they cannot be private.<br>
 Methods declared <b>private</b> are not inherited at all, so there is no rule for them.<br>
+<br>
+if parent is protected then child as public is allowed.
+Child class must not throw newer or broader checked exceptions. . May throw 
+narrower(below in class hierarchy) checked exceptions or any unchecked exception.
     </section>
     <section id="j25">
 <h1>  Enum</h1><br>
+Enum is a type like a class or interface but it can't extend any other class.
+We cannot create enum instance outside of enum b'coz it can't have public 
+constructor in Enum and compiler doesn't allow any public constructor inside the 
+Enum. Enum can only allow private constructor .
 An enum type is a special data type that enables for a variable to be a set 
 of predefined constants. The variable must be equal to one of the values 
 that have been predefined for it.<br>
@@ -1080,6 +1118,12 @@ The simplest lambda expression contains a single parameter and an expression:<br
 parameter -> expression<br>
 To use more than one parameter, wrap them in parentheses:<br>
 (parameter1, parameter2) -> expression<br>
+Lambda expressions can only be used in context of Functional interfaces. You 
+can assign a lambda expression to a single abstract method (i.e. To a Functional interface). 
+If you could assign a lambda expression to an interface containing more than one abstract 
+method (i.e. a non functional interface), the lambda expression could only have 
+implemented one of its methods, leaving the other methods unimplemented. That’s 
+why Lambda expressions don’t have method name, return types etc. as it talks about a single abstract method.<br>
 Lambda expressions are a new and important feature included in Java SE 8. They provide a clear 
 and concise way to represent one method interface using an expression. Lambda expressions also 
 improve the Collection libraries making it easier to iterate through, filter, and extract data from a Collection .<br>
@@ -1097,6 +1141,13 @@ the Java syntax, will be hard to understand quickly and easily.<br>
 <h1>Stream APIs</h1><br>
 Stream API is used to process collections of objects. A stream is a sequence of objects that 
 supports various methods which can be pipelined to produce the desired result.<br>
+Stream API contains various inbuilt methods that supports aggregate methods.It follows 
+a pipeline type of structure starting from source than It may have no or some 
+intermediate operations followed by terminal operations. intermediate operations r optional.<br>
+it is a technique to make processing of collection’s data easy by supporting functional-style operations.<br>
+
+Sequential stream :<br>
+Parallel stream : It allows us to do operations on collection in thread safe mode.<br>
 The features of Java stream are –<br>
 
 A stream is not a data structure instead it takes input from the Collections, Arrays or I/O channels.<br>
@@ -1392,6 +1443,10 @@ A shallow copy constructs a new compound object and then (to the extent possible
 inserts references into it to the objects found in the original. A deep copy 
 constructs a new compound object and then, recursively, inserts copies into 
 it of the objects found in the original.<br>
+<b>In shallow copy, the created reference will point to the original object while 
+in deep copy , the newly created object will be independent of the original 
+object.ie.. the reference will point to the memory location of the newly 
+created object not the original object.</b><br>
 
     </section>
     <section id="j44">
@@ -1402,7 +1457,9 @@ a sound strategy for creating simple, reliable code. Immutable objects
 are particularly useful in concurrent applications.<br>
 its state doesn't change after it has been initialized. 
 For example, String is an immutable class and, once instantiated, the value of a String object never changes<br>
-
+Immutable object remains in 1 state in which they r created throughout as they 
+don't allow any change with them Hence, they r thread safe.<br>
+The internal state of program is consistent even if there r some exception.
 
     </section>
     <section id="j45">
@@ -1419,7 +1476,10 @@ The finalize() method is invoked each time before the object is garbage collecte
 <b>gc() method</b>
 The gc() method is used to invoke the garbage collector to perform cleanup processing. The gc() is found in System and Runtime classes.<br>
 
-
+gc()(static method) is use to call garbage collector to perform clean up processing present 
+in system & runtime class to unreference & destroy the object than garbage collector thread 
+calls finalize method(protected) present in object class . It is a method defined in Object class. <br>
+Garbage collector calls this method to perform clean up activities before destroying the object from the memory.
     </section>
     <section id="j46">
 <h1> JDBC/JPA/JSP/Hibernate</h1><br>
@@ -1450,22 +1510,51 @@ will use a simple database and we don't plan to migrate it to a different databa
 a well-tested and robust framework is handling the interaction between the database and the Java 
 application, we should see a decrease in errors from the database mapping layer when using JPA.<br>
 <div style="background:black;color:white">
-1. <b>JSP & Servlets:</b> JSP is a webpage scripting language that can generate dynamic content while Servlets are Java programs that are already compiled which also creates dynamic web content.Servlets run faster compared to JSP.
+1. <b>JSP & Servlets:</b> JSP is a webpage scripting language that can generate dynamic content 
+while Servlets are Java programs that are already compiled which also creates dynamic web content.
+Servlets run faster compared to JSP.<br>
 
-2. <b>Spring:</b> Spring is the most popular application development framework for enterprise Java.we use Spring Framework to create high performing, easily testable, and reusable code.
+2. <b>Spring:</b> Spring is the most popular application development framework for enterprise Java.
+we use Spring Framework to create high performing, easily testable, and reusable code.<br>
 
-3. <b>JDBC:</b> Java Database Connectivity (JDBC) is an application programming interface (API) for the programming language Java, which defines how a client may access a database. It is part of the Java Standard Edition platform, from Oracle Corporation.
+3. <b>JDBC:</b> Java Database Connectivity (JDBC) is an application programming interface 
+(API) for the programming language Java, which defines how a client may access a database. 
+It is part of the Java Standard Edition platform, from Oracle Corporation.<br>
 
-4. <b>Hibernate :</b> Hibernate framework simplifies the development of java application to interact with the database.
+4. <b>Hibernate :</b> Hibernate framework simplifies the development of java application 
+to interact with the database.<br>
 </div>
     </section>
     </section>
     <section id="j47">
 <h1> Java Card</h1>
+This edition was targeted, to run applets smoothly and securely on smart cards and similar technology.<br>
+
+__<br>
+
+Java Card<br>
+
+
+Java Card is an industry-standard technology platform developed by Sun Microsystems 
+(now Oracle) to enable Java-based applications - applets - to run on smart cards.<br>
+
+Java Card helps developers build, test, and deploy smart card-based applications 
+quickly and efficiently with an object-oriented programming model <br>
+
+
+Java Card technology is used in a wide range of smart card applications,<br>
+
+
+Smart ID badges<br>
+
+SIM<br>
+
+Government id & health card<br>
 
     </section>
     <section id="j48">
 <h1> Java applications in realtime</h1><br>
+Android SDK uses java<br>
 (#1) Desktop GUI Applications<br>
 (#2) Web Applications<br>
 (#3) Mobile Applications<br>
@@ -1560,6 +1649,8 @@ public non-sealed class Car extends Vehicle implements Service {<br>
     </section>     
     <section id="j52">
 <h1>Annotation in Java</h1><br>
+Annotations( a form of metadata , conveys some special meanings to the compiler) 
+became available in Java since JDK 1.5.<br>
 With annotation , the user can get an alert or warning incase we write 
 something wrong or missing anything to write.Such annotation Expression
 will become prevalent at compile-time.It behaves same as comment but also
@@ -1567,6 +1658,102 @@ reveal the intention of the user to the computer that what he actually
 want to do if he has committed some error.<br>
 <b>eg... @override, @suppresswarning etc.
     </section>   
+    <section id="j53">
+<h1>Marker Interface</h1><br>
+<b>Marker interface -</b> An interface that does not contain methods, fields, and 
+constants is known as marker interface.
+
+It delivers the run-time type information about an object. It is the reason 
+that the JVM and compiler have additional information about an object. it
+
+inform the Java compiler by a message so that it can add some special behavior 
+to the class implementing it. <br>
+
+<b>__________</b><br>
+
+<b>clone() of cloneable marker interface -</b> It generates replica (copy) of an 
+object with different name.<br>
+
+(eg... crudrepotory,jparepository r marker interface)
+built-in marker interfaces are the interfaces that are already present in 
+the JDK and ready to use.<br>
+#1 Serializable interface: Serializable is a marker interface present in 
+the java.io package. We can serialize objects using this interface i.e. save 
+the object state into a file. Serialization can be defined as a process by 
+which we convert the object state into its equivalent byte stream to store 
+the object into the memory in a file or persist the object.<br>
+
+
+When we want to retrieve the object from its saved state and access its contents, 
+we will have to convert the byte stream back to the actual Java object and 
+his process is called deserialization.<br>
+
+
+
+The entire mechanism of serialization and deserialization is platform-independent. 
+This means that we can serialize the object on one platform and then deserialize 
+it on a different platform.<br>
+
+
+When we say that we have serialized the Java object, it means that we have called 
+the ObjectOutputStream method writeObject () to write the object to a file.<br>
+
+
+Similarly,
+
+in the case of deserialization, we call the ObjectInputStream:: readObject () 
+method to read the data from the file that has stored the object.<br>
+
+ If a particular field is not serializable then we should mark it as transient.<br>
+
+Java.io.NotSerializableException<br>
+
+thrown when the class is not eligible for serialization. The class that does not 
+implement the Serializable interface becomes ineligible for serialization.<br>
+
+Serialization (writing) <br>
+deserialization (reading)<br>
+
+<b>#2 Cloneable interface:</b> The cloneable interface is a part of the java.lang package 
+and allows the objects to be cloned. Object cloning is a process using which we 
+create an exact copy of the object using the clone () method of the Object class<br>
+
+The <b>clone ()</b> method creates an exact copy of the object with less processing time 
+than that taken for creating a new object using the new keyword.<br>
+
+<b>CloneNotSupportedException :</b> If a class does not implement a Cloneable interface 
+and still invokes the clone () method,<br>
+
+
+When the one-dimensional array is cloned, a deep copy of the array is generated. 
+When a 2-dimensional array is cloned, then a shallow copy is made.<br>
+
+Making a shallow copy is the default behavior of the clone () method in Java.<br>
+
+In deep cloning, we make a copy of the object that is independent of the original 
+object. Any changes then made to the clone object will not reflect in the original . <br>
+
+The default implementation of the clone () method creates a shallow copy of the 
+object while we can override the clone () method to create a deep copy.<br>
+
+
+<b>#3 Remote interface:</b> The remote interface is a part of the java.RMI package and 
+we use this interface to create RMI applications
+It marks an object as remote that can be accessed from another machine (host).<br>
+
+<b>__________</b><br>
+
+<b>How annotations can be use as a replacement to marker interface</b><br>
+
+As marker interfaces are mostly useful for just marking a class, the same thing 
+can be achievable through annotations. Marker interfaces are better than 
+annotations when they're used to define a type. For example, Serializable 
+can be used as the type of an argument that must be serializable.<br>
+
+public void writeToFile(Serializable object);<br>
+If the marker interface doesn't define a type, but only meta-data, then an annotation is better.<br>
+
+    </section>  
 </div> </div>
 <script type="text/javascript">
 $(document).ready(function(){

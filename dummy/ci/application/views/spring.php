@@ -46,7 +46,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     color: white;
 }
 section{
-    height: 100vh;
+    height: auto;
     width: 170vh;
     display: inline-flexbox;
     align-items: left;
@@ -319,7 +319,32 @@ application.properties’ or ‘application.yml’ files  reduces your developme
 effort by minimizing the amount of XMLs that you were writing in a standard 
 Spring project. Under this file , we accommodate the common properties of our 
 project in the form of key-value pairs in these files. Other than the main 
-application.properties file  Sometimes, we need to create custom properties 
+application.properties file  .<br>
+this file is auto detected in a Spring Boot Application. It is placed inside 
+“src/main/resources” directory. <br>
+
+Pre-defined keys<br>
+Spring framework provides several common default properties to specify inside 
+application.properties such as to support database, email, JPA, Hibernate,  Logging, AOP etc.<br>
+Programmer-defined Keys<br>
+
+ ‘application.properties’ file is loaded using code by adding it in starter/main class. <br>
+ @PropertySource(“classpath:application.properties”)<br>
+ @Value - To read one key from the properties .<br>
+ if  the key is not present in the 
+ properties file and we try to read using @Value() then it will throw an Exception:<br>
+IllegalArgumentException.<br>
+
+create and load multiple properties files in the application
+@PropertySource({ "classpath:abc.properties", "classpath:pqr.properties", "classpath:xyz.properties", "....",  })<br>
+
+If we define the same key with different values in different properties files, which one will be selected?<br>
+
+In this case, the last loaded properties file key will ñ
+ considered.( The value of xyz.properties file key will load )<br>
+
+
+Sometimes, we need to create custom properties 
 files in order to fulfil the business requirements. It is placed inside 
 “src/main/resources” directory. It stores various properties in key=value 
 format. These properties are used to provide input to Spring container object, 
@@ -452,7 +477,7 @@ The default behavior of caching can be disabled for thymeleaf using
 the property spring.thymeleaf.cache=false in the application.properties file. 
 We do not need to do this manually, introducing this spring-boot-devtools does this automatically for us.
 <b>________________________________________</b><br>
-
+<b>It dynamically compile & run our code when we regress or add any data </b>
     </section>
     <section id="s9">
 <h1>Stereotype Annotations </h1><br>
@@ -576,7 +601,9 @@ any running application. The main benefit of using this library
 is that we get health and monitoring metrics from production-ready applications.<br>
 To enable Spring Boot actuator endpoints to your Spring Boot application, 
 we need to add the Spring Boot Starter actuator dependency in our build configuration file.<br>
-
+<b><i>Actuator use to access current state of a running application in a prod environment. 
+    These states r shown by different metrics like - app uptime , processor, memory.
+use this to monitor & get health checks of a production-ready application. </i></b><br>
 Maven users can add the below dependency in your pom.xml file.<br>
 dependency><br>
    groupId>org.springframework.boot/groupId><br>
@@ -719,6 +746,8 @@ ApplicationContext<br>
     </section>
     <section id="s20">
 <h1>Bean</h1><br>
+<b>Bean - Java Bean is a simple java helper class, used to transfer data between 
+classes or applications.We must declare Java Bean as a public class. It never acts as a main class</b><br>
 <b>Java Beans</b> are classes that encapsulate many objects into a single 
 object (the bean). Spring beans are classes in which Instead of 
 instantiating a class (using new), you get an instance of the 
@@ -851,6 +880,7 @@ missing the @SpringBootApplication annotation in the Spring Boot entry point cla
     </section>
     <section id="s27">
 <h1>Path param Vs Request param</h1><br>
+
 @RequestParam and @PathVariable can both be used to extract values from the request URI, but they are a bit different.<br>
 @RequestParam is used to get the request parameters from URL, also known as query parameters, 
 while @PathVariable extracts values from URI.<br>
@@ -894,7 +924,14 @@ public String showBookDetails(@PathVariable("ISBN") String id,<br>
    model.addAttribute("ISBN", id);<br>
    return "bookDetails";<br>
 }<br>
-
+<b><i>Path param vs request params :<br>
+Path params we use with get .It comes as a part of url.<br>
+Request params we send in body <br>
+_____<br>
+.@ResponseBody is a Spring annotation which binds a method return 
+value to the web response body .The @ResponseBody annotation is 
+used at method level or method return type level.<br>
+______</i></b>
 The @RequestParam is used to extract query parameters while @PathVariable is used to extract data right from the URI.
     </section>
     <section id="s28">
