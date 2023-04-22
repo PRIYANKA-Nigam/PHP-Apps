@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-
+        <style>
+#icon{
+  width: 30px;
+  cursor: pointer;
+}
+:root{
+  --primary-color:#edf2fc;
+  --secondary-color:white;
+}
+.dark-theme{
+  --primary-color:yellow;
+  --secondary-color:red;
+}
+.g{
+  background: var(--primary-color);
+}
+.gtl{
+  background: var(--secondary-color);
+}
+body{
+  background: var(--primary-color);
+}
+      </style>
 </head>
 
 <body id="page-top">
@@ -22,6 +45,14 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
     <div class="container">
+    <div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
+             <img src='<?=base_url().'setting.jpg'?>' id="icon" width="25px" height="25px" >
     <a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a>
         <h1>JIRA </h1><hr><br>
     <div class="row">
@@ -29,11 +60,11 @@
 <!-- Earnings (Monthly) Card Example -->
 <div class="col-md-6">
     <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
+        <div class="card-body ">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">JIRA Overview</div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     Jira is a project management software use for software  development  
                     across industries it allows to view ,track & report task/issued over the project  we r working on.<br>
 
@@ -68,12 +99,12 @@ software has grown into an agile project management tool
 <!-- Earnings (Monthly) Card Example -->
 <div class="col-md-6 ">
     <div class="card border-left-success shadow h-100 py-2">
-        <div class="card-body">
+        <div class="card-body ">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">JIRA's pros and cons</div><br>
                 </div>
-                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1 gtl">
                     <b>PROS :</b>
 Jira software lets you add story points to each issue to quantify the work 
 required to be done and also group related issues using its Epic issue type
@@ -107,11 +138,11 @@ Hence, JIRA is functional but not developers' friendly</div>
 <!-- Earnings (Monthly) Card Example -->
 <div class="col-md-6">
     <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
+        <div class="card-body ">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Azure DevOps Vs Jira </div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     Azure DevOps and Jira are both helpful tools for software 
                     development teams. Jira uses Agile methodologies, offers additional 
                     search functionality and can be used beyond software development 
@@ -149,12 +180,12 @@ software release.<br><br>
 <!-- Earnings (Monthly) Card Example -->
 <div class="col-md-6 ">
     <div class="card border-left-success shadow h-100 py-2">
-        <div class="card-body">
+        <div class="card-body ">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">JIRA Vs Github</div><br>
                 </div>
-                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1 gtl">
                     GitHub is an Internet hosting service for software development 
                     and version control using Git. It provides the distributed version 
                     control of Git plus access control, bug tracking, software feature 
@@ -180,11 +211,11 @@ from version control systems to project management. And it is rising to fame as 
 <!-- Earnings (Monthly) Card Example -->
 <div class="col-md-6">
     <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
+        <div class="card-body ">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Github</div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     Joining as a recent addition to the list of Jira alternatives is GitHub.
 Popularly known for source code management, now, GitHub has expanded its horizons from 
 version control systems to project management. And it is rising to fame as a popular 
@@ -229,5 +260,16 @@ issue has been fixed.Once the owner resolves the issue ,he can close that issue.
 
     </div>
 </div>
+<script> 
+     var icon=document.getElementById("icon");
+     icon.onclick =function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src="<?=base_url().'setting.jpg'?>";
+      }else{
+        icon.src="<?=base_url().'moon.jpg'?>";
+      }
+     }
+     </script>         
 </body></html>
 <!-- End of Main Content -->

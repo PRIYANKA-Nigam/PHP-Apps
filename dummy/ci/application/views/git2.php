@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +22,29 @@
         <link rel="stylesheet" href="css/style.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
  <link rel="stylesheet" type="text/css" href="https://getbootstrap.com/docs/5.3/examples/dashboard/dashboard.css">
-    
+    <style>
+#icon{
+  width: 30px;
+  cursor: pointer;
+}
+:root{
+  --primary-color:#edf2fc;
+  --secondary-color:white;
+}
+.dark-theme{
+  --primary-color:yellow;
+  --secondary-color:red;
+}
+.g{
+  background: var(--primary-color);
+}
+.gtl{
+  background: var(--secondary-color);
+}
+body{
+  background: var(--primary-color);
+}
+      </style>
 
     
 
@@ -44,6 +67,14 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                                     <h6 class="m-0 font-weight-bold text-primary">Git Blogs</h6>
                                    
                                 </div>
+                                <div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
+              <img src='<?=base_url().'setting.jpg'?>' id="icon" width="25px" height="25px" >
                                 <a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-primary" >Back</button></a> 
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -55,11 +86,11 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                                  <div class="col-md-5">
                                     <div class="row">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <h4 class="card-text"><u>Rebase</u></h4>
               <div class="d-flex justify-content-between align-items-center">
                               <div class="container">
-                                <div class="row">
+                                <div class="row gtl">
                                 Rebase deletes all commit history for the new feature branch.Rebasing 
                                 makes the branching history cleaner and with more linear  commits repo structure 
                                 </div>
@@ -68,11 +99,11 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                          </div>
                          <div class="row">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <h4 class="card-text"><u>How to push some changes to remote branch</u></h4>
               <div class="d-flex justify-content-between align-items-center">
                               <div class="container">
-                                <div class="row">
+                                <div class="row gtl">
                                 git checkout -b [branchname]<br>
                                 git push -u origin [branchname]<br>
                                 </div>
@@ -82,11 +113,11 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                         </div>
             <div class="col-md-7">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <h4 class="card-text"><u>Commit without any commit message</u></h4>
               <div class="d-flex justify-content-between align-items-center">
               <div class="container">
-                                <div class="row">
+                                <div class="row gtl">
                                 git commit -am ''<br>
                                  you will see that it fails because an empty commit message is not allowed. Newer versions of git have the
                                --allow-empty-message commandline argument, including the version of git included with the latest version of 
@@ -105,11 +136,11 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
 
                                     <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <h4 class="card-text">fast-forward merge</h4>
               <div class="d-flex justify-content-between align-items-center">
               <div class="container">
-                                <div class="row">
+                                <div class="row gtl">
                               <br>
                             A fast-forward merge can never have a merge conflict because Git won't apply a 
                             fast-forward merge if the tip of the target branch has diverged from the source branch.<br>
@@ -130,11 +161,11 @@ branch commits r of no further use.<br>
                          </div></div></div></div>
                          <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <h4 class="card-text">no-fast-forward</h4>
               <div class="d-flex justify-content-between align-items-center">
               <div class="container">
-                                <div class="row">
+                                <div class="row gtl">
                                 The no-fast-forward merge is also known as a three-way merge or true merge.
                                 git merge master --no-ff (no fast forward)<br>
                                 option --no-ff (i.e. true merge) creates a new commit with multiple parents, 
@@ -146,11 +177,11 @@ branch commits r of no further use.<br>
                                     </div> </div></div></div>
                                     <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <h4 class="card-text">reflog</h4>
               <div class="d-flex justify-content-between align-items-center">
               <div class="container">
-                                <div class="row">
+                                <div class="row gtl">
                                 Once we did git reset --hard all our latest changes removed permanently 
                                 but after using this command their is still a way to regain those 
                                 changes by using -><br>
@@ -164,11 +195,11 @@ branch commits r of no further use.<br>
           
                                     <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <h4 class="card-text">git push origin master -- force</h4>
               <div class="d-flex justify-content-between align-items-center">
               <div class="container">
-                                <div class="row">
+                                <div class="row gtl">
                                 When code is not getting pushed to remote branch after using git push 
                                 origin master or getting message as remote end hung up unexpectedly than use :<br>
                                 git push origin master -- force<br>
@@ -186,7 +217,7 @@ branch commits r of no further use.<br>
                     <br><hr>
                                     <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
                                     <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" 
@@ -195,7 +226,7 @@ branch commits r of no further use.<br>
       </button>
     </h2>
     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-      <div class="accordion-body">
+      <div class="accordion-body gtl">
       Installing git to local takes larger space than SVN and also SVN repo can handle large 
       binary files but git repo can't.<br>
 Using git , the user will have the full version history of the remote repository in their 
@@ -217,7 +248,7 @@ TravisCI .
       </button>
     </h2>
     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-      <div class="accordion-body">
+      <div class="accordion-body gtl">
       The core difference is GitLab has Continuous Integration/Continuous Delivery (CI/CD) 
       and DevOps workflows built-in. GitHub lets you work with the CI/CD tools of your choice,
        but you'll need to integrate them yourself. GitHub users typically work with a 
@@ -234,7 +265,7 @@ TravisCI .
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
+      <div class="accordion-body gtl">
       Putty gives us an interface to connect to linux server. <br>It is a ssh client used ro make a secure connection with the server .
       </div>
     </div>
@@ -249,7 +280,7 @@ TravisCI .
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
+      <div class="accordion-body gtl">
       Sourcetree is a free graphical user interface (GUI) desktop client that simplifies how you 
       interact with Git reposit tries. Being  GUI based , it's easy to visualize ,mange repository 
       which is rather complex incase of command line tool like - git bash.It offers simplified 
@@ -268,5 +299,16 @@ Crashes often<br>
 </div>
                                     </div></div></div>
 <br><hr>
+<script> 
+     var icon=document.getElementById("icon");
+     icon.onclick =function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src="<?=base_url().'setting.jpg'?>";
+      }else{
+        icon.src="<?=base_url().'moon.jpg'?>";
+      }
+     }
+     </script>         
 </body>
 </html>                    

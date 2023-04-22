@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head><title>JAR Blog</title>
@@ -10,7 +11,29 @@
         <link rel="stylesheet" href="css/style.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
  <link rel="stylesheet" type="text/css" href="https://getbootstrap.com/docs/5.3/examples/dashboard/dashboard.css">
-    
+    <style>
+#icon{
+  width: 30px;
+  cursor: pointer;
+}
+:root{
+  --primary-color:#edf2fc;
+  --secondary-color:white;
+}
+.dark-theme{
+  --primary-color:yellow;
+  --secondary-color:red;
+}
+.g{
+  background: var(--primary-color);
+}
+.gtl{
+  background: var(--secondary-color);
+}
+body{
+  background: var(--primary-color);
+}
+      </style>
 
     
 
@@ -21,7 +44,14 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
-
+    <div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
+              <img src='<?=base_url().'setting.jpg'?>' id="icon" width="25px" height="25px" >
     <a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a>
 <div class="col-lg-12 mb-4">
                            <div class="card shadow mb-4">
@@ -37,9 +67,9 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                                     <h1>JAR File</h1>
                                  <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <p class="card-text"></p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center gtl">
               JAR[Java Archive ] files r combination of .class files.All these class files or
                bytecodes r compressed to form a .jar files. In short these jar files r 
                compressed format of compiled java programs.So, these r .class files along 
@@ -64,9 +94,9 @@ our .class file back to the .java files using java decompiler.We can also use th
                          <h1>WAR File</h1>
                                  <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <p class="card-text"></p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center gtl">
               WAR files is a combination of web related pages such as html,jsp,servlet,css,js 
               etc.War is the archive file for web application.<br>
               a WAR file (Web Application Resource or Web application ARchive) is a file used to 
@@ -90,9 +120,9 @@ our .class file back to the .java files using java decompiler.We can also use th
                          <h1>EAR File</h1>
                                  <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <p class="card-text"></p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center gtl">
               An EAR file is a critical piece in deploying a service application to a production server. 
               An enterprise archive (EAR) file is a compressed file that contains the libraries, 
               enterprise beans, and JAR files that the application requires for deployment.<br>
@@ -109,9 +139,9 @@ our .class file back to the .java files using java decompiler.We can also use th
                          <h1>TAR File</h1>
                                  <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <p class="card-text"></p>
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center gtl">
               A tar (tape archive) file format is an archive created by tar, 
               a UNIX-based utility used to package files together for backup or 
               distribution purposes. It contains multiple files (also known as a tarball) 
@@ -127,3 +157,14 @@ our .class file back to the .java files using java decompiler.We can also use th
                                     
                          </div></div></div></div>
                                  </div></div></div></div>
+                                 <script> 
+     var icon=document.getElementById("icon");
+     icon.onclick =function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src="<?=base_url().'setting.jpg'?>";
+      }else{
+        icon.src="<?=base_url().'moon.jpg'?>";
+      }
+     }
+     </script>         

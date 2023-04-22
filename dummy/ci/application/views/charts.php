@@ -10,9 +10,9 @@
    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
    </script>
 </head>
-<body>  
-   <h2>Top <i> Programming Languages </i> in trend </h2>
-   <p> Showing data of widely used languages in 2023 </p>
+<body >  
+   <h2 class="gtl">Top <i> Programming Languages </i> in trend </h2>
+   <p class="gtl"> Showing data of widely used languages in 2023 </p>
    <hr>
    <br><br>
    <canvas id = "pieChart"> </canvas>

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
@@ -31,7 +32,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
 
 
     <style>
-      
+     
       .container{
     background: rgba(255, 255  , 255, 0.1);
     backdrop-filter: blur(15px);
@@ -200,6 +201,14 @@ section{
     </nav>
   </div>
   </div></div>
+  <div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
+             
 <label><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br>
 <div class="content" >
     <section id="a1" >
@@ -539,4 +548,5 @@ the service.<br>
     </section>
 
    </div>
+         
 </body></html>

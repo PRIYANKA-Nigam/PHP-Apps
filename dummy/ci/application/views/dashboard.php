@@ -60,6 +60,15 @@ width: 15px;
     background-color: blueviolet;
     border-radius: 50%;
   }
+  @media(prefers-color-scheme:dark){
+    body{
+      background-color: #222f3e;
+    }
+    .dot{
+      background: #576574;
+      color: #222f3e;
+    }
+  }
     </style>
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -80,7 +89,7 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 <style>
-.mt-100{margin-top: 50px;}
+.mt-100{margin-top: 5px;}
 .mt-30{margin-top: 30px;}
 .mb-30{margin-bottom: 30px;}
 </style>
@@ -99,19 +108,20 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div> -->
-                    <div style="background-color:black;width:100%;height:200px">
-                   <label style="color:white"> /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</label>
-                   <label style="color:white;margin-top:60px">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</label>
-                   <label style="color:white;margin-top:70px"> ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</label>
+                    <!-- by taking white-space as nowrap all the tilde and slashes which were coming in 2 lines started coming in the same line -->
+                    <div style="background-color:black;width:100%;height:200px; height:75%;min-height:5px;display:inline-block; white-space: nowrap;">
+                    <p style="color:white;" class="gtl">///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</p><br>
+                   <label style="color:white;margin-top:10px" class="gtl">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</label><br>
+                   <label style="color:white;margin-top:30px" class="gtl">//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</label>
                     </div>
-                    <!-- Content Row -->
+                 
                  
                     <div class="row" >
                       <div class="row">
                       <div class="col-md-8">
                         <div class="col-md-4">
                         <div class="text">
-                <label>Confuse to choose right career path for yourself</label>
+                <label >Confuse to choose right career path for yourself</label>
             </div>
                        
                         </div>
@@ -138,87 +148,87 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
 
 <!-- Content Column -->
 <span class="dot"></span><span class="dot"></span>
-<span class="dot a"><h4><center><b style="color:white">Average Salary Path of Tech Roles</b></center></h4></span>
+<span class="dot a"><h4 class="gtl"><center><b style="color:white">Average Salary Path of Tech Roles</b></center></h4></span>
 <span class="dot"></span><span class="dot"></span><br>
 <div class="row">
-<div class="col-lg-6 mb-4">
+<div class="col-lg-8 mb-4">
 
     <!-- Project Card Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Average Salary per domain</h6>
+            <h6 class="m-0 font-weight-bold text-primary ">Average Salary per domain</h6>
         </div>
-        <div class="card-body">
-            <h4 class="small font-weight-bold">DevOps Engineer <span
+        <div class="card-body ">
+            <h4 class="small font-weight-bold ">DevOps Engineer <span
                     class="float-right">3-18.8 lakh</span></h4>
             <div class="progress mb-4">
                 <div class="progress-bar bg-danger" role="progressbar" style="width: 60%"
                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <h4 class="small font-weight-bold">DevOps Engineer (Entry level)<span
+            <h4 class="small font-weight-bold ">DevOps Engineer (Entry level)<span
                     class="float-right">3-7 lakh</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 60%"
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <h4 class="small font-weight-bold">AI Engineer(Experienced) <span
                     class="float-right">10-21 lakh</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: 100%"
+                <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <h4 class="small font-weight-bold">AI Engineer <span
                     class="float-right">5-12 lakh</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: 100%"
+                <div class="progress-bar bg-dark" role="progressbar" style="width: 90%"
                     aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <h4 class="small font-weight-bold">ML Engineer(Senior) <span
                     class="float-right">6.5-20 lakh</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 80%"
+                <div class="progress-bar bg-alert" role="progressbar" style="width: 80%"
                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <h4 class="small font-weight-bold">ML Engineer(Junior) <span
                     class="float-right">3-10 lakh</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 80%"
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 60%"
                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <h4 class="small font-weight-bold">Data Science Engineer<span
                     class="float-right">3-10 lakh</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-info" role="progressbar" style="width: 60%"
+                <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <h4 class="small font-weight-bold">Big Data Engineer <span
                     class="float-right">13-20 lakh</span></h4>
             <div class="progress">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%"
+                <div class="progress-bar bg-dark" role="progressbar" style="width: 70%"
                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
             </div><br>
             <h4 class="small font-weight-bold">Mobile App Developer(Fresher)<span
                     class="float-right">3-6 lakh</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-alert" role="progressbar" style="width: 60%"
+                <div class="progress-bar bg-success" role="progressbar" style="width: 60%"
                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <h4 class="small font-weight-bold">Mobile App Developer(Experienced)<span
                     class="float-right">5-12 lakh</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-alert" role="progressbar" style="width: 60%"
+                <div class="progress-bar bg-alert" role="progressbar" style="width: 67%"
                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <h4 class="small font-weight-bold">Web Developer(Entry level) <span
                     class="float-right">3-7 lakh</span></h4>
             <div class="progress">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: 70%"
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 50%"
                     aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <h4 class="small font-weight-bold">Web Developer(Senior) <span
                     class="float-right">7-13 lakh</span></h4>
             <div class="progress">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: 70%"
+                <div class="progress-bar bg-info" role="progressbar" style="width: 70%"
                     aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
              </div>
@@ -226,71 +236,72 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
         </div>
         
 </div>
-<div class="col-lg-6" style="background:black;height:820px;width:400px;border-radius:20%">
- <label style="color:white;margin-top:5px;font-size:20px;margin-left:40px"><b>Experience</b></label><br><br><br>
+<div class="col-lg-2" style="background:black;height:820px;width:350px;border-radius:20%">
+ <label style="color:white;margin-top:5px;font-size:20px;margin-left:40px" class="gtl"><b>Experience</b></label><br><br><br>
  <div>
  <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">4+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">4+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-3 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">0-3 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">5+ years ~~~~~~~~~~~~~~~</lebel></div><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">5+ years ~~~~~~~~~~~~~~~</lebel></div><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-5 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">0-5 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">5+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">5+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-4 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">0-4 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-3 years ~~~~~~~~~~~~~~~</lebel></div><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">0-3 years ~~~~~~~~~~~~~~~</lebel></div><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">5+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">5+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-4 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">0-4 years ~~~~~~~~~~~~~~~</lebel></div><br><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">4+ years ~~~~~~~~~~~~~~~</lebel></div><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">4+ years ~~~~~~~~~~~~~~~</lebel></div><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">0-4 years ~~~~~~~~~~~~~~~</lebel></div><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">0-4 years ~~~~~~~~~~~~~~~</lebel></div><br>
        <div>
        <span class="dot1"></span> 
    <span class="dot1"></span>
       <span class="dot1"></span>  
-       <span class="dot1"></span> <label style="color:white;margin-left:12px">5+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
+       <span class="dot1"></span> <label style="color:white;margin-left:12px" class="gtl">5+ years ~~~~~~~~~~~~~~~</lebel></div><br><br>
 </div>
 
     </div>
+    <section id="video">
                
                          <div class="col-lg-12 mb-4">
 
@@ -375,7 +386,8 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
         </div>
     </div>
 </div>
-                       
+        </section>
+        <section id="links">
                           <div class="col-lg-12 mb-4">
                            <div class="card shadow mb-4">
                           <div class="card-header py-3">
@@ -458,6 +470,7 @@ printf('<a href="%1$s">%1$s</a>',htmlspecialchars($p,ENT_QUOTES));
                         </div>
                     </div>
 </div></div></div></div>
+        </section>
                     <!-- Content Row -->
                     
             <!-- End of Main Content -->
@@ -507,6 +520,7 @@ printf('<a href="%1$s">%1$s</a>',htmlspecialchars($p,ENT_QUOTES));
               <span>Copyright &copy; Your Website 2023</span>
           </div>
       </div>
+    
   </footer> 
         
 </body>

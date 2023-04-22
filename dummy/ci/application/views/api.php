@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-
+<style>
+#icon{
+  width: 30px;
+  cursor: pointer;
+}
+:root{
+  --primary-color:#edf2fc;
+  --secondary-color:white;
+}
+.dark-theme{
+  --primary-color:yellow;
+  --secondary-color:red;
+}
+.g{
+  background: var(--primary-color);
+}
+.gtl{
+  background: var(--secondary-color);
+}
+body{
+  background: var(--primary-color);
+}
+    </style>
 </head>
 
 <body id="page-top">
@@ -22,17 +45,19 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
     <div class="container">
+    <div id="google_element" style="float:right"></div>
+    <img src='<?=base_url().'setting.jpg'?>' id="icon" width="25px" height="25px" >
       <h1><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a> API & Library</h1><hr><br>
     <div class="row">
 
 <!-- Earnings (Monthly) Card Example -->
 <div class="col-md-6">
     <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
+        <div class="card-body ">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">OAuth</div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     OAuth is about authorization and not authentication. Authorization is 
                     asking for permission to do stuff.when a website wants to use the services 
                     of another—such as Bitly posting to your Twitter stream—instead of asking 
@@ -65,7 +90,7 @@ the permission to access our data or do things on our behalf from our  another a
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">SAML vs. OAuth</div><br>
                 </div>
-                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1 gtl">
                     SAML (Security Assertion Markup Language) is an alternative federated 
                     authentication standard that many enterprises use for Single-Sign On (SSO). <br>
                     SAML enables enterprises to monitor who has access to corporate resources.
@@ -94,7 +119,7 @@ while SAML is geared towards enterprise security.<br> That last point is a key d
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">SAML Vs Open Id connect </div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     OpenID Connect is built on the OAuth 2.0 protocol and uses an additional JSON Web Token (JWT), 
                     called an ID token. It is specifically focused on user authentication and is widely used to 
                     enable user logins on consumer websites and mobile apps.<br>
@@ -121,7 +146,7 @@ OIDC - used your Google to sign in to applications like YouTube, or Facebook to 
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">OAuth2.0 Vs OIDC</div><br>
                 </div>
-                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1 gtl">
                     OAuth Grants access to your API. used for Authorization<br>
 OIDC  allows Logging the user in . use for authentication.<br> 
 SAML supports both user authentication and authorization while OAuth is only 
@@ -148,7 +173,7 @@ managing user privileges, OAuth may be the better choice.</div>
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Tomcat Vs Jetty</div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     Tomcat Vs Jetty -> They r web server & servlet container.<br>
 Jetty came before tomcat.Jetty quite faster in processing than tomcat.<br>Tomcat is 
 open source apache server work for java version 16 while jetty can work from java version 11 -16.
@@ -172,7 +197,7 @@ s/w is written in java language.(Site - tomcat.apache.org)<br></div>
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">GSON Vs Jackson</div><br>
                 </div>
-                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1 gtl">
                     Both Gson and Jackson are good options for serializing/deserializing JSON data, 
                     simple to use and well documented. Advantages of Gson: Simplicity of toJson/fromJson 
                     in the simple cases. For deserialization, do not need access to the Java entities. 
@@ -227,7 +252,7 @@ String carAsString = objectMapper.writeValueAsString(car);<br></div>
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Firebase Vs Rest API</div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     Firebase synced data across all clients in real time & remains available 
                     when our app goes offline .It has a cloud-hosted NoSQL database that lets 
                     you sync between your users in real-time.<br>
@@ -274,7 +299,7 @@ www.postman.com/downloads/release-notes/<br></div>
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Azure pipeline vs github actions</div><br>
                 </div>
-                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1 gtl">
                     Log back framework is a successor of log4j.if we have set the logging level 
                     to trace than normally it won't be visible in the console b'coz by default 
                     logging level is set to info.Hence,need to set for trace level appearance 
@@ -321,7 +346,7 @@ Resource Manager templates. <br></div>
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Builder class Example</div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     Advantage 
 Builder design pattern also helps in minimizing the number of parameters in the constructor 
 and thus there is no need to pass in null for optional parameters to the constructor.<br>
@@ -408,5 +433,22 @@ public class BuilderPatternExample {<br>
 
     </div>
 </div>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
+             <script> 
+     var icon=document.getElementById("icon");
+     icon.onclick =function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src="<?=base_url().'setting.jpg'?>";
+      }else{
+        icon.src="<?=base_url().'moon.jpg'?>";
+      }
+     }
+     </script>         
 </body></html>
 <!-- End of Main Content -->

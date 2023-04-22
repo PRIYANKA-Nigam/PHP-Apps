@@ -6,6 +6,29 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <style>
+#icon{
+  width: 30px;
+  cursor: pointer;
+}
+:root{
+  --primary-color:#edf2fc;
+  --secondary-color:white;
+}
+.dark-theme{
+  --primary-color:yellow;
+  --secondary-color:red;
+}
+.g{
+  background: var(--primary-color);
+}
+.gtl{
+  background: var(--secondary-color);
+}
+body{
+  background: var(--primary-color);
+}
+      </style>
         </head>
     <body  >
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
@@ -13,6 +36,14 @@
     crossorigin="anonymous"></script>
 
 <div id="container">
+<div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
+             <img src='<?=base_url().'setting.jpg'?>' id="icon" width="25px" height="25px" >
 <a href="<?=base_url().'Welcome/'?>" ><button class="btn btn-success" style="float:right;margin-right:10px;margin-top:15px">BACK</button></a>
 	<h1>Welcome to Quiz!</h1>
 <div style="background-color: black;border-radius:30%;width:800px;height:300px;margin-top:50px;margin-left:70px">
@@ -42,7 +73,16 @@
 
 
 </div>
-
+<script> 
+     var icon=document.getElementById("icon");
+     icon.onclick =function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src="<?=base_url().'setting.jpg'?>";
+      }else{
+        icon.src="<?=base_url().'moon.jpg'?>";
+      }
+     }
+     </script>         
 </body>
-</html>
 </html>

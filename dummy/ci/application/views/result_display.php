@@ -1,3 +1,4 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 // session_unset();
@@ -12,7 +13,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Quiz Result</title>
 </head>
 <body>
-
+<div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
 <div id="container">
 	<h1>Quiz Result!</h1>
 
@@ -67,6 +74,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <input type="submit" value="Play Again">
     </form>
 </div>
-
+       
 </body>
 </html>

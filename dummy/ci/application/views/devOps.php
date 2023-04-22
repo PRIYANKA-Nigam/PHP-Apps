@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -31,8 +34,8 @@ section{
     display: inline-flexbox;
     align-items: left;
     margin-top: 35px;
-    margin-left: 350px;
-    padding-left: 350px;
+    margin-left: 300px;
+    padding-left: 370px;
     padding-top: 130px;
     justify-content: center;
     text-transform: uppercase;
@@ -42,9 +45,9 @@ section{
 </style>
 </head>
 <body >
-    <!-- <div class="menu-btn">
-        <i class="fas fa-bars"></i>
-    </div> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+    crossorigin="anonymous"></script>
    <div class="side-bar" >
     <!-- <div class="close-btn">
         <i class="fas fa-times"></i>
@@ -100,7 +103,15 @@ section{
    </div>
    <!-- <section class="main">
     <h1>Sidebar Menu with <br>Sub-Menus</h1> -->
-    <label><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br>
+    <div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
+            
+    <label><b><a href="<?=base_url().'Welcome/Blog'?>" style="float: right;"><button class="btn btn-success" >Back</button></a></b></label><br>
 <div class="content" >
     <section id="d1" >
 <h1>Cloud Computing</h1><br>
@@ -711,5 +722,6 @@ $(".close-btn").on('click', function() {
 
 
 </script>
+       
 </body>
 </html>

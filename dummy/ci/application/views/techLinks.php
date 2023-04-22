@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,6 +46,13 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                                     <h6 class="m-0 font-weight-bold text-primary">APK Files & Code</h6>
                                    
                                 </div>
+                                <div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
                                 <a href="<?=base_url().'Welcome/'?>" ><button class="btn btn-primary" >Back</button></a> 
                                 <!-- Card Body -->
                                 <div class="card-body">

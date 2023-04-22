@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-
+        <style>
+#icon{
+  width: 30px;
+  cursor: pointer;
+}
+:root{
+  --primary-color:#edf2fc;
+  --secondary-color:white;
+}
+.dark-theme{
+  --primary-color:yellow;
+  --secondary-color:red;
+}
+.g{
+  background: var(--primary-color);
+}
+.gtl{
+  background: var(--secondary-color);
+}
+body{
+  background: var(--primary-color);
+}
+      </style>
 </head>
 
 <body id="page-top">
@@ -22,17 +45,25 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
     <div class="container">
+    <div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
+             <img src='<?=base_url().'setting.jpg'?>' id="icon" width="25px" height="25px" >
     <a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a>
         <h1>Jenkins</h1><hr><br>
     <div class="row">
 
 <div class="col-md-6">
-    <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
+    <div class="card border-left-primary shadow h-100 py-2 ">
+        <div class="card-body ">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Jenkins</div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     Jenkins is used for implementing CI/CD pipelines. 
                     These pipelines automate the testing and integrate the changes 
                     from other branches to the main branch .<br><br>
@@ -61,13 +92,13 @@ termed as ‘Continuous Integration’ and ‘Continuous Development’.</div>
 
 
 <div class="col-md-6 ">
-    <div class="card border-left-success shadow h-100 py-2">
-        <div class="card-body">
+    <div class="card border-left-success shadow h-100 py-2 ">
+        <div class="card-body ">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Bamboo</div><br>
                 </div>
-                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1 gtl">
                     Bamboo is an automation server used for Continuous Integration. Developed by Atlassian 
                     in 2007, this tool allows the developers to automatically build, document, integrate, 
                     test the source code and prepare an app for deployment.<br>
@@ -93,12 +124,12 @@ Open Source – which means it’s free<br>
 
 <!-- Earnings (Monthly) Card Example -->
 <div class="col-md-6">
-    <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
+    <div class="card border-left-primary shadow h-100 py-2 ">
+        <div class="card-body ">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Jenkins Vs Bamboo</div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     Jenkins’ integration with Jira and Bitbucket is limited and the process 
                     requires additional components in the configuration which takes time and
                      labour. With Bamboo, basic configuration options are already built-in. 
@@ -123,13 +154,13 @@ project requirements, budget, and timelines to choose the CI/CD tool for your pr
 
 <!-- Earnings (Monthly) Card Example -->
 <div class="col-md-6 ">
-    <div class="card border-left-success shadow h-100 py-2">
-        <div class="card-body">
+    <div class="card border-left-success shadow h-100 py-2 ">
+        <div class="card-body ">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Jenkins Vs Azure DevOps</div><br>
                 </div>
-                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1 gtl">
                    <b> Azure DevOps </b> is  A cloud-based repository a cloud-based CI tool by Microsoft. 
                     It can be understood as a Software-as-a-Service (SaaS) platform,. It Offers a 
                     platform for containers and Kubernetes<br>
@@ -167,4 +198,15 @@ any specific filters as necessary for</div>
 
     </div>
 </div>
+<script> 
+     var icon=document.getElementById("icon");
+     icon.onclick =function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src="<?=base_url().'setting.jpg'?>";
+      }else{
+        icon.src="<?=base_url().'moon.jpg'?>";
+      }
+     }
+     </script>         
 </body></html>

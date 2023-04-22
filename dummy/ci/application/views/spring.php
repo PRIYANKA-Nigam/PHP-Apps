@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,6 +81,7 @@ section{
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
+   
 <div class="container">
   <div class="row">
 
@@ -91,7 +93,7 @@ section{
         <ul class="nav flex-column navbar-nav bg-gradient-primary  sidebar-dark accordion" 
         id="accordionSidebar" >
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="index.html">
+            <a class="nav-link" aria-current="page" href="#">
             <div class="sidebar-brand-icon rotate-n-15">
                 </div>
               <span data-feather="home" class="align-text-bottom" style="color:white">
@@ -268,6 +270,13 @@ section{
 
 </div>
 	</nav></div></div>
+    <div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
 	<label><b><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a></b></label><br>
 <div class="content" >
     <section id="s1" >

@@ -1,3 +1,4 @@
+<?php include('header.php');  ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +8,8 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         </head>
-    <body  >
+    <body class="g">
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
@@ -21,7 +23,7 @@
           
       </div>
       <!-- Card Body -->
-      <div class="card-body">
+      <div class="card-body gtl ">
       <div class="row">
       <div class="col-lg-6 mb-4">
           <div class="card bg-primary text-white shadow">
@@ -163,10 +165,10 @@
       <!-- Card Header - Dropdown -->
       <div
           class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">In-use Languages(2023)</h6>
+          <h6 class="m-0 font-weight-bold text-primary ">In-use Languages(2023)</h6>
       </div>
       <!-- Card Body -->
-<div class="card-body">
+<div class="card-body g">
 <?php  include('charts.php'); ?>
 </div>
 </div>
@@ -178,8 +180,8 @@
                                    
                                 </div>
                                 <!-- Card Body -->
-                                <div class="card-body">
-                           <div class="album py-5 bg-light">
+                                <div class="card-body gtl">
+                           <div class="album py-5 bg-light g">
                               <div class="container">
                                  <div class="row">
                                   
@@ -252,6 +254,7 @@ $(document).ready(function(){
     // $('[data-toggle="tooltip"]').tooltip();
     $("#but").click();
 });       
-        </script>    
+        </script>   
+            
 </body>
 </html>       

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head><title>Git Blog</title>
@@ -16,23 +17,54 @@
 
 <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<style>
+#icon{
+  width: 30px;
+  cursor: pointer;
+}
+:root{
+  --primary-color:#edf2fc;
+  --secondary-color:white;
+}
+.dark-theme{
+  --primary-color:yellow;
+  --secondary-color:red;
+}
+.g{
+  background: var(--primary-color);
+}
+.gtl{
+  background: var(--secondary-color);
+}
+body{
+  background: var(--primary-color);
+}
+  </style>
 </head>
     <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-    <a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a>
-      <h2>Git Commands</h2>
+    <div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
+             <img src='<?=base_url().'setting.jpg'?>' id="icon" width="25px" height="25px" >
+    <a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" style="float:right">Back</button></a>
+      <h2 class="gtl">Git Commands</h2>
    
       <div class="table-responsive" style="margin-left:80px">
         <table class="table table-striped table-sm" border="2" style="margin: auto;">
           <thead>
             <tr>
-              <th scope="col">Sr.No</th>
-              <th scope="col">Title</th>
-              <th scope="col">Description</th>
-              <th scope="col">Image</th>
+              <th scope="col" class="gtl">Sr.No</th>
+              <th scope="col" class="gtl">Title</th>
+              <th scope="col" class="gtl">Description</th>
+              <th scope="col" class="gtl">Image</th>
             </tr>
           </thead>
           <tbody>
@@ -41,8 +73,8 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                $count=1;
                foreach($result as $key => $value){
                   echo "<tr>
-                   <td>".$count."</td>
-                   <td>".$value['blog_title']."</td>
+                   <td class=gtl>".$count."</td>
+                   <td class=gtl>".$value['blog_title']."</td>
                    <td>".$value['blog_desc']."</td>
                    <td><img src='".base_url()."assets/".$value['blog_image']."' class='img-fluid' width='100'></td>
                  </tr>";
@@ -71,10 +103,10 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                                     <h1>Git Commands while pushing code to a new repo</h1>
                                  <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <p class="card-text"></p>
               <div class="d-flex justify-content-between align-items-center">
-                                        <label>git init<br>
+                                        <label class="gtl">git init<br>
                                        git add .<br>
                                        git commit -m "commit message"<br>
                                        git remote add origin "url of the remote repository"<br>
@@ -84,10 +116,10 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                          <h1>Git Commands while pushing code to an existing repo</h1>
                                  <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <p class="card-text"></p>
               <div class="d-flex justify-content-between align-items-center">
-                                        <label>git init<br>
+                                        <label class="gtl">git init<br>
                                        git add -A<br>
                                        git commit -m "commit message"<br>
                                         git push origin master</label>
@@ -96,10 +128,10 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                          <h1>Steps to copy a project from remote branch</h1>
                                  <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <p class="card-text"></p>
               <div class="d-flex justify-content-between align-items-center">
-                                        <label>git init<br>
+                                        <label class="gtl">git init<br>
                                        git add .<br>
                                         git clone "Link of the repository from remote"</label>
                                     
@@ -107,10 +139,10 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                          <h1>When your local branch is ahead of remote branch by 1 commit</h1>
                                  <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <p class="card-text"></p>
               <div class="d-flex justify-content-between align-items-center">
-                                        <label>git pull<br>
+                                        <label class="gtl">git pull<br>
                                        git checkout -b newBranchName<br>
                                        git pull origin remoteBranchName<br>
                                       git status<br>
@@ -120,20 +152,20 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                          <h1>To delete a remote Branch</h1>
                                  <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <p class="card-text"></p>
               <div class="d-flex justify-content-between align-items-center">
-                                        <label>
+                                        <label class="gtl">
                                         git push origin --delete remoteBranchName</label>
                                     
                          </div></div></div></div>
                          <h1>When code is not getting pushed to remote Branch</h1>
                                  <div class="col-md-12">
           <div class="card mb-4 shadow-sm">
-            <div class="card-body">
+            <div class="card-body g">
               <p class="card-text"></p>
               <div class="d-flex justify-content-between align-items-center">
-                                        <label><h4>After using git push origin master when code is not 
+                                        <label class="gtl"><h4>After using git push origin master when code is not 
                                             getting pushed and instead you r getting message as "remote
                                             end hung up unexpectedly.Than use :"
                                         </h4><br>
@@ -155,7 +187,17 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
                     <a href='<?= base_url().'Blog/Git2'?>' >
                     <button name="git" class="btn bg-gradient-primary btn-success" style="margin-left:650px;margin-bottom:100px;margin-top:50px">More
                   </button></a>
-                    
+                  <script> 
+     var icon=document.getElementById("icon");
+     icon.onclick =function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src="<?=base_url().'setting.jpg'?>";
+      }else{
+        icon.src="<?=base_url().'moon.jpg'?>";
+      }
+     }
+     </script>               
 </body>
 </html>
       

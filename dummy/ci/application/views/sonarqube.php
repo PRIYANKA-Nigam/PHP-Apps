@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-
+        <style>
+#icon{
+  width: 30px;
+  cursor: pointer;
+}
+:root{
+  --primary-color:#edf2fc;
+  --secondary-color:white;
+}
+.dark-theme{
+  --primary-color:yellow;
+  --secondary-color:red;
+}
+.g{
+  background: var(--primary-color);
+}
+.gtl{
+  background: var(--secondary-color);
+}
+body{
+  background: var(--primary-color);
+}
+      </style>
 </head>
 
 <body id="page-top">
@@ -22,17 +45,25 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
     crossorigin="anonymous"></script>
     <div class="container">
+    <div id="google_element" style="float:right"></div>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+           function loadGoogleTranslate(){
+            new google.translate.TranslateElement("google_element");
+           }
+            </script>
+             <img src='<?=base_url().'setting.jpg'?>' id="icon" width="25px" height="25px" >
         <h1><a href="<?=base_url().'Welcome/Blog'?>" ><button class="btn btn-success" >Back</button></a> SonarQube</h1><hr><br>
     <div class="row">
 
 
 <div class="col-md-6">
     <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
+        <div class="card-body g">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">SonarQube Overview</div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     It is a software testing tool [static testing tool] which is used to test & improve 
                     the quality of the code & help in fixing the error.If the code is written in a much 
                     complex way Sonar will suggest to write it in a simpler way.If finds security error 
@@ -67,12 +98,12 @@ We can integrate SonarQube with build tools, such as Gradle and ant.<br>
 
 <div class="col-md-6 ">
     <div class="card border-left-success shadow h-100 py-2">
-        <div class="card-body">
+        <div class="card-body g">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">SonarLint</div><br>
                 </div>
-                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1 gtl">
                     SonarLint is a SonarQube plugin which helps to easily integrate SonarQube with any IDE without any 
 need to download & install the whole Sonar software.<br>
 It offers reports on duplicate code,unit test,code complexity,code coverage, comments, bugs,any security 
@@ -100,11 +131,11 @@ analysis remotely. SonarLint can be practiced with IDE or can also be done via C
 
 <div class="col-md-6">
     <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
+        <div class="card-body g">
             <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                 <div class="h5 mb-0 font-weight-bold text-gray-800">Code coverage using SonarQube</div><br>
-                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 gtl">
                     Code coverage gives us the metric of the percentage of production code that is tested. either 
 unit testing or integration testing.If the code coverage is good than we can have the faster release cycle.<br>
 Everytime we will try to build & run our code in azure repo .it will do unit testing, code 
@@ -130,4 +161,15 @@ the minimum code coverage is set to 50%, even so, sonar is using its own code co
 
     </div>
 </div>
+<script> 
+     var icon=document.getElementById("icon");
+     icon.onclick =function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src="<?=base_url().'setting.jpg'?>";
+      }else{
+        icon.src="<?=base_url().'moon.jpg'?>";
+      }
+     }
+     </script>         
 </body></html>
