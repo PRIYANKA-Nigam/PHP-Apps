@@ -40,7 +40,8 @@ margin-left: 150px;
         <input type="submit" name="submit2" value="VIEW">
      </form>
      <?php
-require_once('connection.php');
+// require_once('connection.php');
+include('connection.php');
 if(isset($_POST['submit'])){
     $extension_array=array('jpeg','jpg','png','gif');
     foreach($_FILES['image']['tmp_name'] as $key=>$value){
@@ -53,6 +54,8 @@ if(isset($_POST['submit'])){
                 move_uploaded_file($file_tmp,'files/'.$file);
                 $ins="insert into multipleimageupload(imageName) values('$file')";
                 mysqli_query($con,$ins);
+                echo "inserted";
+                
             }else{
                 $file=str_replace('.','-',basename($file,$ext));
                 $newFile=$file.time().".".$ext;
@@ -60,6 +63,8 @@ if(isset($_POST['submit'])){
                 $final=$newFile;
                 $ins="insert into multipleimageupload(imageName) values('$final')";
                 mysqli_query($con,$ins);
+                echo "inserted";
+               
             }}catch(mysqli_sql_exception $e){
                 $e->getMessage();
             }

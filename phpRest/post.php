@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('GMT');
-include './database/db.php';
+include 'db.php';
 $status = false;
 $msg = 'something went wrong';
 
@@ -8,7 +8,7 @@ if(isset($_POST['cat_id'])){
     post_record();
 }
 else if(isset($_POST['cat_id']) && isset($_POST['author'])){
-    delete_record();
+    // delete_record();
 }
 else{
     get_record();
