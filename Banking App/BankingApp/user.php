@@ -83,7 +83,7 @@ mysqli_query($con,$query);
             <div class="col-2">
             <div class="container  " style="min-height:10vh;padding-right:5px" >
     <div class="card" style="width: 10rem;">
-<img src="../image/Priyanka.jpg" class="card-img-top" alt="Admin">
+<img src="../image/baby.jpg" class="card-img-top" alt="Admin">
 <div class="card-body text-center">
 <h5 class="card-title"><?=$_SESSION['name'] ?></h5>
 <a href="logout_admin_user.php" class="btn btn-primary">Logout</a>
