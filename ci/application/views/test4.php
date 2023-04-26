@@ -72,7 +72,9 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
               <!-- <div class="d-flex justify-content-between align-items-center"> -->
                               <div class="container">
                                 <div class="row">
+
                                <iframe src="<?=base_url().'assets/pdf/the_lady_of_the_lake.pdf' ?>" width="250" height="700"></iframe>
+
                                 <!-- </div> -->
                               <!-- </div> -->
                          <!-- </div> -->
@@ -84,8 +86,10 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
               <!-- <div class="d-flex justify-content-between align-items-center"> -->
                               <div class="container">
                                 <div class="row">
+
                                 <iframe src="<?=base_url().'assets/pdf/the_wedding_date.pdf' ?>" width="250" height="700"></iframe>
-</div>
+
+                               
                                 <!-- </div> -->
                               <!-- </div> -->
                          <!-- </div> -->
@@ -96,8 +100,9 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
               <!-- <div class="d-flex justify-content-between align-items-center"> -->
               <div class="container">
                                 <div class="row">
+
                                 <iframe src="<?=base_url().'assets/pdf/THE-ALCHEMIST.pdf' ?>" width="250" height="700"></iframe>
-                                <!-- </div> -->
+                <!-- </div> -->
                               <!-- </div> -->
                                     <!-- </div> -->
                                  </div></div></div>
@@ -108,7 +113,9 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
               <!-- <div class="d-flex justify-content-between align-items-center"> -->
               <div class="container">
                                 <div class="row">
+
                                 <iframe src="<?=base_url().'assets/pdf/the_lady_of_the_lake.pdf' ?>" width="250" height="700"></iframe>
+
                                 <!-- </div> -->
                               <!-- </div> -->
                                     <!-- </div>  -->
