@@ -67,35 +67,6 @@ $ans=$factorial;
     }
 
 ?>
-<?php
-if(isset($_POST['answer']))
-{
-$sql = "SELECT * FROM scientific";
-$result = $conn->query($sql);
-if(mysqli_num_rows($result) > 0){
-		echo "<br><center><b>All Answers:<b></center><br>";
-        echo "<center><table style='border: 2px dashed grey;'>";
-            echo "<tr>";
-                echo "<th>First Number:</th>";
-                echo "<th>Second Number:</th>";
-                echo "<th>Operator</th>";
-                echo "<th>Result</th>";
-            echo "</tr>";
-        while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
-                echo "<td>" . $row['number1'] . "</td>";
-                echo "<td>" . $row['number2'] . "</td>";
-                echo "<td>" . $row['operator'] . "</td>";
-                echo "<td>" . $row['result'] . "</td>";
-            echo "</tr>";
-        }
-        echo "</table></center>";
-        mysqli_free_result($result);
-    } else{
-        echo "Don't have any saved data in the database.";
-    }
-}
-?>
 <html>
 	<body>
 <form method="post" action="">
@@ -149,5 +120,33 @@ if(mysqli_num_rows($result) > 0){
 	<input class="get" type="submit" name="answer" value="Retrieve Data">
 </form> </body></html>
 
-
+<?php
+if(isset($_POST['answer']))
+{
+$sql = "SELECT * FROM scientific";
+$result = $conn->query($sql);
+if(mysqli_num_rows($result) > 0){
+		echo "<br><center><b>All Answers:<b></center><br>";
+        echo "<center><table style='border: 2px dashed grey;'>";
+            echo "<tr>";
+                echo "<th>First Number:</th>";
+                echo "<th>Second Number:</th>";
+                echo "<th>Operator</th>";
+                echo "<th>Result</th>";
+            echo "</tr>";
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+                echo "<td>" . $row['number1'] . "</td>";
+                echo "<td>" . $row['number2'] . "</td>";
+                echo "<td>" . $row['operator'] . "</td>";
+                echo "<td>" . $row['result'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table></center>";
+        mysqli_free_result($result);
+    } else{
+        echo "Don't have any saved data in the database.";
+    }
+}
+?>
 

@@ -19,7 +19,7 @@ if(isset($_SESSION['name']) && isset($_SESSION['code'])){
     crossorigin="anonymous"></script>
     <div class="container d-flex justify-content-center align-items-center" style="min-height:100vh" >
     <div class="card" style="width: 18rem;">
-<img src="../image/P3.png" class="card-img-top" alt="Admin" width="100px" height="170px">
+<img src="../image/Priyanka.jpg" class="card-img-top" alt="Admin">
 <div class="card-body text-center">
 <h5 class="card-title"><?=$_SESSION['name'] ?></h5>
 <a href="logout_admin_user.php" class="btn btn-primary">Logout</a>
