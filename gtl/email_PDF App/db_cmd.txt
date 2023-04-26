@@ -1,0 +1,155 @@
+Microsoft Windows [Version 10.0.19043.2130]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Hp>cd ../../
+
+C:\>cd xampp/mysql/bin
+
+C:\xampp\mysql\bin>mysql -u root -p -h localhost
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 46
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database insertFile;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> use insertFile;
+Database changed
+MariaDB [insertFile]> create table pdf_file(pdf varchar(2000));
+Query OK, 0 rows affected (0.395 sec)
+
+MariaDB [insertFile]> truncate pdf_file;
+Query OK, 0 rows affected (0.491 sec)
+
+MariaDB [insertFile]> alter table pdf_file(add pdf varchar(5000) distinct);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(add pdf varchar(5000) distinct)' at line 1
+MariaDB [insertFile]> ;
+ERROR: No query specified
+
+MariaDB [insertFile]> alter table pdf_file add pdf varchar(5000) distinct;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'distinct' at line 1
+MariaDB [insertFile]> alter table pdf_file add CONSTRAINT a pdf varchar(5000) distinct;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'pdf varchar(5000) distinct' at line 1
+MariaDB [insertFile]> alter table pdf_file add CONSTRAINT a UNIQUE(pdf);
+Query OK, 0 rows affected (0.965 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [insertFile]> alter table pdf_file drop CONSTRAINT a UNIQUE(pdf);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNIQUE(pdf)' at line 1
+MariaDB [insertFile]> alter table pdf_file drop CONSTRAINT a;
+ERROR 1091 (42000): Can't DROP CONSTRAINT `a`; check that it exists
+MariaDB [insertFile]> alter table pdf_file drop INDEX a;
+Query OK, 0 rows affected (0.287 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [insertFile]> alter table pdf_file(add column pid int(30) not null primary key auto_increment);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(add column pid int(30) not null primary key auto_increment)' at line 1
+MariaDB [insertFile]> alter table pdf_file add column pid int(30) not null primary key auto_increment;
+Query OK, 0 rows affected (0.525 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [insertFile]> desc pdf_file;
++-------+---------------+------+-----+---------+----------------+
+| Field | Type          | Null | Key | Default | Extra          |
++-------+---------------+------+-----+---------+----------------+
+| pdf   | varchar(2000) | YES  |     | NULL    |                |
+| pid   | int(30)       | NO   | PRI | NULL    | auto_increment |
++-------+---------------+------+-----+---------+----------------+
+2 rows in set (0.017 sec)
+
+MariaDB [insertFile]> truncate table pdf_file;
+Query OK, 0 rows affected (0.370 sec)
+
+MariaDB [insertFile]>
+Microsoft Windows [Version 10.0.19043.2130]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Hp>cd ../../
+
+C:\>cd xampp/mysql/bin
+
+C:\xampp\mysql\bin>mysql -u root -p -h localhost
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 165
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use pdf_file;
+ERROR 1049 (42000): Unknown database 'pdf_file'
+MariaDB [(none)]> use database pdf_file;
+ERROR 1049 (42000): Unknown database 'database'
+MariaDB [(none)]> use pdf_file
+ERROR 1049 (42000): Unknown database 'pdf_file'
+MariaDB [(none)]> use insertfile
+Database changed
+MariaDB [insertfile]> desc pdf_file
+    -> desc pdf_file;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'desc pdf_file' at line 2
+MariaDB [insertfile]> show tables;
++----------------------+
+| Tables_in_insertfile |
++----------------------+
+| pdf_file             |
++----------------------+
+1 row in set (0.001 sec)
+
+MariaDB [insertfile]> desc pdf_file;
++-------+---------------+------+-----+---------+----------------+
+| Field | Type          | Null | Key | Default | Extra          |
++-------+---------------+------+-----+---------+----------------+
+| pdf   | varchar(2000) | YES  |     | NULL    |                |
+| pid   | int(30)       | NO   | PRI | NULL    | auto_increment |
++-------+---------------+------+-----+---------+----------------+
+2 rows in set (0.015 sec)
+
+MariaDB [insertfile]> truncate table pdf_file;
+Query OK, 0 rows affected (0.394 sec)
+
+MariaDB [insertfile]> truncate table pdf_file;
+Query OK, 0 rows affected (0.577 sec)
+
+MariaDB [insertfile]> truncate table pdf_file;
+Query OK, 0 rows affected (0.382 sec)
+
+MariaDB [insertfile]> alter table pdf_file rename to MultipleImageUpload;
+Query OK, 0 rows affected (0.208 sec)
+
+MariaDB [insertfile]> alter table multipleimageupload add unique(pdf);
+Query OK, 16 rows affected (0.811 sec)
+Records: 16  Duplicates: 0  Warnings: 0
+
+MariaDB [insertfile]> alter table multipleimageupload rename pdf to imageName;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'to imageName' at line 1
+MariaDB [insertfile]> alter table multipleimageupload rename column  pdf to imageName;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'column  pdf to imageName' at line 1
+MariaDB [insertfile]> alter table multipleimageupload change pdf imageName varchar(200);
+Query OK, 17 rows affected (1.147 sec)
+Records: 17  Duplicates: 0  Warnings: 0
+
+MariaDB [insertfile]> alter table multipleimageupload change pid imageId;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [insertfile]> alter table multipleimageupload change pid imageId int(30);
+Query OK, 0 rows affected (0.116 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [insertfile]> desc multipleimageupload;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| imageName | varchar(200) | YES  | UNI | NULL    |       |
+| imageId   | int(30)      | NO   | PRI | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+2 rows in set (0.027 sec)
+
+MariaDB [insertfile]> alter table multipleimageupload add imageId primarykey auto_imcrement not null;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'auto_imcrement not null' at line 1
+MariaDB [insertfile]>
