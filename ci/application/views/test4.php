@@ -72,13 +72,9 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
               <!-- <div class="d-flex justify-content-between align-items-center"> -->
                               <div class="container">
                                 <div class="row">
-                                <div style="background-color: black;width:100%;height:auto" class="belowdiv">
-<a href="https://www.topcoder.com/" ><img src="<?=base_url().'top.png'?>" alt="Top coder" width="200px" height="200px"></a>
-<a href="https://leetcode.com/" ><img src="<?=base_url().'leet.png'?>" alt="Leetcode" width="200px" height="200px"></a>
-<a href="https://www.codechef.com/" ><img src="<?=base_url().'code.png'?>" alt="Codechef" width="200px" height="200px"></a>
-<a href="https://hackerrank.com/" ><img src="<?=base_url().'hackerrank.png'?>" alt="Hackerrank" width="200px" height="200px"></a>
-<a href="https://www.hackerearth.com/" ><img src="<?=base_url().'hackerearth.png'?>" alt="Hackerearth" width="200px" height="200px"></a>
-</div>
+
+                               <iframe src="<?=base_url().'assets/pdf/the_lady_of_the_lake.pdf' ?>" width="250" height="700"></iframe>
+
                                 <!-- </div> -->
                               <!-- </div> -->
                          <!-- </div> -->
@@ -90,13 +86,10 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
               <!-- <div class="d-flex justify-content-between align-items-center"> -->
                               <div class="container">
                                 <div class="row">
-                                <div style="background-color: black;width:100%;height:auto" class="belowdiv">
-<a href="https://www.topcoder.com/" ><img src="<?=base_url().'top.png'?>" alt="Top coder" width="200px" height="200px"></a>
-<a href="https://leetcode.com/" ><img src="<?=base_url().'leet.png'?>" alt="Leetcode" width="200px" height="200px"></a>
-<a href="https://www.codechef.com/" ><img src="<?=base_url().'code.png'?>" alt="Codechef" width="200px" height="200px"></a>
-<a href="https://hackerrank.com/" ><img src="<?=base_url().'hackerrank.png'?>" alt="Hackerrank" width="200px" height="200px"></a>
-<a href="https://www.hackerearth.com/" ><img src="<?=base_url().'hackerearth.png'?>" alt="Hackerearth" width="200px" height="200px"></a>
-</div>
+
+                                <iframe src="<?=base_url().'assets/pdf/the_wedding_date.pdf' ?>" width="250" height="700"></iframe>
+
+                               
                                 <!-- </div> -->
                               <!-- </div> -->
                          <!-- </div> -->
@@ -107,14 +100,9 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
               <!-- <div class="d-flex justify-content-between align-items-center"> -->
               <div class="container">
                                 <div class="row">
-                                <div style="background-color: black;width:100%;height:auto" class="belowdiv">
-<a href="https://www.topcoder.com/" ><img src="<?=base_url().'top.png'?>" alt="Top coder" width="200px" height="200px"></a>
-<a href="https://leetcode.com/" ><img src="<?=base_url().'leet.png'?>" alt="Leetcode" width="200px" height="200px"></a>
-<a href="https://www.codechef.com/" ><img src="<?=base_url().'code.png'?>" alt="Codechef" width="200px" height="200px"></a>
-<a href="https://hackerrank.com/" ><img src="<?=base_url().'hackerrank.png'?>" alt="Hackerrank" width="200px" height="200px"></a>
-<a href="https://www.hackerearth.com/" ><img src="<?=base_url().'hackerearth.png'?>" alt="Hackerearth" width="200px" height="200px"></a>
-</div>
-                                <!-- </div> -->
+
+                                <iframe src="<?=base_url().'assets/pdf/THE-ALCHEMIST.pdf' ?>" width="250" height="700"></iframe>
+                <!-- </div> -->
                               <!-- </div> -->
                                     <!-- </div> -->
                                  </div></div></div>
@@ -125,13 +113,9 @@ integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtv
               <!-- <div class="d-flex justify-content-between align-items-center"> -->
               <div class="container">
                                 <div class="row">
-                                <div style="background-color: black;width:100%;height:auto" class="belowdiv">
-<a href="https://www.topcoder.com/" ><img src="<?=base_url().'top.png'?>" alt="Top coder" width="200px" height="200px"></a>
-<a href="https://leetcode.com/" ><img src="<?=base_url().'leet.png'?>" alt="Leetcode" width="200px" height="200px"></a>
-<a href="https://www.codechef.com/" ><img src="<?=base_url().'code.png'?>" alt="Codechef" width="200px" height="200px"></a>
-<a href="https://hackerrank.com/" ><img src="<?=base_url().'hackerrank.png'?>" alt="Hackerrank" width="200px" height="200px"></a>
-<a href="https://www.hackerearth.com/" ><img src="<?=base_url().'hackerearth.png'?>" alt="Hackerearth" width="200px" height="200px"></a>
-</div>
+
+                                <iframe src="<?=base_url().'assets/pdf/the_lady_of_the_lake.pdf' ?>" width="250" height="700"></iframe>
+
                                 <!-- </div> -->
                               <!-- </div> -->
                                     <!-- </div>  -->
